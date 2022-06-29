@@ -1,3 +1,3 @@
 # FrontEnd-Programing-Final
-## Trong đây sẽ chứ UI của figma
+## Trong đây sẽ chứa UI của figma
 
