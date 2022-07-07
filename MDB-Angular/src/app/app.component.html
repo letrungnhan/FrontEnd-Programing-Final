@@ -1,68 +1,97 @@
-<!-- Carousel wrapper -->
-<div id="carouselBasicExample" class="carousel slide carousel-fade" data-mdb-ride="carousel">
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="0"
-      class="active"
-      aria-current="true"
-      aria-label="Slide 1"
-    ></button>
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="1"
-      aria-label="Slide 2"
-    ></button>
-    <button
-      type="button"
-      data-mdb-target="#carouselBasicExample"
-      data-mdb-slide-to="2"
-      aria-label="Slide 3"
-    ></button>
+<div class="login-container">
+  <div class="center">
+    <!-- <h1>Login</h1>
+    <form #loginForm="ngForm">
+        <div class="txt_field">
+            <input type="email" required [(ngModel)]="username" name="username" #userName=ngModel>
+            <span></span>
+            <label for="">Username</label>
+        </div>
+        <p class="error" style="color: red;" *ngIf="userName.invalid && userName.touched">
+            Username is required
+        </p>
+        <div class="txt_field">
+            <input type="password" required [(ngModel)]="password" #userPassword=ngModel name="passoword">
+
+            <label for="">Password</label>
+        </div>
+        <p style="color: red;" *ngIf="userPassword.invalid && userPassword.touched">Password is required</p>
+        <div class="pass">Forgot Password</div>
+        <input type="submit" value="Login" (click)="authService.login(userName.value, userPassword.value)"
+            [disabled]="loginForm.invalid" (click)="activeLoading()">
+        <div class="signup_link">
+            Not a member? <a routerLink="/register">Sign up</a>
+        </div>
+    </form> -->
+    <div class="modal modal-login">
+      <div class="modal-login__header">
+        <h3>Đăng nhập</h3>
+        <span class="modal-login__close">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 172 172"
+                         style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                           stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                           font-family="none" font-size="none"
+                           style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#cccccc">
+                                <path
+                                  d="M49.5575,44.72l-4.8375,4.8375l36.55,36.4425l-36.55,36.4425l4.8375,4.8375l36.6575,-36.4425l36.55,36.4425l4.8375,-4.8375l-36.55,-36.4425l36.55,-36.4425l-4.8375,-4.8375l-36.55,36.4425z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </span>
+      </div>
+      <div class="modal-login__content">
+        <form class="login-form">
+          <label for="name">Email</label>
+          <input id="name" type="email" placeholder="example@email.com" class="login-form__name" required
+                 name="username">
+          <p class="error" style="color: red; display: inline-block;"
+          >
+            Yêu cầu email
+          </p>
+          <label for="number">Мật khẩu</label>
+          <input id="number" type="password" placeholder="*****"
+                 name="password" class="login-form__number">
+          <p style="color: red;">Yêu cầu mật khẩu</p>
+          <div class="control-group">
+            <label class="control control--checkbox">Nhớ tải khoản
+              <input type="checkbox"/>
+              <div class="control__indicator">
+              </div>
+            </label>
+            <a routerLink="/forgot-password">Quên mật khẩu?</a>
+          </div>
+          <button class="login-form__number"
+          >Đăng nhập
+          </button>
+          <a routerLink="/register" class="login-form__loginistered">Đăng ký</a>
+        </form>
+        <div class="modal-separator">
+          <div class="modal-separator__text">
+            Hoặc
+          </div>
+        </div>
+        <!--        <div class="social-block">-->
+        <!--          <label>Đăng nhập bằng tài khoản khác</label>-->
+        <!--          <button class="social-block__facebook" (click)="authService.FacebookAuth()">-->
+        <!--            <img src="https://img.icons8.com/color/48/000000/facebook-circled.png"/>-->
+        <!--            Facebook-->
+        <!--          </button>-->
+        <!--          <button class="social-block__google" (click)="authService.GoogleAuth()">-->
+        <!--            <img src="https://img.icons8.com/color/48/000000/google-logo.png"/>-->
+        <!--            Google-->
+        <!--          </button>-->
+        <!--        </div>-->
+      </div>
+      <!--      <div class="lazyImage" [class.active]="isActiveLoading" style="z-index: 50;">-->
+      <!--        <i class="eva eva-sync"></i>-->
+      <!--      </div>-->
+    </div>
+
   </div>
 
-  <!-- Inner -->
-  <div class="carousel-inner">
-    <!-- Single item -->
-    <div class="carousel-item active">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(15).webp" class="d-block w-100" alt="Sunset Over the City"/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-      </div>
-    </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(22).webp" class="d-block w-100" alt="Canyon at Nigh"/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    </div>
-
-    <!-- Single item -->
-    <div class="carousel-item">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(23).webp" class="d-block w-100" alt="Cliff Above a Stormy Sea"/>
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-      </div>
-    </div>
-  </div>
-  <!-- Inner -->
-
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-mdb-target="#carouselBasicExample" data-mdb-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
-<!-- Carousel wrapper -->
+<!--<app-notification *ngIf="successLogin" [type]="true" [message]="sucessLoginMessage"></app-notification>-->
