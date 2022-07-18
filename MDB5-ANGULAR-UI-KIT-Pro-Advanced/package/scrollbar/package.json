@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/scrollbar",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-scrollbar.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-scrollbar.mjs",
+  "esm2020": "../esm2020/scrollbar/mdb-angular-ui-kit-scrollbar.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-scrollbar.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-scrollbar.mjs",
+  "typings": "mdb-angular-ui-kit-scrollbar.d.ts",
+  "sideEffects": false
+}

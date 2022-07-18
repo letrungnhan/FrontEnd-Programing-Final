@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/stepper",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-stepper.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-stepper.mjs",
+  "esm2020": "../esm2020/stepper/mdb-angular-ui-kit-stepper.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-stepper.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-stepper.mjs",
+  "typings": "mdb-angular-ui-kit-stepper.d.ts",
+  "sideEffects": false
+}

@@ -1,0 +1,31 @@
+import { ElementRef, EventEmitter, OnDestroy, OnInit } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class MdbChartDirective implements OnInit, OnDestroy {
+    private _elementRef;
+    get datasets(): any;
+    set datasets(datasets: any);
+    private _datasets;
+    get labels(): string[];
+    set labels(labels: string[]);
+    private _labels;
+    get options(): any;
+    set options(options: any);
+    private _options;
+    type: string;
+    chartClick: EventEmitter<any>;
+    chartHover: EventEmitter<any>;
+    private _defaultOptions;
+    private _canvas;
+    private _ctx;
+    private _chart;
+    private _isInitialized;
+    constructor(_elementRef: ElementRef);
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+    private _destroyChart;
+    private _buildChart;
+    update(): void;
+    rebuild(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MdbChartDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<MdbChartDirective, "canvas[mdbChart]", ["mdbChart"], { "datasets": "datasets"; "labels": "labels"; "options": "options"; "type": "type"; }, { "chartClick": "chartClick"; "chartHover": "chartHover"; }, never>;
+}

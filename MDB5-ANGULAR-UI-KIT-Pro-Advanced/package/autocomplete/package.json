@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/autocomplete",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-autocomplete.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-autocomplete.mjs",
+  "esm2020": "../esm2020/autocomplete/mdb-angular-ui-kit-autocomplete.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-autocomplete.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-autocomplete.mjs",
+  "typings": "mdb-angular-ui-kit-autocomplete.d.ts",
+  "sideEffects": false
+}

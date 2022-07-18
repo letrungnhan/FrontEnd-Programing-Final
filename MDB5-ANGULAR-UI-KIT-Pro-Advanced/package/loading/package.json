@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/loading",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-loading.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-loading.mjs",
+  "esm2020": "../esm2020/loading/mdb-angular-ui-kit-loading.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-loading.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-loading.mjs",
+  "typings": "mdb-angular-ui-kit-loading.d.ts",
+  "sideEffects": false
+}

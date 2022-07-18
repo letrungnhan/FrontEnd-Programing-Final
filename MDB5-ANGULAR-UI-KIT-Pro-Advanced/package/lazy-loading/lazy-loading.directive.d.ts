@@ -1,0 +1,30 @@
+import { ElementRef, EventEmitter, NgZone, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class MdbLazyLoadingDirective implements OnInit, OnDestroy {
+    private _elementRef;
+    private _renderer;
+    private _ngZone;
+    offset: number;
+    loadingPlaceholder: string;
+    errorPlaceholder: string;
+    container: HTMLElement;
+    delay: number;
+    loadingStart: EventEmitter<void>;
+    loadingEnd: EventEmitter<void>;
+    loadingError: EventEmitter<void>;
+    private _scrollSubscription;
+    constructor(_elementRef: ElementRef, _renderer: Renderer2, _ngZone: NgZone);
+    get host(): HTMLElement;
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+    private _initObserver;
+    private _handleScroll;
+    private _isInViewport;
+    private _lazyLoad;
+    private _loadImage;
+    private _loadVideo;
+    private _handleLoadingEvents;
+    private _setPlaceholder;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MdbLazyLoadingDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<MdbLazyLoadingDirective, "[mdbLazyLoading]", never, { "offset": "offset"; "loadingPlaceholder": "loadingPlaceholder"; "errorPlaceholder": "errorPlaceholder"; "container": "container"; "delay": "delay"; }, { "loadingStart": "loadingStart"; "loadingEnd": "loadingEnd"; "loadingError": "loadingError"; }, never>;
+}

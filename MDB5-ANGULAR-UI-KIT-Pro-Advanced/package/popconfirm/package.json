@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/popconfirm",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-popconfirm.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-popconfirm.mjs",
+  "esm2020": "../esm2020/popconfirm/mdb-angular-ui-kit-popconfirm.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-popconfirm.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-popconfirm.mjs",
+  "typings": "mdb-angular-ui-kit-popconfirm.d.ts",
+  "sideEffects": false
+}

@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/sticky",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-sticky.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-sticky.mjs",
+  "esm2020": "../esm2020/sticky/mdb-angular-ui-kit-sticky.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-sticky.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-sticky.mjs",
+  "typings": "mdb-angular-ui-kit-sticky.d.ts",
+  "sideEffects": false
+}

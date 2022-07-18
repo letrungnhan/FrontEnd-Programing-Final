@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/datepicker",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-datepicker.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-datepicker.mjs",
+  "esm2020": "../esm2020/datepicker/mdb-angular-ui-kit-datepicker.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-datepicker.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-datepicker.mjs",
+  "typings": "mdb-angular-ui-kit-datepicker.d.ts",
+  "sideEffects": false
+}

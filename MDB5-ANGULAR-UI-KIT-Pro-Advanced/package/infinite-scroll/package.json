@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/infinite-scroll",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-infinite-scroll.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-infinite-scroll.mjs",
+  "esm2020": "../esm2020/infinite-scroll/mdb-angular-ui-kit-infinite-scroll.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-infinite-scroll.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-infinite-scroll.mjs",
+  "typings": "mdb-angular-ui-kit-infinite-scroll.d.ts",
+  "sideEffects": false
+}

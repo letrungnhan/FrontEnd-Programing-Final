@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/sidenav",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-sidenav.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-sidenav.mjs",
+  "esm2020": "../esm2020/sidenav/mdb-angular-ui-kit-sidenav.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-sidenav.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-sidenav.mjs",
+  "typings": "mdb-angular-ui-kit-sidenav.d.ts",
+  "sideEffects": false
+}

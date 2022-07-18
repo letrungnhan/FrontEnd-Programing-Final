@@ -1,0 +1,37 @@
+import { BooleanInput } from '@angular/cdk/coercion';
+import { Overlay } from '@angular/cdk/overlay';
+import { AfterViewInit, OnChanges, OnDestroy, OnInit, Renderer2, SimpleChanges, TemplateRef, ViewContainerRef } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class MdbLoadingComponent implements OnInit, AfterViewInit, OnChanges, OnDestroy {
+    private _renderer;
+    private _overlay;
+    private _vcr;
+    template: TemplateRef<any>;
+    get show(): boolean;
+    set show(value: boolean);
+    private _show;
+    get backdrop(): boolean;
+    set backdrop(value: boolean);
+    private _backdrop;
+    backdropClass: string;
+    container: HTMLElement;
+    get fullscreen(): boolean;
+    set fullscreen(value: boolean);
+    private _fullscreen;
+    private _overlayRef;
+    constructor(_renderer: Renderer2, _overlay: Overlay, _vcr: ViewContainerRef);
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    showFullscreen(): void;
+    hideFullscreen(): void;
+    private _createOverlay;
+    private _getOverlayConfig;
+    private _getBackdropClass;
+    ngOnDestroy(): void;
+    static ngAcceptInputType_backdrop: BooleanInput;
+    static ngAcceptInputType_fullscreen: BooleanInput;
+    static ngAcceptInputType_show: BooleanInput;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MdbLoadingComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MdbLoadingComponent, "mdb-loading", never, { "show": "show"; "backdrop": "backdrop"; "backdropClass": "backdropClass"; "container": "container"; "fullscreen": "fullscreen"; }, {}, never, ["*"]>;
+}

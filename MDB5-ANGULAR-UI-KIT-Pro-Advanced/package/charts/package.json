@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/charts",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-charts.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-charts.mjs",
+  "esm2020": "../esm2020/charts/mdb-angular-ui-kit-charts.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-charts.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-charts.mjs",
+  "typings": "mdb-angular-ui-kit-charts.d.ts",
+  "sideEffects": false
+}

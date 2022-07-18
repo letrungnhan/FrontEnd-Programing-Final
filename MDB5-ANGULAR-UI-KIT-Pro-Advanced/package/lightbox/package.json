@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/lightbox",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-lightbox.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-lightbox.mjs",
+  "esm2020": "../esm2020/lightbox/mdb-angular-ui-kit-lightbox.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-lightbox.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-lightbox.mjs",
+  "typings": "mdb-angular-ui-kit-lightbox.d.ts",
+  "sideEffects": false
+}

@@ -1,0 +1,30 @@
+import { BooleanInput } from '@angular/cdk/coercion';
+import { ChangeDetectorRef, EventEmitter } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class MdbRatingIconComponent {
+    private _cdRef;
+    set icon(value: string);
+    get icon(): string;
+    color: string;
+    set active(value: boolean);
+    get active(): boolean;
+    set after(value: string);
+    get after(): string;
+    set before(value: string);
+    get before(): string;
+    activeIcon: EventEmitter<MdbRatingIconComponent>;
+    private _active;
+    private _icon;
+    private _originalIconClass;
+    private _after;
+    private _before;
+    disabled: boolean;
+    constructor(_cdRef: ChangeDetectorRef);
+    onMouseenter(): void;
+    setActive(isActive: boolean, iconClass?: string): void;
+    setDynamicIcon(iconClass: string): void;
+    resetIcon(): void;
+    static ngAcceptInputType_active: BooleanInput;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MdbRatingIconComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<MdbRatingIconComponent, "mdb-rating-icon", never, { "icon": "icon"; "color": "color"; "active": "active"; "after": "after"; "before": "before"; }, { "activeIcon": "activeIcon"; }, never, never>;
+}

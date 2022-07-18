@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/select",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-select.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-select.mjs",
+  "esm2020": "../esm2020/select/mdb-angular-ui-kit-select.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-select.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-select.mjs",
+  "typings": "mdb-angular-ui-kit-select.d.ts",
+  "sideEffects": false
+}

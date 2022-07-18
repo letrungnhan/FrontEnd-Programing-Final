@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/notification",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-notification.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-notification.mjs",
+  "esm2020": "../esm2020/notification/mdb-angular-ui-kit-notification.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-notification.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-notification.mjs",
+  "typings": "mdb-angular-ui-kit-notification.d.ts",
+  "sideEffects": false
+}

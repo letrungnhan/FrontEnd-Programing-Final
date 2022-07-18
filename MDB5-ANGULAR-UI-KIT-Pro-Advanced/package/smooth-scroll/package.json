@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/smooth-scroll",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-smooth-scroll.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-smooth-scroll.mjs",
+  "esm2020": "../esm2020/smooth-scroll/mdb-angular-ui-kit-smooth-scroll.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-smooth-scroll.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-smooth-scroll.mjs",
+  "typings": "mdb-angular-ui-kit-smooth-scroll.d.ts",
+  "sideEffects": false
+}

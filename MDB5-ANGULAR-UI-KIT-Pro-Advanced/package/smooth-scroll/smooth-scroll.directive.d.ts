@@ -1,0 +1,30 @@
+import { EventEmitter } from '@angular/core';
+import { MdbSmoothScrollEasing } from './easing-functions';
+import * as i0 from "@angular/core";
+export declare class MdbSmoothScrollDirective {
+    private _document;
+    container: HTMLElement;
+    duration: number;
+    easing: MdbSmoothScrollEasing;
+    href: string;
+    target: string;
+    offset: number;
+    scrollStart: EventEmitter<void>;
+    scrollEnd: EventEmitter<void>;
+    scrollCancel: EventEmitter<void>;
+    onClick(event: MouseEvent): void;
+    private _isCanceled;
+    constructor(_document: any);
+    private _scroll;
+    private _scrollOnNextTick;
+    private _getContainer;
+    private _getTarget;
+    private _getDistance;
+    private _getDistanceForWindow;
+    private _getElementTopOffset;
+    private _getDistanceForContainer;
+    private _isInViewport;
+    cancelScroll(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MdbSmoothScrollDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<MdbSmoothScrollDirective, "[mdbSmoothScroll]", never, { "container": "container"; "duration": "duration"; "easing": "easing"; "href": "href"; "target": "target"; "offset": "offset"; }, { "scrollStart": "scrollStart"; "scrollEnd": "scrollEnd"; "scrollCancel": "scrollCancel"; }, never>;
+}

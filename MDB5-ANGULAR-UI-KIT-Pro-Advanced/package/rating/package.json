@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/rating",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-rating.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-rating.mjs",
+  "esm2020": "../esm2020/rating/mdb-angular-ui-kit-rating.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-rating.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-rating.mjs",
+  "typings": "mdb-angular-ui-kit-rating.d.ts",
+  "sideEffects": false
+}

@@ -1,0 +1,30 @@
+import { ElementRef, EventEmitter, NgZone, OnDestroy, OnInit } from '@angular/core';
+import * as i0 from "@angular/core";
+export declare class MdbScrollbarDirective implements OnInit, OnDestroy {
+    private _elementRef;
+    private _ngZone;
+    private platformId;
+    config: any;
+    scrollY: EventEmitter<any>;
+    scrollX: EventEmitter<any>;
+    scrollUp: EventEmitter<any>;
+    scrollDown: EventEmitter<any>;
+    scrollLeft: EventEmitter<any>;
+    scrollRight: EventEmitter<any>;
+    yReachEnd: EventEmitter<any>;
+    yReachStart: EventEmitter<any>;
+    xReachEnd: EventEmitter<any>;
+    xReachStart: EventEmitter<any>;
+    constructor(_elementRef: ElementRef, _ngZone: NgZone, platformId: Object);
+    private readonly _destroy;
+    private _scrollbar;
+    private _events;
+    private _defaultConfig;
+    ngOnInit(): void;
+    ngOnDestroy(): void;
+    private _initScrollbar;
+    private _bindEvents;
+    private _destroyScrollbar;
+    static ɵfac: i0.ɵɵFactoryDeclaration<MdbScrollbarDirective, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<MdbScrollbarDirective, "[mdbScrollbar]", ["mdbScrollbar"], { "config": "config"; }, { "scrollY": "scrollY"; "scrollX": "scrollX"; "scrollUp": "scrollUp"; "scrollDown": "scrollDown"; "scrollLeft": "scrollLeft"; "scrollRight": "scrollRight"; "yReachEnd": "yReachEnd"; "yReachStart": "yReachStart"; "xReachEnd": "xReachEnd"; "xReachStart": "xReachStart"; }, never>;
+}

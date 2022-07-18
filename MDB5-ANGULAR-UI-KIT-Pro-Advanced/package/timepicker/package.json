@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/timepicker",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-timepicker.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-timepicker.mjs",
+  "esm2020": "../esm2020/timepicker/mdb-angular-ui-kit-timepicker.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-timepicker.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-timepicker.mjs",
+  "typings": "mdb-angular-ui-kit-timepicker.d.ts",
+  "sideEffects": false
+}

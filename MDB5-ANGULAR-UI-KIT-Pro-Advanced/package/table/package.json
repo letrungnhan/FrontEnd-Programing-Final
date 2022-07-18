@@ -1,0 +1,11 @@
+{
+  "name": "mdb-angular-ui-kit/table",
+  "private": true,
+  "module": "../fesm2015/mdb-angular-ui-kit-table.mjs",
+  "es2020": "../fesm2020/mdb-angular-ui-kit-table.mjs",
+  "esm2020": "../esm2020/table/mdb-angular-ui-kit-table.mjs",
+  "fesm2020": "../fesm2020/mdb-angular-ui-kit-table.mjs",
+  "fesm2015": "../fesm2015/mdb-angular-ui-kit-table.mjs",
+  "typings": "mdb-angular-ui-kit-table.d.ts",
+  "sideEffects": false
+}
