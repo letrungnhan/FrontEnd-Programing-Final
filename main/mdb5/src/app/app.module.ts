@@ -47,9 +47,11 @@ import { MdbMentionModule } from 'mdb-angular-mention';
 import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
 import { MdbOnboardingModule } from 'mdb-angular-onboarding';
+import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent, AboutComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
