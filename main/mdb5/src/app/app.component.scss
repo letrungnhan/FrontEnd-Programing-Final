@@ -1,0 +1,12 @@
+.draggable {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.draggable-dragging {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.21) !important;
+}
