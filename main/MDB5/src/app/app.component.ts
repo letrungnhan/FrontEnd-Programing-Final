@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mdb5-angular-ui-kit-pro-advanced';
+  title = 'Source Code Website E-Com';
 }
