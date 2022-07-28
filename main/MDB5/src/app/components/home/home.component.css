@@ -1,0 +1,57 @@
+.home img {
+  width: 100%;
+  height: 600px;
+  object-position: center;
+  object-fit: cover;
+}
+
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+.home-content h1 {
+  color: #ffffff;
+  font-size: 50px;
+}
+.home-content a {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .home img {
+    height: 700px;
+  }
+
+  .home-content h1 {
+    font-size: 60px;
+  }
+}
+.languages_section {
+  text-align: center;
+  padding-top: 3rem;
+}
+.languages_section picture source img {
+  object-fit: contain;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  opacity: 1;
+  vertical-align: middle;
+}
+
+.container-fluid p {
+  margin-bottom: 1rem;
+}
+
+.common-padding {
+  padding-right: 3% !important;
+  padding-left: 3% !important;
+}
+
+.latest-code-para {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=home.component.css.map */
