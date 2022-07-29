@@ -55,11 +55,12 @@ import {AppRoutingModule} from "./app-routing.module";
 import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, HomeComponent, ProductComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
