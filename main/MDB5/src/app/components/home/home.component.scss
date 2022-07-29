@@ -47,6 +47,10 @@
 .languages_section {
   text-align: center;
   padding-top: 3rem;
+  background-color: #c2daec;
+  p{
+    font-weight: 700;
+  }
 
   picture {
     source {
@@ -65,6 +69,7 @@
 .container-fluid {
   p {
     margin-bottom: 1rem;
+
   }
 }
 
@@ -123,7 +128,7 @@
 }
 
 .featuredItems_section {
-  background-color: #9aa6ab;
+  background-color: #c2daec;
   min-height: 80vh;
 
   .app_load {
