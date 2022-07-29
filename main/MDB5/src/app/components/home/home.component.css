@@ -1,21 +1,21 @@
-.home img {
+.banner img {
   width: 100%;
   height: 600px;
   object-position: center;
   object-fit: cover;
 }
 
-.home-content {
+.banner-content {
   position: absolute;
   top: 50%;
   left: 40%;
   transform: translate(-50%, -50%);
 }
-.home-content h1 {
+.banner-content h1 {
   color: #ffffff;
   font-size: 50px;
 }
-.home-content a {
+.banner-content a {
   margin-top: 10px;
 }
 
@@ -51,7 +51,62 @@
 
 .latest-code-para {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  letter-spacing: 2px;
+}
+
+.navbar-scroll .navbar-brand,
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars {
+  color: #817d71;
+}
+
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .nav-link,
+.navbar-scrolled .fa-bars {
+  color: #817d71;
+}
+
+.navbar-scrolled {
+  background-color: #fff;
+}
+
+.btn-primary {
+  background-color: #818963;
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #7c8958;
+  color: #fff;
+}
+
+.video-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+.featuredItems_section {
+  background-color: #9aa6ab;
+  min-height: 80vh;
+}
+.featuredItems_section .app_load {
+  color: #000;
+  font-weight: 900;
+}
+.featuredItems_section .app_load a {
+  color: #000;
 }
 
 /*# sourceMappingURL=home.component.css.map */
