@@ -1,45 +1,122 @@
-
-
-<div style="height: 500px">
+<div style="height: 58px">
 </div>
-<!--<div style="margin: 0 auto">-->
-  <div class="login-box">
-  <h2>Login with</h2>
-   <div class="login-social">
-      <a href="https://www.facebook.com/lltnhan" class="fbItem" >
-        <i class="fab fa-facebook"></i>
-      </a>
-      <a href="https://www.facebook.com/lltnhan" class="gitItem" >
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.facebook.com/lltnhan" class="ggItem" >
-        <i class="fab fa-google"></i>
-      </a>
-   </div>
-    <hr  width="30%" size="3px" align="center" />
+<main class="mb-6 ">
+  <div class="container">
+    <!-- Section: Login form -->
+    <section class="section">
+      <div class="row d-flex justify-content-center ">
+        <div class="col-xl-5 col-md-8 mt">
+          <div class="card rounded-5">
+            <div class="card-body p-4">
+              <!-- Pills content -->
+              <div class="tab-content">
+                <div>
+                  <form>
+                    <div class="text-center mt mb-2">
+                      <p>Login with:</p>
+                      <button
+                        type="button"
+                        class="btn btn-link btn-lg btn-floating"
+                        data-ripple-color="primary"
 
+                      >
+                        <a href="https://www.facebook.com/lltnhan">
+                        <i class="fab fa-facebook-f"></i>
+                        </a>
+                      </button>
 
+                      <button
+                        type="button"
+                        class="btn btn-link btn-lg btn-floating"
+                        data-ripple-color="primary"
+                      >
+                        <i class="fab fa-google"></i>
+                      </button>
 
-  <form>
-    <div class="user-box">
-      <input type="text" name="" required="">
+                      <button
+                        type="button"
+                        class="btn btn-link btn-lg btn-floating"
+                        data-ripple-color="primary"
+                      >
+                        <i class="fab fa-twitter"></i>
+                      </button>
 
-      <label>Username</label>
-      <div class="icons">
-        <span> <i class="fas fa-envelope"></i></span>
+                      <button
+                        type="button"
+                        class="btn btn-link btn-lg btn-floating"
+                        data-ripple-color="primary"
+                      >
+                        <i class="fab fa-github"></i>
+                      </button>
+                    </div>
+
+                    <p class="text-center mb-4">or:</p>
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <div class="row my-3">
+                        <mdb-form-control class="col-md-12">
+                          <input mdbInput type="password" class="form-control form-control-lg" name="email" id="login-email">
+                          <label mdbLabel for="login-email" class="form-label">Email or Username</label>
+                        </mdb-form-control>
+                      </div>
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-4">
+                      <div class="row my-3">
+                        <mdb-form-control class="col-md-12">
+                          <input mdbInput type="password" class="form-control form-control-lg" name="email" id="login-password">
+                          <label mdbLabel for="login-password" class="form-label">Password</label>
+                        </mdb-form-control>
+                      </div>
+                    </div>
+
+                    <!-- 2 column grid layout -->
+                    <div class="row mb-4">
+                      <div class="col-md-6 d-flex justify-content-center">
+                        <!-- Checkbox -->
+                        <div class="form-check mb-3 mb-md-0">
+                          <input
+                            class="form-check-input mt-2"
+                            type="checkbox"
+                            value=""
+                            id="loginCheck"
+                            checked
+                          />
+                          <label class="form-check-label mt-1" for="loginCheck">
+                            Remember me
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 d-flex justify-content-center">
+                        <!-- Simple link -->
+                        <a href="#!">Forgot password?</a>
+                      </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button
+                      type="submit"
+                      class="btn btn-primary btn-rounded w-100 mb-4"
+                    >
+                      Sign in
+                    </button>
+
+                    <!--Register buttons-->
+                    <div class="text-center">
+                      <p>Not a member? <a href="http://localhost:4200/register">Register</a></p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <!-- Pills content -->
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="user-box">
-      <input type="password" name="" required="">
-      <label>Password</label>
-    </div>
-    <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Submit
-    </a>
-  </form>
-</div>
-
+    </section>
+    <!-- Section: Login form -->
+  </div>
+</main>
