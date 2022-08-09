@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-product',
@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
+  title: string = "Rating Star";
+  const = ["fas fa-star blue-text"];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

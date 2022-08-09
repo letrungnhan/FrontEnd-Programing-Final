@@ -1,0 +1,33 @@
+.product-banner {
+  position: relative;
+  background: url(../../../assets/images/product/product-banner.png) center center no-repeat;
+  background-size: cover;
+  padding: 100px 0px;
+  z-index: 0;
+}
+
+.product-banner:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: RGBA(40, 40, 40, 0.88);
+  z-index: -1;
+}
+
+.product-banner h1 {
+  color: #FFFFFF;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0px;
+  padding: 0px;
+}
+@media (min-width: 1400px) {
+  main,
+  header,
+  #main-navbar {
+    padding-left: 240px;
+  }
+}
