@@ -1,11 +1,31 @@
 <div style="height: 58px">
 </div>
-<main class="mb-6">
+<main class="mb">
   <div class="container">
     <!-- Section: Login form -->
     <section class="">
       <div class="row d-flex justify-content-center ">
-        <div class="col-xl-5 col-md-8 mt">
+        <div class="col-xl-6 ">
+          <div class="left-box">
+            <div class="text-block p-3">
+              <h1 class="mt-3 mb-5 mx-2">What can you do on here?</h1>
+              <ul>
+                <li><b>Marketplace</b> - Buy/Sell Source Code in any Programming Language</li>
+                <li><b>PieceX OSS</b> - Get/Provide Support for your Open Source Code</li>
+                <li><b>PieceX IoT</b> - List your IoT Software for an endless variety of potential hardware</li>
+                <li><b>Wallet</b> - Easier budget management with PieceX Wallet for prepaid payment</li>
+                <li><b>Request</b> - Request the source code you want from tens of thousands of users</li>
+                <li><b>Community</b> - Build connections with Buyers and potential Business Partners</li>
+                <li><b>Global network</b> - Expand your Network overseas and Increase your Standing in the Market</li>
+
+              </ul>
+              <a href="/enterprises" class="already-account">Are you a startup or company! </a>
+              <a href="/enterprises" class="greendiv">Create Enterprise Account</a>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-xl-5 col-md-8">
           <div class="card rounded-5">
             <div class="card-body p-4">
 
@@ -14,38 +34,28 @@
 
                 <div>
                   <form>
-                    <div class="text-center mt-4 mb-2">
+                    <div class="text-center mt-2 mb-1">
                       <p>Register with:</p>
                       <button
                         type="button"
-                        class="btn btn-link btn-lg btn-floating"
+                        class="btn btn-link btn-lg btn-floating mx-2"
                         data-ripple-color="primary"
+
                       >
-                        <i class="fab fa-facebook-f"></i>
+                        <a href="https://www.facebook.com/lltnhan">
+                          <a class="w-50 h-50"><img class="icons" src="assets/icons/facebook.png"></a>
+                        </a>
                       </button>
 
                       <button
                         type="button"
-                        class="btn btn-link btn-lg btn-floating"
+                        class="btn btn-link btn-lg btn-floating mx-2"
                         data-ripple-color="primary"
                       >
-                        <i class="fab fa-google"></i>
-                      </button>
+                        <a href="https://www.facebook.com/lltnhan">
+                          <a class="w-50 h-50"><img class="icons" src="assets/icons/google.png"></a>
+                        </a>
 
-                      <button
-                        type="button"
-                        class="btn btn-link btn-lg btn-floating"
-                        data-ripple-color="primary"
-                      >
-                        <i class="fab fa-twitter"></i>
-                      </button>
-
-                      <button
-                        type="button"
-                        class="btn btn-link btn-lg btn-floating"
-                        data-ripple-color="primary"
-                      >
-                        <i class="fab fa-github"></i>
                       </button>
                     </div>
 
@@ -54,27 +64,14 @@
                     <!-- Name input -->
                     <div class="row my-3">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="text" class="form-control form-control-lg" name="email" id="name">
-                        <label mdbLabel for="email" class="form-label">Name</label>
+                        <input mdbInput type="text" class="form-control form-control-lg" name="email" id="register-name" required>
+                        <label mdbLabel for="register-name" class="form-label">Name</label>
                       </mdb-form-control>
                     </div>
-<!--                    <div class="form-outline mb-4">-->
-<!--                      <mdb-form-control class="col-md-12">-->
-<!--                      <input-->
-<!--                        type="text"-->
-<!--                        id="registerName"-->
-<!--                        class="form-control"-->
-<!--                      />-->
-<!--                      <label class="form-label" for="registerName"-->
-<!--                      >Name</label-->
-<!--                      >-->
-<!--                      </mdb-form-control>-->
-<!--                    </div>-->
-
-                    <!-- Username input -->
+<!--  Username input -->
                     <div class="row my-3">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="text" class="form-control form-control-lg" name="email" id="username">
+                        <input mdbInput type="text" class="form-control form-control-lg" name="email" id="username" required>
                         <label mdbLabel for="username" class="form-label">Username</label>
                       </mdb-form-control>
                     </div>
@@ -82,7 +79,7 @@
                     <!-- Email input -->
                     <div class="row my-3">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="text" class="form-control form-control-lg" name="email" id="register-email">
+                        <input mdbInput type="text" class="form-control form-control-lg" name="email" id="register-email" required>
                         <label mdbLabel for="register-email" class="form-label">Email</label>
                       </mdb-form-control>
                     </div>
@@ -90,7 +87,7 @@
                     <!-- Password input -->
                     <div class="row my-3">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="password" class="form-control form-control-lg" name="email" id="register-password">
+                        <input mdbInput type="password" class="form-control form-control-lg" name="email" id="register-password" required>
                         <label mdbLabel for="register-password" class="form-label">Password</label>
                       </mdb-form-control>
                     </div>
@@ -98,22 +95,23 @@
                     <!-- Repeat Password input -->
                     <div class="row my-3">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="password" class="form-control form-control-lg" name="email" id="repeat-password">
+                        <input mdbInput type="password" class="form-control form-control-lg" name="email" id="repeat-password" required>
                         <label mdbLabel for="repeat-password" class="form-label">Repeat Password</label>
                       </mdb-form-control>
                     </div>
 
                     <!-- Checkbox -->
                     <div
-                      class="form-check d-flex justify-content-center mb-4"
+                      class="form-check d-flex justify-content-center align-items-center mb-4"
                     >
                       <input
                         class="form-check-input me-2"
                         type="checkbox"
                         value=""
                         id="registerCheck"
-                        checked
                         aria-describedby="registerCheckHelpText"
+                        required
+
                       />
                       <label class="form-check-label mt-1" for="registerCheck">
                         I have read and agree to the terms
@@ -140,3 +138,4 @@
   </div>
 </main>
 
+<router-outlet> </router-outlet>

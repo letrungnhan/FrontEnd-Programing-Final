@@ -1,10 +1,19 @@
 main {
   background-image: linear-gradient(120deg, #66a6ff 0%, #89f7fe 100%);
-  line-height: 1;
-  padding: 3rem 0;
+  height: 120vh;
+  padding: 1.5rem 0;
+
+  .left-box{
+    line-height: 2;
+  }
 
   .card-body {
-    box-shadow: 0 15px 30px 0 #4f4f4f;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  .icons{
+    height: 30px;
+    width: 30px;
+
   }
 
 

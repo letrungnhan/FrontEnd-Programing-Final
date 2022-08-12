@@ -1,11 +1,9 @@
-<div style="height: 58px">
-</div>
 <main class="mb-6 ">
   <div class="container">
     <!-- Section: Login form -->
     <section class="section">
       <div class="row d-flex justify-content-center ">
-        <div class="col-xl-5 col-md-8 mt">
+        <div class="col-lg-5 col-sm-8 mt">
           <div class="card rounded-5">
             <div class="card-body p-4">
               <!-- Pills content -->
@@ -16,62 +14,43 @@
                       <p>Login with:</p>
                       <button
                         type="button"
-                        class="btn btn-link btn-lg btn-floating"
+                        class="btn btn-link btn-lg btn-floating mx-2"
                         data-ripple-color="primary"
 
                       >
                         <a href="https://www.facebook.com/lltnhan">
-                        <i class="fab fa-facebook-f"></i>
+                          <a class="w-50 h-50"><img class="icons" src="assets/icons/facebook.png"></a>
                         </a>
                       </button>
 
                       <button
                         type="button"
-                        class="btn btn-link btn-lg btn-floating"
+                        class="btn btn-link btn-lg btn-floating mx-2"
                         data-ripple-color="primary"
                       >
-                        <i class="fab fa-google"></i>
-                      </button>
-
-                      <button
-                        type="button"
-                        class="btn btn-link btn-lg btn-floating"
-                        data-ripple-color="primary"
-                      >
-                        <i class="fab fa-twitter"></i>
-                      </button>
-
-                      <button
-                        type="button"
-                        class="btn btn-link btn-lg btn-floating"
-                        data-ripple-color="primary"
-                      >
-                        <i class="fab fa-github"></i>
+                        <a href="https://www.facebook.com/lltnhan">
+                          <a class="w-50 h-50"><img class="icons" src="assets/icons/google.png"></a>
+                        </a>
                       </button>
                     </div>
-
                     <p class="text-center mb-4">or:</p>
-
                     <!-- Email input -->
-                    <div class="form-outline mb-4">
-                      <div class="row my-3">
-                        <mdb-form-control class="col-md-12">
-                          <input mdbInput type="password" class="form-control form-control-lg" name="email" id="login-email">
-                          <label mdbLabel for="login-email" class="form-label">Email or Username</label>
-                        </mdb-form-control>
-                      </div>
+                    <div class="row my-3">
+                      <mdb-form-control class="col-md-12">
+                        <input mdbInput type="password" class="form-control form-control-lg" name="email"
+                               id="login-email" required>
+                        <label mdbLabel for="login-email" class="form-label">Email or Username</label>
+                      </mdb-form-control>
                     </div>
-
                     <!-- Password input -->
-                    <div class="form-outline mb-4">
-                      <div class="row my-3">
-                        <mdb-form-control class="col-md-12">
-                          <input mdbInput type="password" class="form-control form-control-lg" name="email" id="login-password">
-                          <label mdbLabel for="login-password" class="form-label">Password</label>
-                        </mdb-form-control>
-                      </div>
-                    </div>
 
+                    <div class="row my-3">
+                      <mdb-form-control class="col-md-12">
+                        <input mdbInput type="password" class="form-control form-control-lg" name="email"
+                               id="login-password" required>
+                        <label mdbLabel for="login-password" class="form-label">Password</label>
+                      </mdb-form-control>
+                    </div>
                     <!-- 2 column grid layout -->
                     <div class="row mb-4">
                       <div class="col-md-6 d-flex justify-content-center">
@@ -82,7 +61,8 @@
                             type="checkbox"
                             value=""
                             id="loginCheck"
-                            checked
+
+                            required
                           />
                           <label class="form-check-label mt-1" for="loginCheck">
                             Remember me
@@ -106,7 +86,7 @@
 
                     <!--Register buttons-->
                     <div class="text-center">
-                      <p>Not a member? <a href="http://localhost:4200/register">Register</a></p>
+                        Not a member? <a routerLink="/register">Register</a>
                     </div>
                   </form>
                 </div>
@@ -115,8 +95,40 @@
             </div>
           </div>
         </div>
+        <div class="col-lg-6 d-flex justify-content-around align-items-center ms-4 ">
+          <div class="row justify-content-between">
+            <div class="col-lg-10">
+              <div class="left-box d-flex justify-content-around flex-column">
+                <div class="row  justify-content-center align-items-center mb-7">
+                  <div class="images-box col-4">
+                    <div class="white-box d-flex justify-content-center align-items-center">
+                      <img src="/assets/icons/technology.png" class="img-fluid" alt="">
+                    </div>
+                  </div>
+                  <div class="iner col-8">
+                    <a class="affiliate_link" href=""><h2> Become Affiliate</h2></a>
+                    Earn 10% of first purchase made by your referral
+                  </div>
+                </div>
+                <div class="row  justify-content-center align-items-center">
+                  <div class="images-box col-4">
+                    <div class="white-box d-flex justify-content-center align-items-center">
+                      <img src="/assets/icons/technology.png" class="img-fluid" alt="">
+                    </div>
+                  </div>
+                  <div class="iner col-8">
+                    <a class="affiliate_link" href="/homes/affiliate_program"><h2> Become Affiliate</h2></a>
+                    Earn 10% of first purcha se made by your referral
+                  </div>
+                </div>
+                <button routerLink="/product" type="button" class="btn btn-primary btn-rounded mt-5 ">Primary</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Section: Login form -->
   </div>
 </main>
+
