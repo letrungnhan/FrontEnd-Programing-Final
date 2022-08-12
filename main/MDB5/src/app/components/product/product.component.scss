@@ -2,7 +2,7 @@
   position: relative;
   background: url(../../../assets/images/product/product-banner.png) center center no-repeat;
   background-size: cover;
-  padding: 100px 0px;
+  padding: 120px 0px;
   z-index: 0;
 }
 
@@ -24,6 +24,7 @@
   margin: 0px;
   padding: 0px;
 }
+
 @media (min-width: 1400px) {
   main,
   header,
@@ -31,3 +32,58 @@
     padding-left: 240px;
   }
 }
+
+body {
+  background-color: hsl(0, 0%, 97%);
+}
+
+.text-light {
+  color: #9FA6B2 !important;
+}
+
+@media (min-width: 1400px) {
+  main {
+    padding-left: 240px;
+  }
+  header {
+    padding-left: 240px;
+  }
+  #main-navbar {
+    padding-left: 240px;
+  }
+}
+
+@media (min-width: 1400px) {
+  main,
+  header,
+  #main-navbar {
+    padding-left: 240px;
+  }
+}
+.product-list{
+  .card-body{
+    .card-text{
+      display: -webkit-box;
+      opacity: .8;
+      font-size: 15px;
+      line-height: 1.33;
+      color: #000;
+      min-height: 26px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+    .card-title{
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      min-height: 26px;
+      overflow: hidden;
+      display: -webkit-box;
+      opacity: .8;
+      color: #1266f1;
+    }
+  }
+}
+
+
