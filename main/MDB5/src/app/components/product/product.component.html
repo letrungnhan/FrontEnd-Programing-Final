@@ -95,9 +95,9 @@
       <!-- Products Grid -->
       <section class="product-list pt-4">
         <!-- Grid row -->
-        <div class="row">
+        <div class="row" id="products">
           <!-- Grid column -->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6 mb-4" *ngFor="let product of products">
             <!-- Card -->
             <div class="card card-ecommerce">
               <!-- Card image -->
@@ -114,27 +114,27 @@
                 <!-- Category & Title -->
                 <h5 class="card-title mb-1">
                   <strong>
-                    <a class="dark-grey-text" href="">Web e-commercial Shop fdfasdfadsfasf</a>
+                    <a class="dark-grey-text" href="">{{product.title}}</a>
                   </strong>
                 </h5>
-                <span class="badge badge-info mb-2">JavaScript</span>
+                <span class="badge badge-info mb-2">{{product.category}}</span>
                 <span class="badge badge-light mb-2">HTML</span>
                 <span class="badge badge-dark mb-2">CSS</span>
-<!--                  Description-->
+                <!--                  Description-->
 
-                <p class="card-text w">Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-text">{{product.description}}</p>
                 <!-- Author -->
-              <div class="d-flex author flex-nowrap align-items-center justify-content-center">
-                <p class="col w-25">added by</p>
-                <span class="author-name col w25">
-                <a href="#">letrungnhan</a>
+                <div class="d-flex author flex-nowrap align-items-center justify-content-center">
+                  <p class="col w-25">added by</p>
+                  <span class="author-name col w25">
+                <a href="#">{{product.author}}</a>
                </span>
-              </div>
+                </div>
                 <!-- Card footer -->
                 <div class="card-footer pb-0">
                   <div class="mb-0 d-flex flex-row justify-content-between w-100 align-items-center">
                     <span class="price">
-                        <strong>10000$</strong>
+                        <strong>{{product.price}}$</strong>
                       </span>
                     <span class="buy">
                         <a class="" data-placement="top" data-toggle="tooltip" title="Add to Cart">
@@ -477,7 +477,6 @@
 
           </div>
           <!-- Grid column -->
-
         </div>
         <!-- Grid row -->
 
