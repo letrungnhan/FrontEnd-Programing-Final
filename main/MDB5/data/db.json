@@ -1,19 +1,20 @@
 {
-  "products": [
+  "Products": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "id": "1",
+      "title": "Dashboard Admin ",
+      "category": "HTML",
+      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
+      "author": "letrungnhan",
+      "price": "1000"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": "2",
+      "title": "Dashboard Admin ",
+      "category": "HTML",
+      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
+      "author": "letrungnhan",
+      "price": "1200"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
