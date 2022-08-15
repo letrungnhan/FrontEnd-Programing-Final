@@ -96,7 +96,7 @@ describe('MDB Lazy Loading', () => {
     expect(video.dataset.src).toBe(undefined);
   }));
 
-  it('should show placeholder before original images is loaded', fakeAsync(() => {
+  it('should show placeholder before original image is loaded', fakeAsync(() => {
     const img = fixture.nativeElement.querySelector('.lazy-image');
 
     expect(img.dataset.src).toBe(component.imgSrc);

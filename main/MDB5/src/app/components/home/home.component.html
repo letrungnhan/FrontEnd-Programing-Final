@@ -19,7 +19,6 @@
           <h5 class="mb-5">Source code for mobile, websites, applications, plugins, templates and more. </h5>
           <br/>
           <a class="btn btn-outline-light btn-lg" href="product" role="button">Buy now</a>
-<!--          <div class="btn-buy from-left">From Left</div>-->
         </div>
       </div>
     </div>
@@ -47,104 +46,48 @@
   </div>
 </section>
 <!--langugages section-->
-
 <!--featured-section-->
 <section class="featuredItems_section">
   <div class="container-fluid common-padding">
     <h2 class="p1">
     <span class="app_load">Featured
-    </span>Items
+    </span> <a routerLink="/product" class="link-primary">Items</a>
     </h2>
     <div class="latest-code-para">
       <p>Weekly top-performing source codes from the community.</p>
       <a href="#" class="viewprod">View Featured</a>
     </div>
-
     <main class="mb-6">
-      <div class="container">
+      <div class="container-fluid">
         <section class="mb-6">
           <div class="row gx-xl-5 justify-content-center">
-            <div class="col-lg-3 col-6 mb-4 mb-xl-0">
-              <!-- Product card -->
-              <div class="card">
-                <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-                  <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top"
-                       alt="Fissure in Sandstone"/>
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
-                  </a>
+            <ngx-slick-carousel class="carousel"
+                                #slickModal="slick-carousel"
+                                [config]="slideConfig"
+                                (init)="slickInit($event)"
+                                (breakpoint)="breakpoint($event)"
+                                (afterChange)="afterChange($event)"
+                                (beforeChange)="beforeChange($event)">
+              <div ngxSlickItem *ngFor="let slide of slides" class="slide col-lg-3  col-md-7 mx-sm-2 mx-lg-2">
+                <!-- Product card -->
+                <div class="card">
+                  <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
+                    <img src="{{slide.img}}" class="card-img-top w-100"
+                         alt="Fissure in Sandstone"/>
+                    <a routerLink="#">
+                      <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
+                    </a>
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">HR Manager Smart Business Tracker React App</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                      card's content.</p>
+                    <a routerLink="/product" class="btn btn-secondary fw-bold">Buy</a>
+                  </div>
                 </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                  <a href="#!" class="btn btn-primary">Button</a>
-                </div>
+                <!-- Product card -->
               </div>
-              <!-- Product card -->
-            </div>
-            <div class="col-lg-3 col-6 mb-4 mb-xl-0">
-              <!-- Product card -->
-              <div class="card">
-                <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-                  <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top"
-                       alt="Fissure in Sandstone"/>
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
-                  </a>
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                  <a href="#!" class="btn btn-primary">Button</a>
-                </div>
-              </div>
-              <!-- Product card -->
-            </div>
-            <div class="col-lg-3 col-6 mb-4 mb-xl-0">
-              <!-- Product card -->
-              <div class="card">
-                <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-                  <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top"
-                       alt="Fissure in Sandstone"/>
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
-                  </a>
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                  <a href="#!" class="btn btn-primary">Button</a>
-                </div>
-              </div>
-              <!-- Product card -->
-            </div>
-            <div class="col-lg-3 col-6 mb-4 mb-xl-0">
-              <!-- Product card -->
-              <div class="card">
-                <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-                  <img src="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp" class="card-img-top"
-                       alt="Fissure in Sandstone"/>
-                  <a href="#!">
-                    <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
-                  </a>
-                </div>
-
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                  <a href="#!" class="btn btn-primary">Button</a>
-                </div>
-              </div>
-              <!-- Product card -->
-            </div>
-
+            </ngx-slick-carousel>
           </div>
         </section>
         <!-- Section: Bestsellers -->
@@ -154,8 +97,6 @@
   </div>
 </section>
 <!--featured-section-->
-
-
 <!--how it work-->
 <div class="container my-5">
   <section class="how-it-work_section">
@@ -242,7 +183,6 @@
   </section>
 </div>
 <!--how it work-->
-
 <section>
   <div class="bg-image bg-fixed text-center" style="
           background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/Things/full page/img%20%287%29.jpg');
@@ -284,18 +224,19 @@
   <section class="text-center">
     <div class="flex-column ">
       <h3 class="mb-5">Our projects</h3>
-
       <p class="mb-5 mx-auto w-responsive">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum laborum animi
         doloremque nam dicta veniam dolor ea nostrum excepturi laboriosam molestiae, expedita
         odit id! Sunt quia cumque consequatur perferendis hic.
       </p>
     </div>
-
     <div class="row">
-      <div class="col-lg-3 col-md-6 mb-4">
+      <div class="col-lg-3 col-md-6 mb-4" *ngFor="let banner of banners">
         <div class="bg-image hover-overlay shadow-1-strong rounded">
-          <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZSUyMGRlc2lnbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="w-100" alt="Sample image"/>
+          <img
+            src="{{banner.src}}"
+            class="w-100 h-100"
+            alt="Sample image"/>
           <div class="mask d-flex align-items-center justify-content-center" style="
                   background: linear-gradient(
                     45deg,
@@ -306,121 +247,12 @@
             <button class="btn btn-outline-white">SEE MORE</button>
           </div>
         </div>
-        <p class="text-uppercase mt-4 mb-0">Lorem ipsum dolor sit</p>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="bg-image hover-overlay shadow-1-strong rounded">
-          <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHdlYnNpdGUlMjBkZXNpZ258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="w-100" alt="Sample image"/>
-          <div class="mask d-flex align-items-center justify-content-center" style="
-                  background: linear-gradient(
-                    45deg,
-                    rgba(29, 236, 197, 0.7),
-                    rgba(91, 14, 214, 0.7) 100%
-                  );
-                ">
-            <button class="btn btn-outline-white">SEE MORE</button>
-          </div>
-        </div>
-        <p class="text-uppercase mt-4 mb-0">Lorem ipsum dolor sit</p>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4">
-        <div class="bg-image hover-overlay shadow-1-strong rounded">
-          <img src="https://mdbootstrap.com/img/Photos/Others/img8.jpg" class="w-100" alt="Sample image"/>
-          <div class="mask d-flex align-items-center justify-content-center" style="
-                  background: linear-gradient(
-                    45deg,
-                    rgba(29, 236, 197, 0.7),
-                    rgba(91, 14, 214, 0.7) 100%
-                  );
-                ">
-            <button class="btn btn-outline-white">SEE MORE</button>
-          </div>
-        </div>
-        <p class="text-uppercase mt-4 mb-0">Lorem ipsum dolor sit</p>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-0">
-        <div class="bg-image hover-overlay shadow-1-strong rounded">
-          <img src=" https://mdbootstrap.com/img/Photos/Others/img6.jpg" class="w-100" alt="Sample image"/>
-          <div class="mask d-flex align-items-center justify-content-center" style="
-                  background: linear-gradient(
-                    45deg,
-                    rgba(29, 236, 197, 0.7),
-                    rgba(91, 14, 214, 0.7) 100%
-                  );
-                ">
-            <button class="btn btn-outline-white">SEE MORE</button>
-          </div>
-        </div>
-        <p class="text-uppercase mt-4 mb-0">Lorem ipsum dolor sit</p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-        <div class="bg-image hover-overlay shadow-1-strong rounded">
-          <img src="https://mdbootstrap.com/img/Photos/Others/img7.jpg" class="w-100" alt="Sample image"/>
-          <div class="mask d-flex align-items-center justify-content-center" style="
-                  background: linear-gradient(
-                    45deg,
-                    rgba(29, 236, 197, 0.7),
-                    rgba(91, 14, 214, 0.7) 100%
-                  );
-                ">
-            <button class="btn btn-outline-white">SEE MORE</button>
-          </div>
-        </div>
-        <p class="text-uppercase mt-4 mb-0">Lorem ipsum dolor sit</p>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-        <div class="bg-image hover-overlay shadow-1-strong rounded">
-          <img src="https://mdbootstrap.com/img/Photos/Others/img5.jpg" class="w-100" alt="Sample image"/>
-          <div class="mask d-flex align-items-center justify-content-center" style="
-                  background: linear-gradient(
-                    45deg,
-                    rgba(29, 236, 197, 0.7),
-                    rgba(91, 14, 214, 0.7) 100%
-                  );
-                ">
-            <button class="btn btn-outline-white">SEE MORE</button>
-          </div>
-        </div>
-        <p class="text-uppercase mt-4 mb-0">Lorem ipsum dolor sit</p>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-        <div class="bg-image hover-overlay shadow-1-strong rounded">
-          <img src="https://mdbootstrap.com/img/Photos/Others/img9.jpg" class="w-100" alt="Sample image"/>
-          <div class="mask d-flex align-items-center justify-content-center" style="
-                  background: linear-gradient(
-                    45deg,
-                    rgba(29, 236, 197, 0.7),
-                    rgba(91, 14, 214, 0.7) 100%
-                  );
-                ">
-            <button class="btn btn-outline-white">SEE MORE</button>
-          </div>
-        </div>
-        <p class="text-uppercase mt-4 mb-0">Lorem ipsum dolor sit</p>
-      </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="bg-image hover-overlay shadow-1-strong rounded">
-          <img src="https://mdbootstrap.com/img/Photos/Others/img10.jpg" class="w-100" alt="Sample image"/>
-          <div class="mask d-flex align-items-center justify-content-center" style="
-                  background: linear-gradient(
-                    45deg,
-                    rgba(29, 236, 197, 0.7),
-                    rgba(91, 14, 214, 0.7) 100%
-                  );
-                ">
-            <button class="btn btn-outline-white">SEE MORE</button>
-          </div>
-        </div>
-        <p class="text-uppercase mt-4 mb-0">Lorem ipsum dolor sit</p>
+        <p class="text-uppercase fw-bold  mt-4 mb-0">{{banner.label}}</p>
       </div>
     </div>
   </section>
   <!--Section: Design Block-->
 </div>
-
 <section>
   <div
     class="bg-image bg-fixed text-center"
@@ -465,8 +297,8 @@
           <h2 class="mb-0 pb-5 fw-bolder text-uppercase" style="letter-spacing: 2px;">our offer</h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-3 mb-5">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-3 mb-5 d-flex align-items-center flex-column">
           <div class="bg-image hover-zoom mb-4">
             <img src="https://propiece.s3-ap-northeast-1.amazonaws.com/product_image_thumbnail/thumbnail-3237.webp"
                  alt="Offer"
@@ -635,6 +467,4 @@
   <!--Section: Design Block-->
 
 </main>
-
-
 <router-outlet></router-outlet>

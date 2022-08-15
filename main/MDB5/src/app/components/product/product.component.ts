@@ -1,6 +1,8 @@
 import {Component, AfterViewInit, NgZone, ViewChild} from '@angular/core';
 import {MdbSidenavComponent} from 'mdb-angular-ui-kit/sidenav';
 import {fromEvent} from 'rxjs';
+import {ProductService} from "../../service/product-service/product.service";
+import {Products} from "../../service/product-service/Products";
 
 @Component({
   selector: 'app-product',
@@ -11,7 +13,7 @@ export class ProductComponent implements AfterViewInit {
   @ViewChild('sidenav', {static: true}) sidenav!: MdbSidenavComponent;
   mode = window.innerWidth >= 1400 ? 'side' : 'over';
   hidden = window.innerWidth >= 1400 ? false : true;
-  options = [
+  languages = [
     {value: '1', label: 'C#'},
     {value: '2', label: 'C++'},
     {value: '3', label: 'Java'},
@@ -20,37 +22,35 @@ export class ProductComponent implements AfterViewInit {
     {value: '6', label: 'HTML & CSS'},
 
   ];
+  category = [
+    {value: '1', label: 'Web'},
+    {value: '2', label: 'Data'},
+    {value: '3', label: 'Software Services'},
+    {value: '4', label: 'Android'},
+    {value: '5', label: 'Content'},
 
-  constructor(private ngZone: NgZone) {
+  ];
+
+
+  constructor(private productService: ProductService) {
   }
 
-  ngAfterViewInit() {
-    this.ngZone.runOutsideAngular(() => {
-      fromEvent(window, 'resize').subscribe(() => {
-        if (window.innerWidth < 1400 && this.mode !== 'over') {
-          this.ngZone.run(() => {
-            this.mode = 'over';
-            this.hideSidenav();
-          });
-        } else if (window.innerWidth >= 1400 && this.mode !== 'side') {
-          this.ngZone.run(() => {
-            this.mode = 'side';
-            this.showSidenav();
-          });
-        }
-      });
-    });
+  ngAfterViewInit(): void {
+    throw new Error('Method not implemented.');
   }
 
-  hideSidenav() {
-    setTimeout(() => {
-      this.sidenav.hide();
-    }, 0);
-  }
+  columns = ["Product ID", "title", "Category", "Description", "Author", "Price"];
+  index = ["id", "title", "category", "description", "author", "price"]
+  products: Products[] = [];
 
-  showSidenav() {
-    setTimeout(() => {
-      this.sidenav.hide();
-    });
+  ngOnInit(): void {
+    this.productService.getProducts().subscribe(
+      (response) => {
+        this.products = response;
+      },
+      (error) => {
+        console.log("Error Occured:" + error)
+      }
+    )
   }
 }
