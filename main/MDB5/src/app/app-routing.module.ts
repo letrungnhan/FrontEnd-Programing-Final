@@ -9,15 +9,18 @@ import {FooterComponent} from "./components/footer/footer.component";
 import {HeaderComponent} from "./components/header/header.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {LoginComponent} from "./components/login/login.component";
+import {ProductDetailComponent} from "./components/product-detail/product-detail.component";
+
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'product', component: ProductComponent},
-  {path:'about', component:AboutComponent},
-  {path:'contact', component:ContactComponent},
-  {path:'footer', component:FooterComponent},
-  {path: 'header', component:HeaderComponent},
-  {path: 'register', component:RegisterComponent},
-  {path: 'login', component:LoginComponent}
+  {path: 'about', component: AboutComponent},
+  {path: 'contact', component: ContactComponent},
+  {path: 'footer', component: FooterComponent},
+  {path: 'header', component: HeaderComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'product-details', component: ProductDetailComponent}
 ];
 
 @NgModule({

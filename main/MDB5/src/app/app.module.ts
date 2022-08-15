@@ -57,10 +57,11 @@ import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {HttpClientModule} from "@angular/common/http";
-
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent],
+  declarations: [AppComponent, HomeComponent, ProductComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, ProductDetailComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -107,7 +108,8 @@ import {HttpClientModule} from "@angular/common/http";
     MdbMentionModule,
     MdbOnboardingModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SlickCarouselModule
 
   ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService],
