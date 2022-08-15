@@ -180,7 +180,7 @@ describe('MDB Mention', () => {
       expect(inputEl.value).toEqual('@maximus ');
     });
 
-    it('should display images when showImg is set to true and images are provided', () => {
+    it('should display image when showImg is set to true and image are provided', () => {
       const inputEl = document.querySelector('input');
       component.testShowImg = true;
       component.testItems = [
@@ -212,7 +212,7 @@ describe('MDB Mention', () => {
       expect(thirdListElementImage).toBeFalsy();
     });
 
-    it('shouldnt display images when showImg is set to false and images are provided', () => {
+    it('shouldnt display image when showImg is set to false and image are provided', () => {
       const inputEl = document.querySelector('input');
       component.testShowImg = false;
       component.testItems = [

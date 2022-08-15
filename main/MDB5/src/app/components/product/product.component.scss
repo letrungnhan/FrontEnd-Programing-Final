@@ -1,6 +1,6 @@
 .product-banner {
   position: relative;
-  background: url(../../../assets/images/product/product-banner.png) center center no-repeat;
+  background: url(../../../assets/image/banner/product-banner.png) center center no-repeat;
   background-size: cover;
   padding: 120px 0px;
   z-index: 0;
@@ -60,9 +60,10 @@ body {
     padding-left: 240px;
   }
 }
-.product-list{
-  .card-body{
-    .card-text{
+
+.product-list {
+  .card-body {
+    .card-text {
       display: -webkit-box;
       opacity: .8;
       font-size: 15px;
@@ -74,7 +75,8 @@ body {
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
     }
-    .card-title{
+
+    .card-title {
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       min-height: 26px;
