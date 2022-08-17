@@ -1,5 +1,14 @@
 {
-
+  "Category": [
+    {
+      "id": "1",
+      "name": "Java"
+    },
+    {
+      "id": "2",
+      "name": "C#"
+    }
+  ],
   "Products": [
     {
       "id": "1",

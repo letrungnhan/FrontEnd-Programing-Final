@@ -9,10 +9,10 @@ import {Products} from "../../service/product-service/Products";
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements AfterViewInit {
+export class ProductComponent {
   @ViewChild('sidenav', {static: true}) sidenav!: MdbSidenavComponent;
   mode = window.innerWidth >= 1400 ? 'side' : 'over';
-  hidden = window.innerWidth >= 1400 ? false : true;
+  hidden = window.innerWidth >= 1400 ? false : false;
   languages = [
     {value: '1', label: 'C#'},
     {value: '2', label: 'C++'},
@@ -35,9 +35,7 @@ export class ProductComponent implements AfterViewInit {
   constructor(private productService: ProductService) {
   }
 
-  ngAfterViewInit(): void {
-    throw new Error('Method not implemented.');
-  }
+
 
   columns = ["Product ID", "title", "Category", "Description", "Author", "Price"];
   index = ["id", "title", "category", "description", "author", "price"]

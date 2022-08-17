@@ -1,13 +1,6 @@
+<body>
 <section class="product-banner">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 my-auto">
-      </div>
-    </div>
-  </div>
 </section>
-
-
 <section class="text-center text-md-start" style="  background-color: hsl(0, 0%, 97%);">
 
   <div class="container">
@@ -31,27 +24,7 @@
           </div>
           <div class="col-lg-6 text-center text-lg-end">
             <div class="row justify-content-center justify-content-lg-end">
-              <div class="col-lg-3 col-md-12 mb-3 mb-md-3 mb-sm-3">
-                <mdb-form-control>
-                  <mdb-select>
-                    <mdb-option *ngFor="let option of languages" [value]="option.value">{{
-                      option.label
-                      }}</mdb-option>
-                  </mdb-select>
-                  <label mdbLabel class="form-label">Languages</label>
-                </mdb-form-control>
-              </div>
-              <div class="col-lg-4 col-md-12 mb-3 mb-md-3 mb-sm-3">
-                <mdb-form-control>
-                  <mdb-select>
-                    <mdb-option *ngFor="let option of category" [value]="option.value">{{
-                      option.label
-                      }}</mdb-option>
-                  </mdb-select>
-                  <label mdbLabel class="form-label">Category</label>
-                </mdb-form-control>
-              </div>
-              <div class="col-lg-5 col-md-12 col-sm-12 mb-4 mb-md-0">
+              <div class="col-lg-7 col-md-12 col-sm-12 mb-4 mb-md-0">
                 <form class="d-flex input-group w-auto">
                   <input
                     type="search"
@@ -71,104 +44,178 @@
     </div>
   </div>
 </section>
-<!-- Heading -->
+<main class="row col-12">
+  <div class="sidenav-light col-3 pt-5">
+    <div class="card h-100 ">
+      <mdb-accordion [multiple]="true">
+        <mdb-accordion-item>
+          <ng-template mdbAccordionItemHeader>Industries</ng-template>
+          <ng-template mdbAccordionItemBody>
+            <div>
+              <input
+                aria-label="..."
+                class="form-check-input"
+                id="industries1"
+                mdbCheckbox
+                type="checkbox"
+                value=""
+              />
+              <label class="form-check-label text-black" for="industries1">Software Services</label>
+            </div>
+            <div>
+              <input
+                aria-label="..."
+                class="form-check-input"
+                id="industries2"
+                mdbCheckbox
+                type="checkbox"
+                value=""
+              />
+              <label class="form-check-label text-black" for="industries2">Software Services</label>
+            </div>
+          </ng-template>
+        </mdb-accordion-item>
+        <mdb-accordion-item>
+          <ng-template mdbAccordionItemHeader>Programming Language</ng-template>
+          <ng-template mdbAccordionItemBody>
+            <div>
+              <input
+                aria-label="..."
+                class="form-check-input"
+                id="checkboxLanguage1"
+                mdbCheckbox
+                type="checkbox"
+                value=""
+              />
+              <label class="form-check-label text-black" for="checkboxLanguage1">Java</label>
+            </div>
+            <div>
+              <input
+                aria-label="..."
+                class="form-check-input"
+                id="checkboxLanguage2"
+                mdbCheckbox
+                type="checkbox"
+                value=""
+              />
+              <label class="form-check-label text-black" for="checkboxLanguage2">C#</label>
+            </div>
+          </ng-template>
+        </mdb-accordion-item>
+
+      </mdb-accordion>
 
 
-<body class="category-v3 hidden-sn white-skin animated">
-<!-- Main Container -->
-<div class="container">
-  <div class="row pt-4">
-    <div class="col-lg-12">
-      <div class="row">
-        <div class="col-8 col-md-8 text-right">
-          <a class="btn blue darken-3 btn-sm">
-            <i aria-hidden="true" class="fas fa-th mr-2"></i>
-            <strong> Grid</strong>
-          </a>
-          <a class="btn blue darken-3 btn-sm">
-            <i aria-hidden="true" class="fas fa-th-list mr-2"></i>
-            <strong> List</strong>
-          </a>
-        </div>
-      </div>
-      <section class="product-list pt-4">
-        <div class="row" id="products">
-          <div class="col-lg-3 col-md-6 mb-4" *ngFor="let product of products">
-            <!-- Card -->
-            <div class="card card-ecommerce">
-              <!-- Card image -->
-              <div class="view overlay">
-                <img alt="" class="img-fluid"
-                     src="https://propiece.s3-ap-northeast-1.amazonaws.com/product_image_thumbnail/thumbnail-3382.webp">
-                <a href="/product-details">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!-- Card image -->
-              <!-- Card content -->
-              <div class="card-body">
-                <!-- Category & Title -->
-                <h5 class="card-title mb-1">
-                  <strong>
-                    <a class="dark-grey-text" href="">{{product.title}}</a>
-                  </strong>
-                </h5>
-                <span class="badge badge-info mb-2">{{product.category}}</span>
-                <span class="badge badge-light mb-2">HTML</span>
-                <span class="badge badge-dark mb-2">CSS</span>
-                <!--                  Description-->
+    </div>
+  </div>
+  <div class="main-content col-9 " mdbScrollbar style="position: relative;">
+    <section class="category-v3 hidden-sn white-skin animated">
+      <!-- Main Container -->
+      <div class="row pt-4 ">
+        <div class="col-lg-12">
+          <section class="product-list pt-4">
+            <div class="row overflow-y-scroll" id="products" style="max-height: 800px ">
+              <div *ngFor="let product of products" class="col-lg-4 col-md-6 mb-4">
+                <!-- Card -->
+                <div class="card card-ecommerce">
+                  <!-- Card image -->
+                  <div class="view overlay">
+                    <img alt="" class="img-fluid"
+                         src="https://propiece.s3-ap-northeast-1.amazonaws.com/product_image_thumbnail/thumbnail-3382.webp">
+                    <a routerLink="/product-details">
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body">
+                    <!-- Category & Title -->
+                    <h5 class="card-title mb-1">
+                      <strong>
+                        <a class="dark-grey-text" href="">{{product.title}}</a>
+                      </strong>
+                    </h5>
+                    <span class="badge badge-info mb-2">{{product.category}}</span>
+                    <span class="badge badge-light mb-2">HTML</span>
+                    <span class="badge badge-dark mb-2">CSS</span>
+                    <!--                  Description-->
 
-                <p class="card-text">{{product.description}}</p>
-                <!-- Author -->
-                <div class="author">
-                  <p>added by
-                    <span class="author-name">
+                    <p class="card-text">{{product.description}}</p>
+                    <!-- Author -->
+                    <div class="author">
+                      <p>added by
+                        <span class="author-name">
                     <a href="#">{{product.author}}</a> </span></p>
 
-                </div>
-                <!-- Card footer -->
-                <div class="card-footer pb-0">
-                  <div class="mb-0 d-flex flex-row justify-content-between w-100 align-items-center">
+                    </div>
+                    <!-- Card footer -->
+                    <div class="card-footer pb-0">
+                      <div class="mb-0 d-flex flex-row justify-content-between w-100 align-items-center">
                     <span class="price">
                         <strong>{{product.price}}$</strong>
                       </span>
-                    <span class="buy">
+                        <span class="buy">
                         <a class="" data-placement="top" data-toggle="tooltip" title="Add to Cart">
                          <button type="button" class="btn btn-primary">Buy</button>
                         </a>
                       </span>
+                      </div>
+                    </div>
                   </div>
+                  <!-- Card content -->
                 </div>
+                <!-- Card -->
               </div>
-              <!-- Card content -->
             </div>
-            <!-- Card -->
-          </div>
+            <div class="row justify-content-center mb-4">
+              <!-- Pagination -->
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a aria-disabled="true" class="page-link" href="#" tabindex="-1">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- Pagination -->
+            </div>
+          </section>
         </div>
-        <div class="row justify-content-center mb-4">
-          <!-- Pagination -->
-          <nav aria-label="Page navigation example">
-            <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
-          </nav>
-          <!-- Pagination -->
+      </div>
+      <!-- Main Container -->
+
+    </section>
+
+  </div>
+</main>
+
+<section class="product-footer">
+  <div class="row">
+    <div class="mid-div">
+      <div class="row">
+        <div class="featured-text-product">
+          <h2>Featured</h2><span>
+          Product
+          <p>adkfjhadfhadjkfhadkfhadkfhasdkfhasdkfhaksdfhjk</p>
+        </span>
         </div>
-      </section>
+        <div class="btn-img-image">
+          <a href="#">
+            <button>
+              <img src="">
+            </button>
+          </a>
+
+        </div>
+      </div>
     </div>
   </div>
-</div>
-<!-- Main Container -->
-</body>
-
+</section>
 
 <script type="text/javascript">
   /* WOW.js init */
@@ -184,3 +231,4 @@
   // SideNav Initialization
   $(".button-collapse").sideNav();
 </script>
+</body>

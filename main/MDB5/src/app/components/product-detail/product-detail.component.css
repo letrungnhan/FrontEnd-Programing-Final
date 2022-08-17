@@ -1,9 +1,32 @@
+body {
+  background-color: #ececec;
+}
+
 .product-banner {
   position: relative;
   background: url(../../../assets/image/banner/product-banner.png) center center no-repeat;
   background-size: cover;
   padding: 120px 0px;
   z-index: 0;
+}
+
+.product-price-infor {
+  padding: 20px;
+}
+
+.section_title {
+  font-size: 24px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #111111;
+  margin-bottom: 1rem;
+}
+.section_title span {
+  color: #414cd9;
 }
 
 /*# sourceMappingURL=product-detail.component.css.map */

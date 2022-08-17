@@ -1,3 +1,10 @@
+body {
+  background-color: hsl(0deg, 0%, 97%);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .product-banner {
   position: relative;
   background: url(../../../assets/image/banner/product-banner.png) center center no-repeat;
@@ -25,41 +32,10 @@
   padding: 0px;
 }
 
-@media (min-width: 1400px) {
-  main,
-header,
-#main-navbar {
-    padding-left: 240px;
-  }
-}
-body {
-  background-color: hsl(0deg, 0%, 97%);
-}
-
 .text-light {
   color: #9FA6B2 !important;
 }
 
-@media (min-width: 1400px) {
-  main {
-    padding-left: 240px;
-  }
-
-  header {
-    padding-left: 240px;
-  }
-
-  #main-navbar {
-    padding-left: 240px;
-  }
-}
-@media (min-width: 1400px) {
-  main,
-header,
-#main-navbar {
-    padding-left: 240px;
-  }
-}
 .product-list .card-body .card-text {
   display: -webkit-box;
   opacity: 0.8;

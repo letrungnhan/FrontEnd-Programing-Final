@@ -59,9 +59,10 @@ import {ContactComponent} from './components/contact/contact.component';
 import {HttpClientModule} from "@angular/common/http";
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { DetailsModalComponent } from './modal/details-modal/details-modal.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, ProductDetailComponent],
+  declarations: [AppComponent, HomeComponent, ProductComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, ProductDetailComponent, DetailsModalComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

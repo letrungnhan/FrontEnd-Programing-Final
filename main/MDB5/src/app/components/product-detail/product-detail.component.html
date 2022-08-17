@@ -1,3 +1,5 @@
+
+<body>
 <section class="product-banner">
   <div class="container">
     <div class="row">
@@ -32,7 +34,6 @@
     </div>
   </div>
 </section>
-
 <!--Main layout-->
 <main class="mt-5 mb-10 details-main">
   <div class="container-fluid">
@@ -65,19 +66,19 @@
           </div>
           <!-- Gallery -->
         </div>
-
         <div class=" col-md-6 mb-md-0">
           <!-- Details -->
           <div class="card shadow-3-strong product-price-infor mb-5">
             <div>
               <h1 class="fw-bold mb-3 mt-3 h1">Sophisticated dress</h1>
-              <hr class="my-3"/>
+              <hr class="my-3 mb-6"/>
               <div class="d-flex text-primary flex-column">
                 <ul
-                  class="rating mb-3 me-2"
+                  class="rating mb-3 me-2 "
                   data-mdb-toggle="rating"
                   data-mdb-readonly="true"
                   data-mdb-value="4"
+
                 >
                   <li>
                     <i class="fas fa-tags fw-bolder"></i>
@@ -93,7 +94,7 @@
 
                 </ul>
                 <ul
-                  class="rating mb-3 me-2"
+                  class="rating mb-4 me-2"
                   data-mdb-toggle="rating"
                   data-mdb-readonly="true"
                   data-mdb-value="4"
@@ -115,38 +116,12 @@
               <h5 class="mb-3">
                 <span class="align-middle h2 text-primary">$101</span>
               </h5>
-
               <p class="text-muted">S
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Ratione accusantium harum repellendus illo mollitia similique
                 atque vitae repudiandae animi dolor? Rem eveniet saepe
                 deserunt aliquam. Enim incidunt quas voluptatibus perferendis.
               </p>
-
-              <div class="table-responsive">
-                <table class="table table-sm table-borderless mb-0">
-                  <tbody>
-                  <tr>
-                    <th class="ps-0 w-25" scope="row">
-                      <strong>Model</strong>
-                    </th>
-                    <td>Shirt 5407X</td>
-                  </tr>
-                  <tr>
-                    <th class="ps-0 w-25" scope="row">
-                      <strong>Material</strong>
-                    </th>
-                    <td>Cotton 80%</td>
-                  </tr>
-                  <tr>
-                    <th class="ps-0 w-25" scope="row">
-                      <strong>Delivery</strong>
-                    </th>
-                    <td>USA, Europe</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
 
               <hr class="my-5"/>
               <div class="row my-5">
@@ -162,15 +137,181 @@
               <!-- Details -->
             </div>
           </div>
-          <div class="card shadow-3-strong created-by ">
+          <div class="card shadow-3-strong created-by p-4 ">
             <div class="author">
-              Created By
+              Created by&nbsp;
+              <i class="fas fa-user-circle fs-6"></i> &nbsp;
+              <span class="text-primary">letrugnnhan</span>
             </div>
+            <p>Standard support to find out what is included</p>
+            <button class="btn btn-outline-primary shadow-3-strong" (click)="openModal()">Click here</button>
           </div>
         </div>
-
       </div>
     </section>
+
   </div>
+
 </main>
 <!--Main layout-->
+
+<!--Details layout-->
+<section class="product-description-section">
+  <div class="container-fluid common-padding description-inner">
+    <div class="section_title mx-5">
+      Product <span>Details</span>
+    </div>
+    <div class="description-tab row justify-content-center">
+      <div class="col-12 mb-7" style="width: 95%">
+        <mdb-tabs [pills]="true" [justified]="true">
+          <mdb-tab title="Product details" class="fw-bold"  >
+            <div class="card details-content shadow-1-strong p-3">
+              <p>
+                Ball Bounce , Physics Ball , BrickBall
+                Balls Bounce is the TOP 1 free-to-play bouncing ball arcade game in Android market.
+                Unique mix between brick breaker and bubble shooter games, perfect time killer to spend your leisure time.
+
+                Framework : Android With Cordova
+              </p>
+              <p>
+                Ball Bounce , Physics Ball , BrickBall
+                Balls Bounce is the TOP 1 free-to-play bouncing ball arcade game in Android market.
+                Unique mix between brick breaker and bubble shooter games, perfect time killer to spend your leisure time.
+
+                Framework : Android With Cordova
+              </p>
+              <p>
+                Ball Bounce , Physics Ball , BrickBall
+                Balls Bounce is the TOP 1 free-to-play bouncing ball arcade game in Android market.
+                Unique mix between brick breaker and bubble shooter games, perfect time killer to spend your leisure time.
+
+                Framework : Android With Cordova
+              </p>
+            </div>
+
+          </mdb-tab>
+          <mdb-tab title="Price Statistics">Tab content 2</mdb-tab>
+          <mdb-tab title="Talk to Seller">Tab content 3</mdb-tab>
+        </mdb-tabs>
+
+      </div>
+
+    </div>
+  </div></section>
+<!--Details layout-->
+
+<!--Related Product-->
+<section class="product-related-section">
+  <div class="container-fluid common-padding description-inner">
+    <div class="section_title mx-5">
+      Product <span>Related</span>
+
+    </div>
+    <div class="row mx-4" id="products">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <!-- Card -->
+        <div class="card card-ecommerce">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img alt="" class="img-fluid"
+                 src="https://propiece.s3-ap-northeast-1.amazonaws.com/product_image_thumbnail/thumbnail-3382.webp">
+            <a routerLink="/product-details">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <!-- Card image -->
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Category & Title -->
+            <h5 class="card-title mb-1">
+              <strong>
+                <a class="dark-grey-text" href="">afdasdfaf</a>
+              </strong>
+            </h5>
+            <span class="badge badge-info mb-2">adfadfaf</span>
+            <span class="badge badge-light mb-2">HTML</span>
+            <span class="badge badge-dark mb-2">CSS</span>
+            <!--                  Description-->
+
+            <p class="card-text">âfasdfasdf</p>
+            <!-- Author -->
+            <div class="author">
+              <p>added by
+                <span class="author-name">
+                    <a href="#">ádfafasdf</a> </span></p>
+
+            </div>
+            <!-- Card footer -->
+            <div class="card-footer pb-0">
+              <div class="mb-0 d-flex flex-row justify-content-between w-100 align-items-center">
+                    <span class="price">
+                        <strong>545433$</strong>
+                      </span>
+                <span class="buy">
+                        <a class="" data-placement="top" data-toggle="tooltip" title="Add to Cart">
+                         <button type="button" class="btn btn-primary">Buy</button>
+                        </a>
+                      </span>
+              </div>
+            </div>
+          </div>
+          <!-- Card content -->
+        </div>
+        <!-- Card -->
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <!-- Card -->
+        <div class="card card-ecommerce">
+          <!-- Card image -->
+          <div class="view overlay">
+            <img alt="" class="img-fluid"
+                 src="https://propiece.s3-ap-northeast-1.amazonaws.com/product_image_thumbnail/thumbnail-3382.webp">
+            <a routerLink="/product-details">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <!-- Card image -->
+          <!-- Card content -->
+          <div class="card-body">
+            <!-- Category & Title -->
+            <h5 class="card-title mb-1">
+              <strong>
+                <a class="dark-grey-text" href="">afdasdfaf</a>
+              </strong>
+            </h5>
+            <span class="badge badge-info mb-2">adfadfaf</span>
+            <span class="badge badge-light mb-2">HTML</span>
+            <span class="badge badge-dark mb-2">CSS</span>
+            <!--                  Description-->
+
+            <p class="card-text">âfasdfasdf</p>
+            <!-- Author -->
+            <div class="author">
+              <p>added by
+                <span class="author-name">
+                    <a href="#">ádfafasdf</a> </span></p>
+
+            </div>
+            <!-- Card footer -->
+            <div class="card-footer pb-0">
+              <div class="mb-0 d-flex flex-row justify-content-between w-100 align-items-center">
+                    <span class="price">
+                        <strong>545433$</strong>
+                      </span>
+                <span class="buy">
+                        <a class="" data-placement="top" data-toggle="tooltip" title="Add to Cart">
+                         <button type="button" class="btn btn-primary">Buy</button>
+                        </a>
+                      </span>
+              </div>
+            </div>
+          </div>
+          <!-- Card content -->
+        </div>
+        <!-- Card -->
+      </div>
+    </div>
+  </div>
+</section>
+<!--Related Product-->
+</body>
