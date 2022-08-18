@@ -6,12 +6,9 @@ import {Products} from "./Products";
   providedIn: 'root'
 })
 export class ProductService {
-
   constructor(private http: HttpClient) {
   }
-
   url: string = "http://localhost:3000/Products";
-
   getProducts() {
     return this.http.get<Products[]>(this.url);
 
