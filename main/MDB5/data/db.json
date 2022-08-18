@@ -1,94 +1,56 @@
 {
-  "Category": [
-    {
-      "id": "1",
-      "name": "Java"
-    },
-    {
-      "id": "2",
-      "name": "C#"
-    }
-  ],
   "Products": [
     {
-      "id": "1",
-      "title": "Dashboard Admin ",
-      "category": "HTML",
-      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
+      "id": 1,
+      "title": "Dashboard Admin",
+      "description": "Some quick example text  build on the card title and make up the bulk of the card's content.",
+      "img": "./assets/image/product/supper-cleaner-2020.png",
+      "price": "1000",
       "author": "letrungnhan",
-      "price": "1000"
+      "rating": 4,
+      "categoryID": "JAVA"
     },
     {
-      "id": "2",
-      "title": "Clinic Management Software",
-      "category": "HTML",
-      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
-      "author": "letrungnhan",
-      "price": "1200"
-    },
-    {
-      "id": "3",
-      "title": "Clinic Management Software",
-      "category": "HTML",
-      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
-      "author": "letrungnhan",
-      "price": "1200"
-    },
-    {
-      "id": "4",
-      "title": "Clinic Management Software",
-      "category": "HTML",
-      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
-      "author": "letrungnhan",
-      "price": "1200"
-    },
-    {
-      "id": "5",
-      "title": "Clinic Management Software",
-      "category": "HTML",
-      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
-      "author": "letrungnhan",
-      "price": "1200"
-    },
-    {
-      "id": "6",
-      "title": "Clinic Management Software",
-      "category": "HTML",
-      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
-      "author": "letrungnhan",
-      "price": "1200"
-    },
-    {
-      "id": "7",
-      "title": "Clinic Management Software",
-      "category": "HTML",
-      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
-      "author": "letrungnhan",
-      "price": "1200"
-    },
-    {
-      "id": "8",
-      "title": "Clinic Management Software",
-      "category": "HTML",
-      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
-      "author": "letrungnhan",
-      "price": "1200"
-    },
-    {
-      "id": "9",
-      "title": "Clinic Management Software",
-      "category": "HTML",
-      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
-      "author": "letrungnhan",
-      "price": "1200"
-    },
-    {
-      "id": "10",
-      "title": "Clinic Management Software",
-      "category": "HTML",
-      "description": "Some quick example text tdfasfasdfasdfo build on the card title and make up the bulk of the card's content.",
-      "author": "letrungnhan",
-      "price": "1200"
+      "id": 2,
+      "title": "Money Management Android App",
+      "description": "With this finance app, accounting and tracking your financial data efficiently is now made easy. Clearly arranged monthly tables enable transactions to be entered very quickly.",
+      "img": "./assets/image/product/Money-Management-Android-App.png",
+      "price": "4223.5",
+      "author": "hoxuanthinh",
+      "rating": 3,
+      "categoryID": "CSHARP"
     }
+  ],
+  "Categories": [
+    {
+      "categoryName": "JAVA",
+      "categoryID": 1
+    },
+    {
+      "categoryName": "CSHARP",
+      "categoryID": 2
+    },
+    {
+      "categoryName": "HTMLvCSS",
+      "categoryID": 3
+    },
+    {
+      "categoryName": "PYTHON",
+      "categoryID": 4
+    },
+    {
+      "categoryName": "PHP",
+      "categoryID": 5
+    },
+    {
+      "categoryName": "JAVASCRIPT",
+      "categoryID": 6
+    },
+    {
+      "categoryName": "NET",
+      "categoryID": 7
+    }
+
   ]
+
 }

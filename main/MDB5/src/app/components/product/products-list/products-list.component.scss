@@ -1,12 +1,12 @@
 body {
-  background-color: hsl(0, 0%, 97%);
+  background-color: hsl(0, 0%, 80%);
   margin: 0; padding: 0;
   box-sizing: border-box;
 }
 
 .product-banner {
   position: relative;
-  background: url(../../../assets/image/banner/product-banner.png) center center no-repeat;
+  background: url(../../../../assets/image/banner/product-banner.png) center center no-repeat;
   background-size: cover;
   padding: 120px 0px;
   z-index: 0;
@@ -58,5 +58,11 @@ body {
     }
   }
 }
-
+.featured-text-product{}
+.mid-div{
+  background-image: url('../../../../assets/image/banner/mid_div.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 2.5rem;
+}
 

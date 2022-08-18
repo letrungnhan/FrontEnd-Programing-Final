@@ -48,7 +48,7 @@ import {MdbCookiesManagementService} from 'mdb-angular-cookies-management';
 import {MdbStorageManagementService} from 'mdb-angular-storage-management';
 import {MdbOnboardingModule} from 'mdb-angular-onboarding';
 import {HomeComponent} from './components/home/home.component';
-import {ProductComponent} from './components/product/product.component';
+
 import {LoginComponent} from './components/login/login.component';
 import {RegisterComponent} from './components/register/register.component';
 import {AppRoutingModule} from "./app-routing.module";
@@ -57,12 +57,18 @@ import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {HttpClientModule} from "@angular/common/http";
-import { SlickCarouselModule } from 'ngx-slick-carousel';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { DetailsModalComponent } from './modal/details-modal/details-modal.component';
+import {SlickCarouselModule} from 'ngx-slick-carousel';
+import {DetailsModalComponent} from './modal/details-modal/details-modal.component';
+import {CartComponent} from './components/cart/cart.component';
+import {ProductSingleComponent} from './components/product/product-single/product-single.component';
+import {ProductDetailComponent} from "./components/product/product-details/product-details.component";
+import {ProductsListComponent} from "./components/product/products-list/products-list.component";
+import {ReactiveFormsModule} from "@angular/forms";
+
+
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, ProductDetailComponent, DetailsModalComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductSingleComponent, ProductsListComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -110,7 +116,8 @@ import { DetailsModalComponent } from './modal/details-modal/details-modal.compo
     MdbOnboardingModule,
     AppRoutingModule,
     HttpClientModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    ReactiveFormsModule
 
   ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService],

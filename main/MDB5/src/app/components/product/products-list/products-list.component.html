@@ -1,7 +1,7 @@
 <body>
 <section class="product-banner">
 </section>
-<section class="text-center text-md-start" style="  background-color: hsl(0, 0%, 97%);">
+<section class="text-center text-md-start" style="  background-color: hsl(0, 0%, 80%);">
 
   <div class="container">
     <div class="card shadow-3-strong" style="
@@ -48,61 +48,28 @@
   <div class="sidenav-light col-3 pt-5">
     <div class="card h-100 ">
       <mdb-accordion [multiple]="true">
-        <mdb-accordion-item>
-          <ng-template mdbAccordionItemHeader>Industries</ng-template>
-          <ng-template mdbAccordionItemBody>
-            <div>
-              <input
-                aria-label="..."
-                class="form-check-input"
-                id="industries1"
-                mdbCheckbox
-                type="checkbox"
-                value=""
-              />
-              <label class="form-check-label text-black" for="industries1">Software Services</label>
-            </div>
-            <div>
-              <input
-                aria-label="..."
-                class="form-check-input"
-                id="industries2"
-                mdbCheckbox
-                type="checkbox"
-                value=""
-              />
-              <label class="form-check-label text-black" for="industries2">Software Services</label>
-            </div>
-          </ng-template>
-        </mdb-accordion-item>
-        <mdb-accordion-item>
-          <ng-template mdbAccordionItemHeader>Programming Language</ng-template>
-          <ng-template mdbAccordionItemBody>
-            <div>
-              <input
-                aria-label="..."
-                class="form-check-input"
-                id="checkboxLanguage1"
-                mdbCheckbox
-                type="checkbox"
-                value=""
-              />
-              <label class="form-check-label text-black" for="checkboxLanguage1">Java</label>
-            </div>
-            <div>
-              <input
-                aria-label="..."
-                class="form-check-input"
-                id="checkboxLanguage2"
-                mdbCheckbox
-                type="checkbox"
-                value=""
-              />
-              <label class="form-check-label text-black" for="checkboxLanguage2">C#</label>
-            </div>
-          </ng-template>
-        </mdb-accordion-item>
-
+        <div class="container mt-3">
+          <form [formGroup]="filtersGroup">
+            <mdb-accordion-item>
+              <ng-template mdbAccordionItemHeader>Programming Language</ng-template>
+              <ng-template mdbAccordionItemBody>
+                <div *ngFor="let category of dataCategory ">
+                  <input
+                    aria-label="..."
+                    class="form-check-input"
+                    id="checkboxLanguage"
+                    name="language"
+                    mdbInput
+                    type="checkbox"
+                    formControlName="{{category.categoryName}}"
+                    value="{{category.categoryID}}"
+                  />
+                  <label class="form-check-label text-black" for="checkboxLanguage">{{category.categoryName}}</label>
+                </div>
+              </ng-template>
+            </mdb-accordion-item>
+          </form>
+        </div>
       </mdb-accordion>
 
 
@@ -115,15 +82,20 @@
         <div class="col-lg-12">
           <section class="product-list pt-4">
             <div class="row overflow-y-scroll" id="products" style="max-height: 800px ">
-              <div *ngFor="let product of products" class="col-lg-4 col-md-6 mb-4">
+              <div *ngFor="let item of  filteredItems$   | async "
+                   class="col-lg-4 col-md-6 mb-4">
                 <!-- Card -->
                 <div class="card card-ecommerce">
                   <!-- Card image -->
-                  <div class="view overlay">
-                    <img alt="" class="img-fluid"
-                         src="https://propiece.s3-ap-northeast-1.amazonaws.com/product_image_thumbnail/thumbnail-3382.webp">
+                  <div
+                    class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img alt="" class="w-100"
+                         src="{{item.img}}"/>
+
                     <a routerLink="/product-details">
-                      <div class="mask rgba-white-slight"></div>
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
                   </div>
                   <!-- Card image -->
@@ -132,27 +104,24 @@
                     <!-- Category & Title -->
                     <h5 class="card-title mb-1">
                       <strong>
-                        <a class="dark-grey-text" href="">{{product.title}}</a>
+                        <a class="dark-grey-text" href="">{{item.title}}</a>
                       </strong>
                     </h5>
-                    <span class="badge badge-info mb-2">{{product.category}}</span>
-                    <span class="badge badge-light mb-2">HTML</span>
-                    <span class="badge badge-dark mb-2">CSS</span>
+                    <span class="badge badge-info mb-2">{{item.categoryID}}</span>
                     <!--                  Description-->
-
-                    <p class="card-text">{{product.description}}</p>
+                    <p class="card-text">{{item.description}}</p>
                     <!-- Author -->
                     <div class="author">
                       <p>added by
                         <span class="author-name">
-                    <a href="#">{{product.author}}</a> </span></p>
+                    <a href="#">{{item.author}}</a> </span></p>
 
                     </div>
                     <!-- Card footer -->
                     <div class="card-footer pb-0">
                       <div class="mb-0 d-flex flex-row justify-content-between w-100 align-items-center">
                     <span class="price">
-                        <strong>{{product.price}}$</strong>
+                        <strong>{{item.price}}$</strong>
                       </span>
                         <span class="buy">
                         <a class="" data-placement="top" data-toggle="tooltip" title="Add to Cart">
@@ -184,6 +153,27 @@
               </nav>
               <!-- Pagination -->
             </div>
+            <section class="product-footer shadow-5-strong">
+
+              <div class="mid-div mb-6">
+                <div class="d-flex justify-content-around align-items-center">
+                  <div class="featured-text-product">
+                    <h2 class="text-light">Featured<span class="text-danger"> Product</span></h2>
+                    <p class="text-light">adkfjhadfhadjkfhadkfhadkfhas
+                      gfsdgsdfgsdfgsdfgsdfgdkfhasdkfhaksdfhjk</p>
+
+                  </div>
+                  <div class="btn-img-image">
+                    <a href="#">
+                      <button class="btn btn-outline-primary hover-overlay"> BUY CODE NOW
+                      </button>
+                    </a>
+
+                  </div>
+                </div>
+
+              </div>
+            </section>
           </section>
         </div>
       </div>
@@ -194,28 +184,6 @@
   </div>
 </main>
 
-<section class="product-footer">
-  <div class="row">
-    <div class="mid-div">
-      <div class="row">
-        <div class="featured-text-product">
-          <h2>Featured</h2><span>
-          Product
-          <p>adkfjhadfhadjkfhadkfhadkfhasdkfhasdkfhaksdfhjk</p>
-        </span>
-        </div>
-        <div class="btn-img-image">
-          <a href="#">
-            <button>
-              <img src="">
-            </button>
-          </a>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <script type="text/javascript">
   /* WOW.js init */
@@ -232,3 +200,4 @@
   $(".button-collapse").sideNav();
 </script>
 </body>
+
