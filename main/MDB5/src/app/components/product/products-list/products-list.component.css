@@ -57,6 +57,13 @@ body {
   opacity: 0.8;
   color: #1266f1;
 }
+.product-list .card-body .card-group {
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  min-height: 26px;
+  overflow: hidden;
+  display: -webkit-box;
+}
 
 .mid-div {
   background-image: url("../../../../assets/image/banner/mid_div.png");

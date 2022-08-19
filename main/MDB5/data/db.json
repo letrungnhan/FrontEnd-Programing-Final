@@ -8,7 +8,13 @@
       "price": "1000",
       "author": "letrungnhan",
       "rating": 4,
-      "categoryID": "JAVA"
+      "languageName": [
+        "HTML",
+        "CSS",
+        "JAVASCRIPT"
+      ],
+      "industryName": "WEB",
+      "tagName": "WEB SYSTEMS"
     },
     {
       "id": 2,
@@ -18,39 +24,119 @@
       "price": "4223.5",
       "author": "hoxuanthinh",
       "rating": 3,
-      "categoryID": "CSHARP"
+      "languageName": "CSHARP",
+      "industryName": "DATA",
+      "tagName": "ANDROID"
+    },
+    {
+      "id": 3,
+      "title": "ECOM Ecommerce web platform",
+      "description": "This is a web template for a fully functioning Ecommerce platform, where products can be shown, browsed, wishlisted, put in cart, bought, added reviews, user created, etc.The server is realized via PHP and MySQL database. The frontend is JavaScript, HTML and CSS.",
+      "img": "./assets/image/product/ECOM Ecommerce web platform1.png",
+      "price": "310.09",
+      "author": "letrungnhan",
+      "rating": 3,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": "ECOMMERCE",
+      "tagName": "WEB SYSTEM"
     }
   ],
-  "Categories": [
+  "Languages": [
     {
-      "categoryName": "JAVA",
-      "categoryID": 1
+      "languageName": "JAVA",
+      "languageID": 1
     },
     {
-      "categoryName": "CSHARP",
-      "categoryID": 2
+      "languageName": "CSHARP",
+      "languageID": 2
     },
     {
-      "categoryName": "HTMLvCSS",
-      "categoryID": 3
+      "languageName": "HTML",
+      "languageID": 3
     },
     {
-      "categoryName": "PYTHON",
-      "categoryID": 4
+      "languageName": "PYTHON",
+      "languageID": 4
     },
     {
-      "categoryName": "PHP",
-      "categoryID": 5
+      "languageName": "PHP",
+      "languageID": 5
     },
     {
-      "categoryName": "JAVASCRIPT",
-      "categoryID": 6
+      "languageName": "JAVASCRIPT",
+      "languageID": 6
     },
     {
-      "categoryName": "NET",
-      "categoryID": 7
+      "languageName": "NET",
+      "languageID": 7
+    },
+    {
+      "languageName": "CSS",
+      "languageID": 8
     }
-
+  ],
+  "Industries": [
+    {
+      "industryName": "WEB",
+      "industryID": 1
+    },
+    {
+      "industryName": "DATA",
+      "industryID": 2
+    },
+    {
+      "industryName": "TECHNOLOGY",
+      "industryID": 3
+    },
+    {
+      "industryName": "MOBILE",
+      "industryID": 4
+    },
+    {
+      "industryName": "ECOMMERCE",
+      "industryID": 5
+    },
+    {
+      "industryName": "MEDIA",
+      "industryID": 6
+    },
+    {
+      "industryName": "ENGINEERING",
+      "industryID": 7
+    }
+  ],
+  "Tags": [
+    {
+      "tagName": "SOFTWARE SERVICE",
+      "tagID": 1
+    },
+    {
+      "tagName": "WEB SYSTEM",
+      "tagID": 2
+    },
+    {
+      "tagName": "FRONTEND",
+      "tagID": 3
+    },
+    {
+      "tagName": "PYTHON",
+      "tagID": 4
+    },
+    {
+      "tagName": "PHP",
+      "tagID": 5
+    },
+    {
+      "tagName": "CHAT",
+      "tagID": 6
+    },
+    {
+      "tagName": "CRYPTO",
+      "tagID": 7
+    }
   ]
-
 }
