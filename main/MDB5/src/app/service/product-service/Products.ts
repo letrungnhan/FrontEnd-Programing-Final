@@ -2,15 +2,17 @@ export class Products {
   private _id: number;
   private _title: string;
   private _description: string;
-  private _img: string;
+  private _img: string[];
   private _price: number;
   private _author: string;
   private _rating: number;
   private _languageName: string[];
-  private _industryName: string;
-  private _tagName: string;
+  private _industryName: string[];
+  private _tagName: string[];
+  private _quantity: number;
 
-  constructor(id: number, title: string, description: string, img: string, price: number, author: string, rating: number, languageName: string[], industryName: string, tagName: string) {
+
+  constructor(id: number, title: string, description: string, img: string[], price: number, author: string, rating: number, languageName: string[], industryName: string[], tagName: string[], quantity: number) {
     this._id = id;
     this._title = title;
     this._description = description;
@@ -21,32 +23,16 @@ export class Products {
     this._languageName = languageName;
     this._industryName = industryName;
     this._tagName = tagName;
+    this._quantity = quantity;
   }
 
-  get languageName(): string[] {
-    return this._languageName;
+  get quantity(): number {
+    return this._quantity;
   }
 
-  set languageName(value: string[]) {
-    this._languageName = value;
+  set quantity(value: number) {
+    this._quantity = value;
   }
-
-  get industryName(): string {
-    return this._industryName;
-  }
-
-  set industryName(value: string) {
-    this._industryName = value;
-  }
-
-  get tagName(): string {
-    return this._tagName;
-  }
-
-  set tagName(value: string) {
-    this._tagName = value;
-  }
-
 
   get id(): number {
     return this._id;
@@ -72,11 +58,11 @@ export class Products {
     this._description = value;
   }
 
-  get img(): string {
+  get img(): string[] {
     return this._img;
   }
 
-  set img(value: string) {
+  set img(value: string[]) {
     this._img = value;
   }
 
@@ -96,7 +82,6 @@ export class Products {
     this._author = value;
   }
 
-
   get rating(): number {
     return this._rating;
   }
@@ -105,5 +90,27 @@ export class Products {
     this._rating = value;
   }
 
+  get languageName(): string[] {
+    return this._languageName;
+  }
 
+  set languageName(value: string[]) {
+    this._languageName = value;
+  }
+
+  get industryName(): string[] {
+    return this._industryName;
+  }
+
+  set industryName(value: string[]) {
+    this._industryName = value;
+  }
+
+  get tagName(): string[] {
+    return this._tagName;
+  }
+
+  set tagName(value: string[]) {
+    this._tagName = value;
+  }
 }

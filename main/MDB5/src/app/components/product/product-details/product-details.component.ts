@@ -3,7 +3,9 @@ import {MdbModalRef, MdbModalService} from "mdb-angular-ui-kit/modal";
 import {DetailsModalComponent} from "../../../modal/details-modal/details-modal.component";
 import {CommonService} from "../../../service/common.service";
 import {ActivatedRoute} from "@angular/router";
-import {setFileSystem} from "@angular/compiler-cli";
+import {Products} from "../../../service/product-service/Products";
+import {CartService} from "../../../service/cart.service";
+
 
 @Component({
   selector: 'app-product-details',
@@ -14,9 +16,10 @@ export class ProductDetailComponent implements OnInit {
   modalRef: MdbModalRef<DetailsModalComponent> | null = null;
   id: any;
   itemProduct: any;
+  displayImage = 0;
 
   constructor(private modalService: MdbModalService, private commonService: CommonService,
-              private activatedRouter: ActivatedRoute) {
+              private activatedRouter: ActivatedRoute, private cartService: CartService) {
   }
 
   ngOnInit(): void {
@@ -40,9 +43,14 @@ export class ProductDetailComponent implements OnInit {
 
   }
 
+
   openModal() {
     this.modalRef = this.modalService.open(DetailsModalComponent, {
       modalClass: 'modal-dialog-centered'
     })
+  }
+
+  addToCart(product: Products) {
+    this.cartService.addItem(product);
   }
 }

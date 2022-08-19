@@ -4,8 +4,12 @@
       "id": 1,
       "title": "Dashboard Admin",
       "description": "Some quick example text  build on the card title and make up the bulk of the card's content.",
-      "img": "./assets/image/product/supper-cleaner-2020.png",
-      "price": "1000",
+      "img": [
+        "./assets/image/product/Bot Mult Crypto for Binance1.png",
+        "./assets/image/product/Bot Mult Crypto for Binance2.png",
+        "./assets/image/product/Bot Mult Crypto for Binance3.png"
+      ],
+      "price": 1000,
       "author": "letrungnhan",
       "rating": 4,
       "languageName": [
@@ -13,26 +17,46 @@
         "CSS",
         "JAVASCRIPT"
       ],
-      "industryName": "WEB",
-      "tagName": "WEB SYSTEMS"
+      "industryName": [
+        "WEB",
+        "ECOMMERCE"
+      ],
+      "tagName": [
+        "WEBSYSTEMS",
+        "CHAT"
+      ],
+      "quantity": 1
     },
     {
       "id": 2,
       "title": "Money Management Android App",
       "description": "With this finance app, accounting and tracking your financial data efficiently is now made easy. Clearly arranged monthly tables enable transactions to be entered very quickly.",
-      "img": "./assets/image/product/Money-Management-Android-App.png",
-      "price": "4223.5",
+      "img": [
+        "./assets/image/product/supper-cleaner-2020.png",
+        "./assets/image/product/Money-Management-Android-App.png",
+        "./assets/image/product/Bot Mult Crypto for Binance1.png"
+      ],
+      "price": 4223.5,
       "author": "hoxuanthinh",
       "rating": 3,
       "languageName": "CSHARP",
-      "industryName": "DATA",
-      "tagName": "ANDROID"
+      "industryName": [
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEMS"
+      ],
+      "quantity": 1
     },
     {
       "id": 3,
       "title": "ECOM Ecommerce web platform",
       "description": "This is a web template for a fully functioning Ecommerce platform, where products can be shown, browsed, wishlisted, put in cart, bought, added reviews, user created, etc.The server is realized via PHP and MySQL database. The frontend is JavaScript, HTML and CSS.",
-      "img": "./assets/image/product/ECOM Ecommerce web platform1.png",
+      "img": [
+        "./assets/image/product/supper-cleaner-2020.png",
+        "./assets/image/product/Money-Management-Android-App.png",
+        "./assets/image/product/Bot Mult Crypto for Binance1.png"
+      ],
       "price": "310.09",
       "author": "letrungnhan",
       "rating": 3,
@@ -41,8 +65,39 @@
         "HTML",
         "CSS"
       ],
-      "industryName": "ECOMMERCE",
-      "tagName": "WEB SYSTEM"
+      "industryName": [
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEMS"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "title": "ECOM Ecommerce web platform",
+      "description": "Robot for the Cryptocurrency market, uses binance to make trades within its portfolio. (single user system)",
+      "img": [
+        "./assets/image/product/supper-cleaner-2020.png",
+        "./assets/image/product/Money-Management-Android-App.png",
+        "./assets/image/product/Bot Mult Crypto for Binance1.png"
+      ],
+      "price": 393.32,
+      "author": "letrungnhan",
+      "rating": 4,
+      "languageName": [
+        "JAVASCRIPT",
+        "PHP",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEMS"
+      ],
+      "quantity": 1
     }
   ],
   "Languages": [
@@ -111,11 +166,11 @@
   ],
   "Tags": [
     {
-      "tagName": "SOFTWARE SERVICE",
+      "tagName": "SOFTWARESERVICE",
       "tagID": 1
     },
     {
-      "tagName": "WEB SYSTEM",
+      "tagName": "WEBSYSTEM",
       "tagID": 2
     },
     {

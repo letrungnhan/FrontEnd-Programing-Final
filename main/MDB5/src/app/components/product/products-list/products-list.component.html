@@ -49,7 +49,7 @@
     <div class="card h-100 ">
       <mdb-accordion [multiple]="true">
         <div class="container mt-3">
-          <form [formGroup]="filtersGroup">
+          <form>
             <mdb-accordion-item>
               <ng-template mdbAccordionItemHeader>Programming Language</ng-template>
               <ng-template mdbAccordionItemBody>
@@ -61,8 +61,9 @@
                     name="Languages"
                     mdbInput
                     type="checkbox"
-                    formControlName="{{language.languageName}}"
-                    value="{{language.languageName}}"
+                    value="{{language.languageID}}"
+                    [checked]=true
+
                   />
                   <label class="form-check-label text-black" for="checkboxLanguage">{{language.languageName}}</label>
                 </div>
@@ -71,7 +72,7 @@
           </form>
         </div>
         <div class="container mt-3">
-          <form [formGroup]="filtersGroup">
+          <form>
             <mdb-accordion-item>
               <ng-template mdbAccordionItemHeader>Industries</ng-template>
               <ng-template mdbAccordionItemBody>
@@ -83,8 +84,8 @@
                     name="language"
                     mdbInput
                     type="checkbox"
-                    formControlName="{{industry.industryName}}"
                     value="{{industry.industryID}}"
+                    checked
                   />
                   <label class="form-check-label text-black" for="checkboxIndustry">{{industry.industryName}}</label>
                 </div>
@@ -93,7 +94,7 @@
           </form>
         </div>
         <div class="container mt-3">
-          <form [formGroup]="filtersGroup">
+          <form>
             <mdb-accordion-item>
               <ng-template mdbAccordionItemHeader>Tags</ng-template>
               <ng-template mdbAccordionItemBody>
@@ -105,8 +106,7 @@
                     name="language"
                     mdbInput
                     type="checkbox"
-                    formControlName="{{tag.tagName}}"
-                    value="{{tag.tagID}}"
+                    value="{{tag.tagName}}"
                   />
                   <label class="form-check-label text-black" for="checkboxIndustry">{{tag.tagName}}</label>
                 </div>
@@ -126,8 +126,9 @@
         <div class="col-lg-12">
           <section class="product-list pt-4">
             <div class="row overflow-y-scroll" id="products" style="max-height: 800px ">
-              <div *ngFor="let item of filteredItems$ | async"
-                   class="col-lg-4 col-md-6 mb-4">
+              <div
+                *ngFor="let item of dataProduct"
+                class="col-lg-4 col-md-6 mb-4">
                 <!-- Card -->
                 <div class="card card-ecommerce">
                   <!-- Card image -->
@@ -136,7 +137,7 @@
                     data-mdb-ripple-color="light"
                   >
                     <img alt="" class="w-100"
-                         [attr.src]="item.img"/>
+                         [src]="item.img[0]"/>
 
                     <a routerLink="/product-details/{{item.id}}">
                       <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
@@ -228,9 +229,7 @@
         </div>
       </div>
       <!-- Main Container -->
-
     </section>
-
   </div>
 </main>
 
