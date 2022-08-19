@@ -1,9 +1,0 @@
-.product-banner {
-  position: relative;
-  background: url(../../../assets/image/banner/product-banner.png) center center no-repeat;
-  background-size: cover;
-  padding: 120px 0px;
-  z-index: 0;
-}
-
-/*# sourceMappingURL=product-detail.component.css.map */
