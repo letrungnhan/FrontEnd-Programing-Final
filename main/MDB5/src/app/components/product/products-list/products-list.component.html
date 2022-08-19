@@ -53,18 +53,62 @@
             <mdb-accordion-item>
               <ng-template mdbAccordionItemHeader>Programming Language</ng-template>
               <ng-template mdbAccordionItemBody>
-                <div *ngFor="let category of dataCategory ">
+                <div *ngFor="let language of dataLanguage">
                   <input
                     aria-label="..."
                     class="form-check-input"
                     id="checkboxLanguage"
+                    name="Languages"
+                    mdbInput
+                    type="checkbox"
+                    formControlName="{{language.languageName}}"
+                    value="{{language.languageName}}"
+                  />
+                  <label class="form-check-label text-black" for="checkboxLanguage">{{language.languageName}}</label>
+                </div>
+              </ng-template>
+            </mdb-accordion-item>
+          </form>
+        </div>
+        <div class="container mt-3">
+          <form [formGroup]="filtersGroup">
+            <mdb-accordion-item>
+              <ng-template mdbAccordionItemHeader>Industries</ng-template>
+              <ng-template mdbAccordionItemBody>
+                <div *ngFor="let industry of dataIndustry ">
+                  <input
+                    aria-label="..."
+                    class="form-check-input"
+                    id="checkboxIndustry"
                     name="language"
                     mdbInput
                     type="checkbox"
-                    formControlName="{{category.categoryName}}"
-                    value="{{category.categoryID}}"
+                    formControlName="{{industry.industryName}}"
+                    value="{{industry.industryID}}"
                   />
-                  <label class="form-check-label text-black" for="checkboxLanguage">{{category.categoryName}}</label>
+                  <label class="form-check-label text-black" for="checkboxIndustry">{{industry.industryName}}</label>
+                </div>
+              </ng-template>
+            </mdb-accordion-item>
+          </form>
+        </div>
+        <div class="container mt-3">
+          <form [formGroup]="filtersGroup">
+            <mdb-accordion-item>
+              <ng-template mdbAccordionItemHeader>Tags</ng-template>
+              <ng-template mdbAccordionItemBody>
+                <div *ngFor="let tag of dataTag ">
+                  <input
+                    aria-label="..."
+                    class="form-check-input"
+                    id="checkboxTag"
+                    name="language"
+                    mdbInput
+                    type="checkbox"
+                    formControlName="{{tag.tagName}}"
+                    value="{{tag.tagID}}"
+                  />
+                  <label class="form-check-label text-black" for="checkboxIndustry">{{tag.tagName}}</label>
                 </div>
               </ng-template>
             </mdb-accordion-item>
@@ -82,7 +126,7 @@
         <div class="col-lg-12">
           <section class="product-list pt-4">
             <div class="row overflow-y-scroll" id="products" style="max-height: 800px ">
-              <div *ngFor="let item of  filteredItems$   | async "
+              <div *ngFor="let item of dataProduct"
                    class="col-lg-4 col-md-6 mb-4">
                 <!-- Card -->
                 <div class="card card-ecommerce">
@@ -92,22 +136,27 @@
                     data-mdb-ripple-color="light"
                   >
                     <img alt="" class="w-100"
-                         src="{{item.img}}"/>
+                         [attr.src]="item.img"/>
 
-                    <a routerLink="/product-details">
+                    <a routerLink="/product-details/{{item.id}}">
                       <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
                     </a>
                   </div>
                   <!-- Card image -->
                   <!-- Card content -->
                   <div class="card-body">
-                    <!-- Category & Title -->
+                    <!-- Language & Title -->
                     <h5 class="card-title mb-1">
                       <strong>
-                        <a class="dark-grey-text" href="">{{item.title}}</a>
+                        <a class="dark-grey-text" routerLink="/product-details/{{item.id}}">{{item.title}}</a>
                       </strong>
                     </h5>
-                    <span class="badge badge-info mb-2">{{item.categoryID}}</span>
+                    <div class="card-group">
+                      <span class="badge badge-info mb-2">{{item.languageName}}&nbsp;</span>
+                      <span class="badge badge-warning mb-2 mx-1">{{item.industryName}}&nbsp;</span>
+                      <span class="badge badge-secondary mb-2">{{item.tagName}}</span>
+                    </div>
+
                     <!--                  Description-->
                     <p class="card-text">{{item.description}}</p>
                     <!-- Author -->
@@ -135,6 +184,7 @@
                 </div>
                 <!-- Card -->
               </div>
+
             </div>
             <div class="row justify-content-center mb-4">
               <!-- Pagination -->

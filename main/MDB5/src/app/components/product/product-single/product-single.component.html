@@ -1,1 +1,253 @@
-<p>product-single works!</p>
+<body>
+<section class="product-banner">
+</section>
+<section class="text-center text-md-start" style="  background-color: hsl(0, 0%, 80%);">
+
+  <div class="container">
+    <div class="card shadow-3-strong" style="
+    margin-top: -100px;  ">
+      <div class="card-body py-5 px-5">
+        <div class="row gx-lg-4 align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+            <h1 class="">Product Source List</h1>
+            <!-- Breadcrumb -->
+            <nav class="d-flex justify-content-center justify-content-lg-start">
+              <h6 class="mb-0">
+                <a href="" class="text-muted">Home </a> &nbsp;
+                <span>/</span> &nbsp;
+                <a href="" class="text-muted">Analytics </a>&nbsp;
+                <span>/</span>&nbsp;
+                <a href="" class="text-muted"><u>eCommerce </u></a>
+              </h6>
+            </nav>
+            <!-- Breadcrumb -->
+          </div>
+          <div class="col-lg-6 text-center text-lg-end">
+            <div class="row justify-content-center justify-content-lg-end">
+              <div class="col-lg-7 col-md-12 col-sm-12 mb-4 mb-md-0">
+                <form class="d-flex input-group w-auto">
+                  <input
+                    type="search"
+                    class="form-control rounded"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <span class="input-group-text border-0" id="search-addon">
+                    <a href="#">  <button type="button" class="btn btn-secondary btn-rounded w-100">Search</button></a>
+               </span>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<main class="row col-12">
+  <div class="sidenav-light col-3 pt-5">
+    <div class="card h-100 ">
+      <mdb-accordion [multiple]="true">
+        <div class="container mt-3">
+          <form [formGroup]="filtersGroup">
+            <mdb-accordion-item>
+              <ng-template mdbAccordionItemHeader>Programming Language</ng-template>
+              <ng-template mdbAccordionItemBody>
+                <div *ngFor="let language of dataLanguage">
+                  <input
+                    aria-label="..."
+                    class="form-check-input"
+                    id="checkboxLanguage"
+                    name="Languages"
+                    mdbInput
+                    type="checkbox"
+                    formControlName="{{language.languageName}}"
+                    value="{{language.languageName}}"
+                  />
+                  <label class="form-check-label text-black" for="checkboxLanguage">{{language.languageName}}</label>
+                </div>
+              </ng-template>
+            </mdb-accordion-item>
+          </form>
+        </div>
+        <div class="container mt-3">
+          <form [formGroup]="filtersGroup">
+            <mdb-accordion-item>
+              <ng-template mdbAccordionItemHeader>Industries</ng-template>
+              <ng-template mdbAccordionItemBody>
+                <div *ngFor="let industry of dataIndustry ">
+                  <input
+                    aria-label="..."
+                    class="form-check-input"
+                    id="checkboxIndustry"
+                    name="language"
+                    mdbInput
+                    type="checkbox"
+                    formControlName="{{industry.industryName}}"
+                    value="{{industry.industryID}}"
+                  />
+                  <label class="form-check-label text-black" for="checkboxIndustry">{{industry.industryName}}</label>
+                </div>
+              </ng-template>
+            </mdb-accordion-item>
+          </form>
+        </div>
+        <div class="container mt-3">
+          <form [formGroup]="filtersGroup">
+            <mdb-accordion-item>
+              <ng-template mdbAccordionItemHeader>Tags</ng-template>
+              <ng-template mdbAccordionItemBody>
+                <div *ngFor="let tag of dataTag ">
+                  <input
+                    aria-label="..."
+                    class="form-check-input"
+                    id="checkboxTag"
+                    name="language"
+                    mdbInput
+                    type="checkbox"
+                    formControlName="{{tag.tagName}}"
+                    value="{{tag.tagID}}"
+                  />
+                  <label class="form-check-label text-black" for="checkboxIndustry">{{tag.tagName}}</label>
+                </div>
+              </ng-template>
+            </mdb-accordion-item>
+          </form>
+        </div>
+      </mdb-accordion>
+
+
+    </div>
+  </div>
+  <div class="main-content col-9 " mdbScrollbar style="position: relative;">
+    <section class="category-v3 hidden-sn white-skin animated">
+      <!-- Main Container -->
+      <div class="row pt-4 ">
+        <div class="col-lg-12">
+          <section class="product-list pt-4">
+            <div class="row overflow-y-scroll" id="products" style="max-height: 800px ">
+              <div *ngFor="let item of  dataProduct"
+                   class="col-lg-4 col-md-6 mb-4">
+                <!-- Card -->
+                <div class="card card-ecommerce">
+                  <!-- Card image -->
+                  <div
+                    class="bg-image hover-overlay ripple shadow-1-strong rounded"
+                    data-mdb-ripple-color="light"
+                  >
+                    <img alt="" class="w-100"
+                         [attr.src]="item.img"/>
+
+                    <a routerLink="/product-details/{{item.id}}">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+                    </a>
+                  </div>
+                  <!-- Card image -->
+                  <!-- Card content -->
+                  <div class="card-body">
+                    <!-- Language & Title -->
+                    <h5 class="card-title mb-1">
+                      <strong>
+                        <a class="dark-grey-text" routerLink="/product-details/{{item.id}}">{{item.title}}</a>
+                      </strong>
+                    </h5>
+                    <div class="card-group">
+                      <span class="badge badge-info mb-2">{{item.languageName}}&nbsp;</span>
+                      <span class="badge badge-warning mb-2 mx-1">{{item.industryName}}&nbsp;</span>
+                      <span class="badge badge-secondary mb-2">{{item.tagName}}</span>
+                    </div>
+
+                    <!--                  Description-->
+                    <p class="card-text">{{item.description}}</p>
+                    <!-- Author -->
+                    <div class="author">
+                      <p>added by
+                        <span class="author-name">
+                    <a href="#">{{item.author}}</a> </span></p>
+
+                    </div>
+                    <!-- Card footer -->
+                    <div class="card-footer pb-0">
+                      <div class="mb-0 d-flex flex-row justify-content-between w-100 align-items-center">
+                    <span class="price">
+                        <strong>{{item.price}}$</strong>
+                      </span>
+                        <span class="buy">
+                        <a class="" data-placement="top" data-toggle="tooltip" title="Add to Cart">
+                         <button type="button" class="btn btn-primary">Buy</button>
+                        </a>
+                      </span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Card content -->
+                </div>
+                <!-- Card -->
+              </div>
+
+            </div>
+            <div class="row justify-content-center mb-4">
+              <!-- Pagination -->
+              <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a aria-disabled="true" class="page-link" href="#" tabindex="-1">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- Pagination -->
+            </div>
+            <section class="product-footer shadow-5-strong">
+
+              <div class="mid-div mb-6">
+                <div class="d-flex justify-content-around align-items-center">
+                  <div class="featured-text-product">
+                    <h2 class="text-light">Featured<span class="text-danger"> Product</span></h2>
+                    <p class="text-light">adkfjhadfhadjkfhadkfhadkfhas
+                      gfsdgsdfgsdfgsdfgsdfgdkfhasdkfhaksdfhjk</p>
+
+                  </div>
+                  <div class="btn-img-image">
+                    <a href="#">
+                      <button class="btn btn-outline-primary hover-overlay"> BUY CODE NOW
+                      </button>
+                    </a>
+
+                  </div>
+                </div>
+
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+      <!-- Main Container -->
+
+    </section>
+
+  </div>
+</main>
+
+
+<script type="text/javascript">
+  /* WOW.js init */
+  new WOW().init();
+  // Tooltips Initialization
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+  // Material Select Initialization
+  $(document).ready(function () {
+    $('.mdb-select').material_select();
+  });
+  // SideNav Initialization
+  $(".button-collapse").sideNav();
+</script>
+</body>
+

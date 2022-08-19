@@ -6,10 +6,11 @@ export class Products {
   private _price: number;
   private _author: string;
   private _rating: number;
-  private _categoryID: string;
+  private _languageName: string[];
+  private _industryName: string;
+  private _tagName: string;
 
-
-  constructor(id: number, title: string, description: string, img: string, price: number, author: string, rating: number, category: string) {
+  constructor(id: number, title: string, description: string, img: string, price: number, author: string, rating: number, languageName: string[], industryName: string, tagName: string) {
     this._id = id;
     this._title = title;
     this._description = description;
@@ -17,7 +18,33 @@ export class Products {
     this._price = price;
     this._author = author;
     this._rating = rating;
-    this._categoryID = category;
+    this._languageName = languageName;
+    this._industryName = industryName;
+    this._tagName = tagName;
+  }
+
+  get languageName(): string[] {
+    return this._languageName;
+  }
+
+  set languageName(value: string[]) {
+    this._languageName = value;
+  }
+
+  get industryName(): string {
+    return this._industryName;
+  }
+
+  set industryName(value: string) {
+    this._industryName = value;
+  }
+
+  get tagName(): string {
+    return this._tagName;
+  }
+
+  set tagName(value: string) {
+    this._tagName = value;
   }
 
 
@@ -79,11 +106,4 @@ export class Products {
   }
 
 
-  get categoryID(): string {
-    return this._categoryID;
-  }
-
-  set categoryID(value: string) {
-    this._categoryID = value;
-  }
 }
