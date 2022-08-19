@@ -64,6 +64,9 @@ import {ProductSingleComponent} from './components/product/product-single/produc
 import {ProductDetailComponent} from "./components/product/product-details/product-details.component";
 import {ProductsListComponent} from "./components/product/products-list/products-list.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
 
 
 
@@ -118,7 +121,9 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
         HttpClientModule,
         SlickCarouselModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
+        provideFirebaseApp(() => initializeApp(environment.firebase)),
+        provideAuth(() => getAuth())
 
     ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService],
