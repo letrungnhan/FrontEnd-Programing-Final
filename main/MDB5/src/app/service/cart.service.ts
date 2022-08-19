@@ -10,30 +10,24 @@ export class CartService {
   placeholder = [];
   cartItems = new BehaviorSubject([]);
 
-
   constructor() {
-    // @ts-ignore
     const ls = this.getCartData();
-    if (ls) {
-      this.cartItems.next(ls);
-    }
+    if (ls) this.cartItems.next(ls);
+
   }
 
   addItem(product: Products) {
-    // @ts-ignore
     const ls = this.getCartData();
 
     let exist: Products;
 
     if (ls) { // @ts-ignore
       exist = ls.find((item) => {
-        // @ts-ignore
         return item.id === product.id;
       });
     }
     // @ts-ignore
     if (exist) {
-      // @ts-ignore
       exist.quantity++;
       this.setCartData(ls);
     } else {
@@ -44,8 +38,6 @@ export class CartService {
       // @ts-ignore
       this.placeholder.push(product);
       this.setCartData(this.placeholder);
-
-
     }
 
   }
@@ -57,6 +49,6 @@ export class CartService {
 
   getCartData() {
     // @ts-ignore
-    return JSON.parse(localStorage.getItem('cart'))
+    return JSON.parse(localStorage.getItem('cart'));
   }
 }

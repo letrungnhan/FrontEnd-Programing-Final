@@ -16,28 +16,20 @@ import {
 })
 
 export class AuthenticationService {
-
   currentUser$ = authState(this.auth);
 
-
-  constructor(private auth: Auth, private router: Router) {
+  constructor(public auth: Auth, private router: Router) {
   }
-
   login(email: string, password: string) {
     return from(signInWithEmailAndPassword(this.auth, email, password));
   }
-
   register(name: string, email: string, password: string) {
     return from(createUserWithEmailAndPassword(this.auth, email, password)).pipe(
       switchMap(({user}) => updateProfile(user, {displayName: name})));
-
-
   }
-
   logout() {
     return from(this.auth.signOut());
   }
-
   //sign in with Google
   googleSignIn(): Observable<UserCredential> {
     return from(signInWithPopup(this.auth, new GoogleAuthProvider()));

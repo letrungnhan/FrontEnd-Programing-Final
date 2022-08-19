@@ -16,7 +16,6 @@ export class ProductDetailComponent implements OnInit {
   modalRef: MdbModalRef<DetailsModalComponent> | null = null;
   id: any;
   itemProduct: any;
-  displayImage = 0;
 
   constructor(private modalService: MdbModalService, private commonService: CommonService,
               private activatedRouter: ActivatedRoute, private cartService: CartService) {
@@ -37,6 +36,7 @@ export class ProductDetailComponent implements OnInit {
     this.commonService.getProductByID(id).subscribe(
       (res) => {
         this.itemProduct = res;
+
         console.log(this.itemProduct)
       }
     )
