@@ -1,4 +1,4 @@
-import {Component, AfterViewInit, NgZone, ViewChild} from '@angular/core';
+import {Component, AfterViewInit, NgZone, ViewChild, Output, EventEmitter} from '@angular/core';
 import {MdbSidenavComponent} from 'mdb-angular-ui-kit/sidenav';
 import {ProductService} from "../../../service/product-service/product.service";
 import {CommonService} from "../../../service/common.service";
@@ -6,6 +6,8 @@ import {FormControl, FormGroup} from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import {Products} from "../../../service/product-service/Products";
+import {CartService} from "../../../service/cart.service";
+import {ActivatedRoute} from "@angular/router";
 
 
 @Component({
@@ -23,6 +25,8 @@ export class ProductsListComponent {
 
   constructor(private productService: ProductService,
               private commonService: CommonService,
+              private cartService: CartService,
+              private activatedRouter: ActivatedRoute
   ) {
   }
 
@@ -43,6 +47,8 @@ export class ProductsListComponent {
         this.dataProduct = res;
       }
     )
+
+
   }
 
   getLastCategory() {
@@ -53,7 +59,6 @@ export class ProductsListComponent {
       }
     )
   }
-
 
   getLastIndustry() {
     this.commonService.listAllIndustry().subscribe(
@@ -70,5 +75,21 @@ export class ProductsListComponent {
       }
     )
   }
+
+
+  addToCart(product: Products) {
+    this.cartService.addItem(product);
+  }
+
+  //search
+
+
+  searchText: string = '';
+
+  onSearchTextEntered(searchValue: string) {
+    this.searchText = searchValue;
+    console.log(this.searchText.toString());
+  }
+
 
 }

@@ -14,10 +14,9 @@
 @import '../node_modules/mdb-angular-mention/scss/mention.scss';
 @import '../node_modules/mdb-ui-kit/css/mdb.min.css';
 
-body {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-

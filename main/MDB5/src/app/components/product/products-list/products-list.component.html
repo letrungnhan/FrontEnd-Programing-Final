@@ -25,17 +25,7 @@
           <div class="col-lg-6 text-center text-lg-end">
             <div class="row justify-content-center justify-content-lg-end">
               <div class="col-lg-7 col-md-12 col-sm-12 mb-4 mb-md-0">
-                <form class="d-flex input-group w-auto">
-                  <input
-                    type="search"
-                    class="form-control rounded"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
-                  <span class="input-group-text border-0" id="search-addon">
-                    <a href="#">  <button type="button" class="btn btn-secondary btn-rounded w-100">Search</button></a>
-               </span>
-                </form>
+                <app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
               </div>
             </div>
           </div>
@@ -171,11 +161,12 @@
                     <div class="card-footer pb-0">
                       <div class="mb-0 d-flex flex-row justify-content-between w-100 align-items-center">
                     <span class="price">
-                        <strong>{{item.price}}$</strong>
+                        <strong>${{item.price}}</strong>
                       </span>
                         <span class="buy">
                         <a class="" data-placement="top" data-toggle="tooltip" title="Add to Cart">
-                         <button type="button" class="btn btn-primary">Buy</button>
+                         <button routerLink="/cart" type="button" class="btn btn-primary"
+                                 (click)="addToCart(item)">Buy</button>
                         </a>
                       </span>
                       </div>

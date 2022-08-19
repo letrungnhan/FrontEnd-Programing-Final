@@ -56,80 +56,82 @@ import {AboutComponent} from './components/about/about.component';
 import {HeaderComponent} from './components/header/header.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {ContactComponent} from './components/contact/contact.component';
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {DetailsModalComponent} from './modal/details-modal/details-modal.component';
 import {CartComponent} from './components/cart/cart.component';
-
 import {ProductDetailComponent} from "./components/product/product-details/product-details.component";
 import {ProductsListComponent} from "./components/product/products-list/products-list.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { HotToastModule } from '@ngneat/hot-toast';
-
-
-
+import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
+import {environment} from '../environments/environment';
+import {provideAuth, getAuth} from '@angular/fire/auth';
+import {HotToastModule} from '@ngneat/hot-toast';
+import {OrderComponent} from './components/order/order.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductsListComponent],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        MdbAccordionModule,
-        MdbAutocompleteModule,
-        MdbCarouselModule,
-        MdbChartModule,
-        MdbCheckboxModule,
-        MdbCollapseModule,
-        MdbDatepickerModule,
-        MdbDropdownModule,
-        MdbFormsModule,
-        MdbInfiniteScrollModule,
-        MdbLazyLoadingModule,
-        MdbLightboxModule,
-        MdbLoadingModule,
-        MdbModalModule,
-        MdbNotificationModule,
-        MdbPopconfirmModule,
-        MdbPopoverModule,
-        MdbRadioModule,
-        MdbRangeModule,
-        MdbRatingModule,
-        MdbRippleModule,
-        MdbScrollbarModule,
-        MdbScrollspyModule,
-        MdbSelectModule,
-        MdbSidenavModule,
-        MdbSmoothScrollModule,
-        MdbStepperModule,
-        MdbStickyModule,
-        MdbTableModule,
-        MdbTabsModule,
-        MdbTimepickerModule,
-        MdbTooltipModule,
-        MdbValidationModule,
-        MdbCalendarModule,
-        MdbWysiwygModule,
-        MdbDragAndDropModule,
-        MdbVectorMapModule,
-        MdbFileUploadModule,
-        MdbTreeviewModule,
-        MdbTransferModule,
-        MdbMentionModule,
-        MdbOnboardingModule,
-        AppRoutingModule,
-        HttpClientModule,
-        SlickCarouselModule,
-        ReactiveFormsModule,
-        FormsModule,
-        provideFirebaseApp(() => initializeApp(environment.firebase)),
-        provideAuth(() => getAuth()),
-        HotToastModule.forRoot()
+  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductsListComponent, OrderComponent, SearchComponent],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MdbAccordionModule,
+    MdbAutocompleteModule,
+    MdbCarouselModule,
+    MdbChartModule,
+    MdbCheckboxModule,
+    MdbCollapseModule,
+    MdbDatepickerModule,
+    MdbDropdownModule,
+    MdbFormsModule,
+    MdbInfiniteScrollModule,
+    MdbLazyLoadingModule,
+    MdbLightboxModule,
+    MdbLoadingModule,
+    MdbModalModule,
+    MdbNotificationModule,
+    MdbPopconfirmModule,
+    MdbPopoverModule,
+    MdbRadioModule,
+    MdbRangeModule,
+    MdbRatingModule,
+    MdbRippleModule,
+    MdbScrollbarModule,
+    MdbScrollspyModule,
+    MdbSelectModule,
+    MdbSidenavModule,
+    MdbSmoothScrollModule,
+    MdbStepperModule,
+    MdbStickyModule,
+    MdbTableModule,
+    MdbTabsModule,
+    MdbTimepickerModule,
+    MdbTooltipModule,
+    MdbValidationModule,
+    MdbCalendarModule,
+    MdbWysiwygModule,
+    MdbDragAndDropModule,
+    MdbVectorMapModule,
+    MdbFileUploadModule,
+    MdbTreeviewModule,
+    MdbTransferModule,
+    MdbMentionModule,
+    MdbOnboardingModule,
+    AppRoutingModule,
+    HttpClientModule,
+    SlickCarouselModule,
+    ReactiveFormsModule,
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    HotToastModule.forRoot()
   ],
-  providers: [MdbCookiesManagementService, MdbStorageManagementService],
+  providers: [
+    MdbCookiesManagementService,
+    MdbStorageManagementService,
+
+  ],
+
   bootstrap: [AppComponent],
 })
 export class AppModule {
