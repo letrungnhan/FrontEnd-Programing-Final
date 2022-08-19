@@ -1,26 +1,23 @@
-body {
-  background-color: #000 !important;
+@media (max-width: 991px) {
+  .navbar-scroll {
+    background-color: #444;
+  }
+}
+.navbar-scroll .navbar-brand {
   color: #fff;
 }
 
-.display-1,
-.display-2,
-h5 {
-  font-weight: 700 !important;
+.navbar-scrolled {
+  background-color: #444;
 }
-
-@media (min-width: 1600px) {
-  .display-1 {
-    font-size: 10rem;
-  }
+.navbar-scrolled .navbar-brand {
+  color: #fff;
 }
-.video-fluid {
-  width: 100%;
-  height: auto;
+.navbar-scrolled .nav-link {
+  color: #fff;
 }
-
-.multi-carousel .multi-carousel-inner .multi-carousel-item img {
-  max-height: 100%;
+.navbar-scrolled .fa-bars {
+  color: #fff;
 }
 
 /*# sourceMappingURL=about.component.css.map */
