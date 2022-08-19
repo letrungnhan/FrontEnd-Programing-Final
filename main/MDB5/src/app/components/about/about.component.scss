@@ -1,31 +1,22 @@
-body {
-  background-color: #000 !important;
-  color: #fff;
-}
-
-.display-1,
-.display-2,
-h5 {
-  font-weight: 700 !important;
-}
-
-@media (min-width: 1600px) {
-  .display-1 {
-    font-size: 10rem;
+@media (max-width: 991px) {
+  .navbar-scroll {
+    background-color: #444;
   }
 }
-
-.video-fluid {
-  width: 100%;
-  height: auto;
-}
-
-.multi-carousel {
-  .multi-carousel-inner {
-    .multi-carousel-item img {
-      max-height: 100%;
-    }
-
+.navbar-scroll {
+  .navbar-brand {
+    color: #fff;
   }
-
+}
+.navbar-scrolled {
+  background-color: #444;
+  .navbar-brand {
+    color: #fff;
+  }
+  .nav-link {
+    color: #fff;
+  }
+  .fa-bars {
+    color: #fff;
+  }
 }
