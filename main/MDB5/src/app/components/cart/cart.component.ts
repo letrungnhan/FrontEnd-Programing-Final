@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Products} from "../../service/product-service/Products";
 import {CartService} from "../../service/cart.service";
+import {AuthenticationService} from "../../auth/authentication.service";
+import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +14,9 @@ export class CartComponent implements OnInit {
   items: Products[] = [];
   total: number | undefined;
 
-  constructor(private cartService: CartService) {
+  constructor(private cartService: CartService,
+              private authService: AuthenticationService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -28,6 +33,7 @@ export class CartComponent implements OnInit {
     this.getTotal(this.items);
 
   }
+
   validateInput(event: any, i: number) {
     const quantity = +event.target.value;
     if (quantity < 1) {
@@ -36,17 +42,30 @@ export class CartComponent implements OnInit {
     }
     this.QuantityUpdate(quantity, i);
   }
+
   private QuantityUpdate(quantity: number, i: number) {
     this.items[i].quantity = quantity;
     this.cartService.setCartData(this.items);
     this.getTotal(this.items);
 
   }
+
   getTotal(data: any) {
     let subs = 0;
     for (const item of data) {
       subs += item.price * item.quantity;
       this.total = subs;
     }
+  }
+
+  onCheckOut() {
+    this.authService.currentUser$.subscribe(user => {
+        if (!user) {
+          this.router.navigate(['/login']);
+        } else {
+          this.router.navigate(['/order']);
+        }
+      }
+    )
   }
 }

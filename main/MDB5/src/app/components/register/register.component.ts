@@ -57,12 +57,11 @@ export class RegisterComponent implements OnInit {
 
   submit() {
     if (!this.registerForm.valid) return;
-
     const {username, email, password} = this.registerForm.value;
     this.authService.register(username, email, password).pipe(
       this.toast.observe({
         success: 'Congrats! You are all signed up',
-        loading: 'Signing in',
+        loading: 'Wating for sign up',
         error: ({message}) => `$(message)`
       })
     ).subscribe(

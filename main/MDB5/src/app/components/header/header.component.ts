@@ -3,6 +3,7 @@ import {CartService} from "../../service/cart.service";
 import {AuthenticationService} from "../../auth/authentication.service";
 import {Router} from "@angular/router";
 import {HotToastService} from "@ngneat/hot-toast";
+import {LoaderService} from "../../loader/loader.service";
 
 @Component({
   selector: 'app-header',
@@ -11,13 +12,12 @@ import {HotToastService} from "@ngneat/hot-toast";
 })
 export class HeaderComponent implements OnInit {
   itemInCart: number | undefined;
-  user: any;
-
 
   constructor(public authService: AuthenticationService,
               private router: Router,
               private toast: HotToastService,
-              private cartService: CartService) {
+              private cartService: CartService,
+              public loaderService: LoaderService) {
   }
 
   logout() {
@@ -37,6 +37,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
     this.cartService.cartItems.subscribe(d => {
         this.itemInCart = d.length;
       }

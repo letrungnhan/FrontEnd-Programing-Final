@@ -17,7 +17,7 @@
                     You don't have any item in your cart
                   </i>
                 </p>
-                <a routerLink="/product-list" class="btn btn-success mb-6 p-3 w-25">Buy Code Now</a>
+                <a routerLink="/product-list" class="btn btn-primary mb-6 p-3 w-25">Buy Code Now</a>
               </div>
 
               <ng-container *ngIf="items.length >0">
@@ -45,7 +45,7 @@
                   <div class="col-md-7 mb-4 mb-md-0">
                     <p class="fw-bold">{{item.title}}</p>
                     <p class="mb-1">
-                      <span class="text-muted me-2">Language:</span><span class="fw-bolder">Java</span>
+                      <span class="text-muted me-2">Language:</span><span class="fw-bolder">{{item.languageName}}</span>
                     </p>
                     <p class="mb-1">
                       <span class="text-muted me-2">Description:</span><span
@@ -86,10 +86,12 @@
                     </div>
 
                     <h5 class="mb-2 mx-2">
-                      <span class="align-middle text-danger fs-5">Price: {{item.price|currency}}</span>
+                      <span
+                        class="align-middle text-danger fs-5">Price: ${{ item.price | number  : "1.0-4" : "en-US"  }}</span>
                       <br/>
 
-                      <span class="align-middle text-danger fs-5">Total: {{item.price * item.quantity|currency}}</span>
+                      <span
+                        class="align-middle text-danger fs-5">Total: ${{item.price * item.quantity| number  : "1.0-4" : "en-US"}}</span>
                     </h5>
                   </div>
                 </div>
@@ -150,20 +152,19 @@
                 <h5 class="mb-5">The total amount of</h5>
 
                 <div class="d-flex justify-content-between mb-3">
-                  <span>Temporary amount </span>
+                  <span>Temporary amount: </span>
                   <span>$</span>
                 </div>
                 <div class="d-flex justify-content-between">
-                  <span>Shipping </span>
-                  <span></span>
+                  <span>Shipping: </span>
+                  <span>$</span>
                 </div>
                 <hr class="my-4"/>
                 <div class="d-flex justify-content-between fw-bold mb-5">
-                  <span>The total amount of (including VAT) </span>
-                  <span>${{total | currency}}</span>
+                  <span>The total amount of (including VAT): </span>
+                  <span>$ {{total |  number  : "1.0-4" : "en-US"}}</span>
                 </div>
-
-                <button type="button" class="btn btn-primary btn-rounded w-100">
+                <button type="button" class="btn btn-primary btn-rounded w-100" (click)="onCheckOut()">
                   Got to checkout
                 </button>
               </section>
