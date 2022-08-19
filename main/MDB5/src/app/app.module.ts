@@ -67,6 +67,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
+import { HotToastModule } from '@ngneat/hot-toast';
 
 
 
@@ -123,7 +124,8 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
         ReactiveFormsModule,
         FormsModule,
         provideFirebaseApp(() => initializeApp(environment.firebase)),
-        provideAuth(() => getAuth())
+        provideAuth(() => getAuth()),
+        HotToastModule.forRoot()
 
     ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService],

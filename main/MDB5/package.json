@@ -22,6 +22,8 @@
     "@angular/platform-browser-dynamic": "~13.2.4",
     "@angular/router": "~13.2.4",
     "@fortawesome/fontawesome-free": "^6.0.0",
+    "@ngneat/hot-toast": "^4.1.0",
+    "@ngneat/overview": "^3.0.0",
     "chart.js": "^3.1.1",
     "jquery": "^3.6.0",
     "mdb-angular-calendar": "file:mdb-angular-calendar-2.0.0.tgz",
