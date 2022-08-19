@@ -1,4 +1,3 @@
-
 import {Component, OnInit} from '@angular/core';
 import {CartService} from "../../service/cart.service";
 import {AuthenticationService} from "../../auth/authentication.service";
@@ -13,14 +12,15 @@ import {HotToastService} from "@ngneat/hot-toast";
 export class HeaderComponent implements OnInit {
   itemInCart: number | undefined;
   user: any;
-  constructor(private cartService: CartService) {
 
-  constructor(public  authService: AuthenticationService,
+
+  constructor(public authService: AuthenticationService,
               private router: Router,
-              private toast: HotToastService
-              ) { }
+              private toast: HotToastService,
+              private cartService: CartService) {
+  }
 
-  logout(){
+  logout() {
     this.authService.logout().pipe(
       this.toast.observe({
         success: 'Logged out successfully',
