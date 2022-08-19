@@ -11,7 +11,7 @@ import {LoginComponent} from "./components/login/login.component";
 import {CartComponent} from "./components/cart/cart.component";
 import {ProductsListComponent} from "./components/product/products-list/products-list.component";
 import {ProductDetailComponent} from "./components/product/product-details/product-details.component";
-import {ProductSingleComponent} from "./components/product/product-single/product-single.component";
+
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -22,7 +22,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'product-list', component: ProductsListComponent},
-  {path: 'product', component: ProductSingleComponent},
+
   {path: 'product-details/:id', component: ProductDetailComponent},
   {path: 'cart', component: CartComponent}
 ];

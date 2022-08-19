@@ -60,10 +60,11 @@ import {HttpClientModule} from "@angular/common/http";
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {DetailsModalComponent} from './modal/details-modal/details-modal.component';
 import {CartComponent} from './components/cart/cart.component';
-import {ProductSingleComponent} from './components/product/product-single/product-single.component';
+
 import {ProductDetailComponent} from "./components/product/product-details/product-details.component";
 import {ProductsListComponent} from "./components/product/products-list/products-list.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
@@ -71,8 +72,9 @@ import { HotToastModule } from '@ngneat/hot-toast';
 
 
 
+
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductSingleComponent, ProductsListComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductsListComponent],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
@@ -126,8 +128,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
         provideFirebaseApp(() => initializeApp(environment.firebase)),
         provideAuth(() => getAuth()),
         HotToastModule.forRoot()
-
-    ],
+  ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService],
   bootstrap: [AppComponent],
 })
