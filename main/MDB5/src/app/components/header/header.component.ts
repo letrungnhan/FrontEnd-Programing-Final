@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CartService} from "../../service/cart.service";
 import {AuthenticationService} from "../../auth/authentication.service";
 import {Router} from "@angular/router";
 import {HotToastService} from "@ngneat/hot-toast";
@@ -9,13 +10,17 @@ import {HotToastService} from "@ngneat/hot-toast";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  itemInCart: number | undefined;
+  user: any;
 
-  constructor(public  authService: AuthenticationService,
+
+  constructor(public authService: AuthenticationService,
               private router: Router,
-              private toast: HotToastService
-              ) { }
+              private toast: HotToastService,
+              private cartService: CartService) {
+  }
 
-  logout(){
+  logout() {
     this.authService.logout().pipe(
       this.toast.observe({
         success: 'Logged out successfully',
@@ -28,9 +33,16 @@ export class HeaderComponent implements OnInit {
         this.router.navigate(['/home']);
       }
     );
+
   }
 
   ngOnInit(): void {
+    this.cartService.cartItems.subscribe(d => {
+        this.itemInCart = d.length;
+      }
+    )
+
+
   }
 
 }

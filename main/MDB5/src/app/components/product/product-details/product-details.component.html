@@ -39,7 +39,7 @@
     <!-- Section: Product details -->
     <section class="">
       <div class="row">
-        <div class="card shadow-3-strong col-md-5 mb-4 mb-md-0 mx-lg-5 justify-content-center">
+        <div class="card d-flex flex-column shadow-3-strong col-md-6 mb-4 mb-md-0 mx-lg-5 justify-content-center">
           <!-- Gallery -->
           <div
             class="ecommerce-gallery vertical"
@@ -49,17 +49,24 @@
             <div class="row gx-2 gx-lg-3">
               <div class="col-12 col-sm-12">
                 <div class="lightbox-gallery-counter">
-                  <img
-                    [attr.src]="itemProduct.img"
-                    alt="Gallery image 1"
-                    class="ecommerce-gallery-main-img active w-100  rounded-4"/>
+                  <mdb-carousel [controls]="true" [indicators]="true">
+                    <mdb-carousel-item *ngFor="let image of itemProduct.img">
+                      <img
+                        [src]="image"
+                        class="d-block w-100"
+                        alt="..."
+                      />
+                    </mdb-carousel-item>
+                  </mdb-carousel>
                 </div>
               </div>
             </div>
           </div>
           <!-- Gallery -->
         </div>
-        <div class=" col-md-6 mb-md-0">
+
+
+        <div class=" col-md-5 mb-md-0">
           <!-- Details -->
           <div class="card shadow-3-strong product-price-infor mb-5">
             <div>
@@ -122,11 +129,10 @@
               <p class="text-muted">{{itemProduct.description}}
 
               </p>
-
               <hr class="my-5"/>
               <div class="row my-5">
                 <div class="col-lg-6">
-                  <button class="btn btn-secondary w-100"><i class="fas fa-shopping-cart"></i> &nbsp; Add to cart
+                  <button routerLink="/cart" class="btn btn-secondary w-100" (click)="addToCart(itemProduct)"><i class="fas fa-shopping-cart"></i> &nbsp; Add to cart
                   </button>
                 </div>
                 <div class="col-lg-6">
