@@ -25,7 +25,7 @@
           </div>
 
         </div>
-        <div class="col-xl-5 col-md-8">
+        <div class="col-xl-5 col-md-8 mt-3">
           <div class="card rounded-5">
             <div class="card-body p-4">
 
@@ -33,70 +33,88 @@
               <div class="tab-content">
 
                 <div>
-                  <form>
-                    <div class="text-center mt-2 mb-1">
-                      <p>Register with:</p>
-                      <button
-                        type="button"
-                        class="btn btn-link btn-lg btn-floating mx-2"
-                        data-ripple-color="primary"
+                  <form [formGroup]="registerForm" (ngSubmit)="submit()">
+                    <div class="text-center mt-1 mb-1">
+                      <p>Sign Up</p>
 
-                      >
-                        <a href="https://www.facebook.com/lltnhan">
-                          <a class="w-50 h-50"><img class="icons" src="assets/icons/facebook.png"></a>
-                        </a>
-                      </button>
-
-                      <button
-                        type="button"
-                        class="btn btn-link btn-lg btn-floating mx-2"
-                        data-ripple-color="primary"
-                      >
-                        <a href="https://www.facebook.com/lltnhan">
-                          <a class="w-50 h-50"><img class="icons" src="assets/icons/google.png"></a>
-                        </a>
-
-                      </button>
                     </div>
 
-                    <p class="text-center mb-4">or:</p>
-
                     <!-- Name input -->
-                    <div class="row my-3">
+                    <div class="row my-4">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="text" class="form-control form-control-lg" name="email" id="register-name" required>
-                        <label mdbLabel for="register-name" class="form-label">Name</label>
+                        <input mdbInput mdbValidate type="name" class="form-control form-control-lg" name="name"
+                               id="register-name" required formControlName="username">
+                        <label mdbLabel for="register-name" class="form-label">Username</label>
+                        <mdb-error class="mt-1 mx-1"
+                                   *ngIf=" username?.invalid && (username?.dirty || username?.touched) "
+                        >Name is required
+                        </mdb-error
+                        >
+                        <mdb-success class="mt-3 mx-1"
+                                     *ngIf=" username?.valid && (username?.dirty || username?.touched)  ">
+                        </mdb-success
+                        >
                       </mdb-form-control>
                     </div>
 <!--  Username input -->
-                    <div class="row my-3">
+<!--           Email input -->
+                    <div class="row my-4 ">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="text" class="form-control form-control-lg" name="email" id="username" required>
-                        <label mdbLabel for="username" class="form-label">Username</label>
-                      </mdb-form-control>
-                    </div>
-
-                    <!-- Email input -->
-                    <div class="row my-3">
-                      <mdb-form-control class="col-md-12">
-                        <input mdbInput type="text" class="form-control form-control-lg" name="email" id="register-email" required>
+                        <input mdbInput mdbValidate type="email" class="form-control form-control-lg" name="email"
+                               id="register-email" required formControlName="email">
                         <label mdbLabel for="register-email" class="form-label">Email</label>
+                        <mdb-error class="mt-1 mx-1"
+                                   *ngIf=" email?.errors?.['required'] ">
+                        </mdb-error
+                        >
+                        <mdb-error class="mt-1 mx-1"
+                                   *ngIf=" email?.errors?.['email'] "
+                        >Email wrong format
+                        </mdb-error
+                        >
+                        <mdb-success class="mt-3 mx-1"
+                                     *ngIf=" email?.valid && (email?.dirty || email?.touched)  ">
+                        </mdb-success
+                        >
                       </mdb-form-control>
                     </div>
 
                     <!-- Password input -->
-                    <div class="row my-3">
+                    <div class="row my-4">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="password" class="form-control form-control-lg" name="email" id="register-password" required>
+                        <input mdbInput mdbValidate type="password" class="form-control form-control-lg" name="password"
+                               id="register-password" required formControlName="password">
                         <label mdbLabel for="register-password" class="form-label">Password</label>
+                        <mdb-error class="mx-1 mt-1"
+                                   *ngIf=" password?.invalid && (password?.dirty || password?.touched) "
+                        >Password is required
+                        </mdb-error
+                        >
+                        <mdb-success class="mt-3 mx-1"
+                                     *ngIf=" password?.valid && (password?.dirty || password?.touched)  ">
+                        </mdb-success
+                        >
                       </mdb-form-control>
                     </div>
 
                     <!-- Repeat Password input -->
-                    <div class="row my-3">
+                    <div class="row my-4 mb-5">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="password" class="form-control form-control-lg" name="email" id="repeat-password" required>
-                        <label mdbLabel for="repeat-password" class="form-label">Repeat Password</label>
+                        <input mdbInput mdbValidate type="password" class="form-control form-control-lg" name="repeat password"
+                               id="register-repeat" required formControlName="repeat">
+                        <label mdbLabel for="register-repeat" class="form-label">Repeat Password</label>
+                        <mdb-error class="mx-1 mt-1"
+                                   *ngIf=" repeat?.invalid && (repeat?.dirty || repeat?.touched) "
+                        >RepeatPassword is required
+                        </mdb-error>
+                        <mdb-error class="mx-1 mt-1"
+                                   *ngIf=" registerForm.errors?.['passwordsDontMatch'] "
+                        >RepeatPassword should match
+                        </mdb-error>
+                        <mdb-success class=""
+                                     *ngIf=" repeat?.valid && (repeat?.dirty || repeat?.touched)  ">
+                        </mdb-success
+                        >
                       </mdb-form-control>
                     </div>
 
@@ -111,6 +129,7 @@
                         id="registerCheck"
                         aria-describedby="registerCheckHelpText"
                         required
+                        checked
 
                       />
                       <label class="form-check-label mt-1" for="registerCheck">
@@ -121,10 +140,12 @@
                     <!-- Submit button -->
                     <button
                       type="submit"
-                      class="btn btn-primary btn-rounded w-100 mb-3"
-                    >
+                      class="btn btn-primary btn-rounded w-100 mb-3">
                       Register
                     </button>
+                    <div class="text-center">
+                      If you are a member. <a routerLink="/login">Login</a>
+                    </div>
                   </form>
                 </div>
               </div>

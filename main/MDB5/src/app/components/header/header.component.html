@@ -34,15 +34,33 @@
       <ul class="navbar-nav d-flex flex-row">
         <li class="nav-item me-3 me-lg-0">
           <div class="d-flex align-items-center">
-            <button type="button" class="btn btn-outline-light px-3 me-2 btn-hover" routerLink="login">
-              Login
-            </button>
-            <div class="bg-1"></div>
-            <div class="bg-2"></div>
-            <button type="button" class="btn btn-outline-light me-3 btn-hover" routerLink="register">
-              Sign up
-            </button>
+            <ng-container *ngIf="authService.currentUser$  | async as user; else loginButton">
+
+              <button type="button" class="btn btn-outline-light px-3 me-2 btn-hover" (click)="logout()">
+                Logout
+                &nbsp;
+                <i class="fas fa-sign-out-alt"></i>
+              </button>
+
+              <div class="bg-1"></div>
+              <div class="bg-2"></div>
+            </ng-container>
+
+            <ng-template #loginButton>
+              <button type="button" class="btn btn-outline-light px-3 me-2 btn-hover" routerLink="login">
+                Login
+              </button>
+              <div class="bg-1"></div>
+              <div class="bg-2"></div>
+              <button type="button" class="btn btn-outline-light me-3 btn-hover" routerLink="register">
+                Sign up
+              </button>
+
+            </ng-template>
+
+
           </div>
+
         </li>
         <li class="nav-item me-3 me-lg-0">
           <a class="nav-link" routerLink="/cart">

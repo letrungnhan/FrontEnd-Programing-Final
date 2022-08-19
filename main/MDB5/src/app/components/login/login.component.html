@@ -9,16 +9,15 @@
               <!-- Pills content -->
               <div class="tab-content">
                 <div>
-                  <form>
+                  <form [formGroup]="loginForm" (ngSubmit)="submit()">
                     <div class="text-center mt mb-2">
                       <p>Login with:</p>
                       <button
                         type="button"
                         class="btn btn-link btn-lg btn-floating mx-2"
                         data-ripple-color="primary"
-
                       >
-                        <a href="https://www.facebook.com/lltnhan">
+                        <a >
                           <a class="w-50 h-50"><img class="icons" src="assets/icons/facebook.png"></a>
                         </a>
                       </button>
@@ -28,31 +27,52 @@
                         class="btn btn-link btn-lg btn-floating mx-2"
                         data-ripple-color="primary"
                       >
-                        <a href="https://www.facebook.com/lltnhan">
-                          <a class="w-50 h-50"><img class="icons" src="assets/icons/google.png"></a>
+                        <a (click)="signInWithGoogle()">
+                          <img class="icons h-5 w-5" src="assets/icons/google.png">
                         </a>
                       </button>
+
                     </div>
                     <p class="text-center mb-4">or:</p>
                     <!-- Email input -->
-                    <div class="row my-3">
+                    <div class="row my-3 mb-5">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="password" class="form-control form-control-lg" name="email"
-                               id="login-email" required>
+                        <input mdbInput mdbValidate type="email" class="form-control form-control-lg" name="email"
+                               id="login-email" required formControlName="email">
                         <label mdbLabel for="login-email" class="form-label">Email or Username</label>
+                        <mdb-error class="mt-3 mx-1"
+                                   *ngIf=" email?.invalid && (email?.dirty || email?.touched) "
+                        >Email is required
+                        </mdb-error
+                        >
+                        <mdb-success class="mt-3 mx-1"
+                                     *ngIf=" email?.valid && (email?.dirty || email?.touched)  ">Looks good!
+                        </mdb-success
+                        >
                       </mdb-form-control>
                     </div>
                     <!-- Password input -->
 
                     <div class="row my-3">
                       <mdb-form-control class="col-md-12">
-                        <input mdbInput type="password" class="form-control form-control-lg" name="email"
-                               id="login-password" required>
+                        <input mdbInput
+                               mdbValidate
+                               type="password"
+                               class="form-control form-control-lg" name="password"
+                               id="login-password" required formControlName="password">
                         <label mdbLabel for="login-password" class="form-label">Password</label>
+                        <mdb-error class="mt-3 mx-1" *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+                        >Pass word is required
+                        </mdb-error
+                        >
+                        <mdb-success class="mt-3 mx-1" *ngIf="password?.valid && (password?.dirty || password?.touched)"
+                        >Looks good!
+                        </mdb-success
+                        >
                       </mdb-form-control>
                     </div>
                     <!-- 2 column grid layout -->
-                    <div class="row mb-4">
+                    <div class="row mb-4 mt-5">
                       <div class="col-md-6 d-flex justify-content-center">
                         <!-- Checkbox -->
                         <div class="form-check mb-3 mb-md-0">
@@ -61,7 +81,7 @@
                             type="checkbox"
                             value=""
                             id="loginCheck"
-
+                            checked
                             required
                           />
                           <label class="form-check-label mt-1" for="loginCheck">
@@ -86,7 +106,7 @@
 
                     <!--Register buttons-->
                     <div class="text-center">
-                        Not a member? <a routerLink="/register">Register</a>
+                      Not a member? <a routerLink="/register">Register</a>
                     </div>
                   </form>
                 </div>
@@ -131,4 +151,5 @@
     <!-- Section: Login form -->
   </div>
 </main>
+
 
