@@ -126,7 +126,7 @@
         <div class="col-lg-12">
           <section class="product-list pt-4">
             <div class="row overflow-y-scroll" id="products" style="max-height: 800px ">
-              <div *ngFor="let item of dataProduct"
+              <div *ngFor="let item of filteredItems$ | async"
                    class="col-lg-4 col-md-6 mb-4">
                 <!-- Card -->
                 <div class="card card-ecommerce">
