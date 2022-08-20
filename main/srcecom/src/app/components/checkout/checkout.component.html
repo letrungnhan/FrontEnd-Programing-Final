@@ -1,0 +1,237 @@
+<header class=" mt-5">
+  <div class="p-5 text-center bg-light">
+    <h1 class="mb-5 h3 fs-3">Checkout</h1>
+    <hr class="w-75 m-auto"/>
+  </div>
+</header>
+<!--Main layout-->
+<main class="mb-6">
+  <div class="container">
+    <!-- Section: Checkout form -->
+    <section class="">
+      <div class="row gx-lg-5">
+        <div class="col-lg-8 mb-4 mb-md-0 shadow-5-strong p-3">
+          <!-- Section: Biling details -->
+          <section class="">
+            <form [formGroup]="checkoutFormGroup">
+              <div formGroupName="customer">
+                <h2 class="mx-1 mb-3">Customer Details</h2>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                  <div class="col">
+                    <mdb-form-control class="form-outline">
+                      <input
+                        mdbInput
+                        type="text"
+                        id="form6Example1"
+                        class="form-control"
+                        formControlName="firstName"
+                      />
+                      <label mdbLabel class="form-label" for="form6Example1">First name</label>
+                    </mdb-form-control>
+                  </div>
+                  <div class="col">
+                    <mdb-form-control>
+                      <mdb-select formControlName="cardType">
+                        <mdb-option>
+                          Visa
+                        </mdb-option>
+                        <mdb-option>
+                          Mastercard
+                        </mdb-option>
+                      </mdb-select>
+                      <label mdbLabel class="form-label">Card Type</label>
+                    </mdb-form-control>
+                  </div>
+                </div>
+                <div class="row ">
+                  <div class="col">
+                    <mdb-form-control class="form-outline mb-4">
+                      <input mdbInput
+                             type="email"
+                             id="form6Example5"
+                             class="form-control"
+                             formControlName="lastName"
+                      />
+                      <label mdbLabel class="form-label" for="form6Example5"
+                      >Last Name</label
+                      >
+                    </mdb-form-control>
+                  </div>
+                  <div class="col">
+                    <mdb-form-control class="form-outline mb-4">
+                      <input mdbInput
+                             type="text"
+                             id="form6Example6"
+                             class="form-control"
+                             formControlName="cardName"
+                      />
+                      <label mdbLabel class="form-label" for="form6Example6"
+                      >Card Name</label
+                      >
+                    </mdb-form-control>
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <mdb-form-control class="form-outline mb-4">
+                      <input mdbInput
+                             type="email"
+                             id="form6Example9"
+                             class="form-control"
+                             formControlName="email"
+                      />
+                      <label mdbLabel class="form-label" for="form6Example9"
+                      >Email</label
+                      >
+                    </mdb-form-control>
+                  </div>
+                  <div class="col">
+                    <mdb-form-control class="form-outline mb-4">
+                      <input mdbInput
+                             type="number"
+                             id="form6Example10"
+                             class="form-control"
+                             formControlName="cardNumber"
+                      />
+                      <label mdbLabel class="form-label" for="form6Example10"
+                      >Card Number</label
+                      >
+                    </mdb-form-control>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <mdb-form-control class="form-outline mb-4">
+                      <input mdbInput
+                             type="number"
+                             id="form6Example17"
+                             class="form-control"
+                             formControlName="phone"
+                      />
+                      <label mdbLabel class="form-label" for="form6Example17"
+                      >Phone</label
+                      >
+                    </mdb-form-control>
+
+                  </div>
+                  <div class="col">
+                    <mdb-form-control class="form-outline mb-4">
+                      <input mdbInput
+                             type="number"
+                             id="form6Example11"
+                             class="form-control"
+                             formControlName="securityCode"
+                      />
+                      <label mdbLabel class="form-label" for="form6Example11"
+                      >Security Code</label
+                      >
+                    </mdb-form-control>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <mdb-form-control class="form-outline mb-4">
+                      <input mdbInput
+                             type="text"
+                             id="form6Example3"
+                             class="form-control"
+                             formControlName="companyName"
+                      />
+                      <label mdbLabel class="form-label" for="form6Example3"
+                      >Company</label
+                      >
+                    </mdb-form-control>
+                  </div>
+                  <div class="col">
+                    <div class="row">
+                      <div class="col">
+                        <mdb-form-control>
+                          <mdb-select formControlName="expMonth">
+                            <mdb-option *ngFor="let expMonth of creditCardMonth" [value]="expMonth">
+                              {{expMonth}}
+                            </mdb-option>
+                          </mdb-select>
+                          <label mdbLabel class="form-label">Expiration Moth</label>
+                        </mdb-form-control>
+                      </div>
+                      <div class="col">
+                        <mdb-form-control>
+                          <mdb-select formControlName="expYear" (change)="handleMonthsAndYears()"
+                                      (selected)="handleMonthsAndYears()">
+                            <mdb-option *ngFor="let year of creditCardYear" [value]="year">
+                              {{year }}
+                            </mdb-option>
+                          </mdb-select>
+                          <label mdbLabel class="form-label">Expiration Year</label>
+                        </mdb-form-control>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+                <mdb-form-control class="form-outline mb-5">
+                <textarea mdbInput
+                          class="form-control"
+                          id="form6Example7"
+                          rows="4"
+                          formControlName="message"
+                ></textarea>
+                  <label mdbLabel class="form-label" for="form6Example7"
+                  >Additional information</label
+                  >
+                </mdb-form-control>
+              </div>
+
+            </form>
+          </section>
+          <!-- Section: Biling details -->
+        </div>
+
+        <div class="col-lg-4 mb-4 mb-md-0">
+          <!-- Section: Summary -->
+          <section class="shadow-5-strong p-4 rounded-5 mb-4">
+            <h5 class="mb-5">The total amount of</h5>
+
+            <div class="d-flex justify-content-between mb-3">
+              <span>Temporary amount </span>
+              <span>{{cartService.getCartData().totalPrice|currency:'USD'}}</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span>Number of product </span>
+              <span>{{cartService.getCartData().totalQuantity | currency:'USD'}}</span>
+            </div>
+            <hr class="my-4"/>
+            <div class="d-flex justify-content-between fw-bold mb-5">
+              <span>The total amount of (including VAT) </span>
+              <span>{{totalPrice * totalQuantity | currency:'USD'}}</span>
+            </div>
+            <form class=" p-4 rounded-5" (ngSubmit)="onSubmit()">
+              <button
+                type="submit"
+                class="btn btn-primary btn-rounded w-100"
+              >
+                Proceed to shipping
+              </button>
+            </form>
+
+          </section>
+          <!-- Section: Summary -->
+
+          <!-- Section: Summary -->
+
+          <h5 class="mb-4 mx-3">Choose your preferred payment</h5>
+
+          <!-- Section: Summary -->
+        </div>
+      </div>
+    </section>
+    <!-- Section: Checkout form -->
+  </div>
+</main>
+<!--Main layout-->
