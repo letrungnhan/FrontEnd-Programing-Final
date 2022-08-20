@@ -1,0 +1,60 @@
+.navbar-scroll .navbar-brand {
+  color: #fff;
+}
+
+.navbar-scrolled {
+  background-color: #7d8488;
+}
+
+.navbar-scrolled .navbar-brand,
+.navbar-scrolled .nav-link,
+.navbar-scrolled .fa-bars {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .navbar-scroll {
+    background-color: #7d8488;
+  }
+}
+.btn-hover:hover {
+  background-color: #fff;
+  border-color: transparent;
+  color: #444;
+  transition: 0.2s;
+}
+.btn-hover:hover ~ .bg-1 {
+  opacity: 0;
+}
+.btn-hover:hover ~ .bg-2 {
+  opacity: 0.7;
+}
+
+.loader-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: black;
+  opacity: 0.8;
+  z-index: 99;
+}
+
+.avtGG {
+  -webkit-background-size: 32px 32px;
+  background-size: 32px 32px;
+  border: 0;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  margin: 0px;
+  position: relative;
+  height: 35px;
+  width: 35px;
+  z-index: 0;
+}
+.avtGG:hover {
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+/*# sourceMappingURL=header.component.css.map */
