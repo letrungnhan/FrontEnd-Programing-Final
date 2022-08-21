@@ -1,15 +1,14 @@
 import {Injectable} from '@angular/core';
 import {from, Observable} from "rxjs";
-import {Router} from "@angular/router";
 import {
   Auth,
-  authState,
-   FacebookAuthProvider,
+  authState, createUserWithEmailAndPassword,
+  FacebookAuthProvider,
   GoogleAuthProvider,
-  signInWithEmailAndPassword, signInWithPopup, UserCredential
+  signInWithEmailAndPassword, signInWithPopup, updateProfile, UserCredential
 } from "@angular/fire/auth";
 import {AngularFireAuth} from "@angular/fire/compat/auth";
-import {HotToastService} from "@ngneat/hot-toast";
+import {switchMap} from "rxjs/operators";
 
 
 @Injectable({
@@ -18,32 +17,18 @@ import {HotToastService} from "@ngneat/hot-toast";
 
 export class AuthenticationService {
   currentUser$ = authState(this.auth);
-  constructor(public auth: Auth, public fireAuth: AngularFireAuth, private router: Router,private toast: HotToastService) {
+  constructor(public auth: Auth, public fireAuth: AngularFireAuth) {
   }
   login(email: string, password: string) {
     return from(signInWithEmailAndPassword(this.auth, email, password));
   }
   //register
 
-  // register(username: string, email: string, password: string) {
-  //   return from(createUserWithEmailAndPassword(this.auth, email, password)).pipe(
-  //     switchMap(({user}) => updateProfile(user, {displayName: username})));
-  // }
-// @ts-ignore
-
   register(username: string, email: string, password: string) {
-    this.fireAuth.createUserWithEmailAndPassword(email, password).then( res => {
-      this.toast.observe({
-        success:'Sign Up success',
-        loading:'Waiting for SignUp',
-        error:'ERROR'
-      })
-        this.router.navigate(['/login']).then(() => this.auth.signOut());
-
-      // this.sendEmailForVarification(res.user);
-    }
-    )
+    return from(createUserWithEmailAndPassword(this.auth, email, password)).pipe(
+      switchMap(({user}) => updateProfile(user, {displayName: username})));
   }
+
   logout() {
     return from(this.auth.signOut());
   }
