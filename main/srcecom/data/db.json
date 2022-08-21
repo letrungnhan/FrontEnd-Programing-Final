@@ -1,0 +1,1384 @@
+{
+
+  "Languages": [
+    {
+      "languageName": "JAVA",
+      "languageID": 1
+    },
+    {
+      "languageName": "CSHARP",
+      "languageID": 2
+    },
+    {
+      "languageName": "HTML",
+      "languageID": 3
+    },
+    {
+      "languageName": "PYTHON",
+      "languageID": 4
+    },
+    {
+      "languageName": "PHP",
+      "languageID": 5
+    },
+    {
+      "languageName": "JAVASCRIPT",
+      "languageID": 6
+    },
+    {
+      "languageName": "NET",
+      "languageID": 7
+    },
+    {
+      "languageName": "CSS",
+      "languageID": 8
+    }
+  ],
+  "Industries": [
+    {
+      "industryName": "WEB",
+      "industryID": 1
+    },
+    {
+      "industryName": "DATA",
+      "industryID": 2
+    },
+    {
+      "industryName": "TECHNOLOGY",
+      "industryID": 3
+    },
+    {
+      "industryName": "MOBILE",
+      "industryID": 4
+    },
+    {
+      "industryName": "ECOMMERCE",
+      "industryID": 5
+    },
+    {
+      "industryName": "MEDIA",
+      "industryID": 6
+    },
+    {
+      "industryName": "ENGINEERING",
+      "industryID": 7
+    }
+  ],
+  "Tags": [
+    {
+      "tagName": "WEBSYSTEM",
+      "tagID": 1
+    },
+    {
+      "tagName": "FRONTEND",
+      "tagID": 2
+    },
+    {
+      "tagName": "CHAT",
+      "tagID": 3
+    },
+    {
+      "tagName": "CRYPTO",
+      "tagID": 4
+    }
+  ],
+
+
+  "Products": [
+    {
+      "id": 1,
+      "title": "Dashboard Admin",
+      "description": "Some quick example text  build on the card title and make up the bulk of the card's content.",
+      "img": [
+        "./assets/image/product/Bot Mult Crypto for Binance1.png",
+        "./assets/image/product/Bot Mult Crypto for Binance2.png",
+        "./assets/image/product/Bot Mult Crypto for Binance3.png"
+      ],
+      "price": 1000,
+      "author": "letrungnhan",
+      "rating": 4,
+      "languageName": [
+        "HTML",
+        "CSS",
+        "JAVASCRIPT"
+      ],
+      "industryName": [
+        "WEB",
+        "ECOMMERCE"
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "CHAT"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "title": "Money Management Android App",
+      "description": "With this finance app, accounting and tracking your financial data efficiently is now made easy. Clearly arranged monthly tables enable transactions to be entered very quickly.",
+      "img": [
+        "./assets/image/product/supper-cleaner-2020.png",
+        "./assets/image/product/Money-Management-Android-App.png",
+        "./assets/image/product/Bot Mult Crypto for Binance1.png"
+      ],
+      "price": 4223.5,
+      "author": "hoxuanthinh",
+      "rating": 3,
+      "languageName": "CSHARP",
+      "industryName": [
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "title": "ECOM Ecommerce web platform",
+      "description": "This is a web template for a fully functioning Ecommerce platform, where products can be shown, browsed, wishlisted, put in cart, bought, added reviews, user created, etc.The server is realized via PHP and MySQL database. The frontend is JavaScript, HTML and CSS.",
+      "img": [
+        "./assets/image/product/supper-cleaner-2020.png",
+        "./assets/image/product/Money-Management-Android-App.png",
+        "./assets/image/product/Bot Mult Crypto for Binance1.png"
+      ],
+      "price": "310.09",
+      "author": "letrungnhan",
+      "rating": 3,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "title": "ECOM Ecommerce web platform",
+      "description": "Robot for the Cryptocurrency market, uses binance to make trades within its portfolio. (single user system)",
+      "img": [
+        "./assets/image/product/supper-cleaner-2020.png",
+        "./assets/image/product/Money-Management-Android-App.png",
+        "./assets/image/product/Bot Mult Crypto for Binance1.png"
+      ],
+      "price": 393.32,
+      "author": "letrungnhan",
+      "rating": 4,
+      "languageName": [
+        "JAVASCRIPT",
+        "PHP",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "title": "HERMEX Crypto Currency Trading Bot",
+      "description": "This is an npm tool running on NodeJS, using a websocket for communication. Frontend via web interface. Command line functionality also included, via NodeJS. Fully use Websocket for exchange communication to react as fast as possible on market movements and events. Multi pair support in one instance",
+      "img": [
+        "./assets/image/product/HERMEX_Web_1.png",
+        "./assets/image/product/HERMEX_Web_2.png",
+        "./assets/image/product/HERMEX_Web_3.png"
+      ],
+      "price": "3,110.09",
+      "author": "hoxuanthinh",
+      "rating": 4,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB"
+      ],
+      "tagName": [
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "title": "Android Towing and Roadside Assistance App iRescue App",
+      "description": "iRescue is a smart technology solution that is designed to provide Road Rescue and  Assistance through a mobile application. It is an innovative\non-demand roadside assistance platform that is set to transform the towing and roadside assistance services within the world with amazing customer experience.",
+      "img": [
+        "./assets/image/product/iRescueApp-java-1.png",
+        "./assets/image/product/iRescueApp-java-2.png",
+        "./assets/image/product/iRescueApp-java-3.png",
+        "./assets/image/product/iRescueApp-java-4.png"
+      ],
+      "price": "310.09",
+      "author": "letrungnhan",
+      "rating": 3,
+      "languageName": [
+        "PHP",
+        "JAVA"
+
+      ],
+      "industryName": [
+        "WEB",
+        "ECOMMERCE"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "title": "MShopping Mall Shopping Flutter Apps with Admin Panel",
+      "description": "This is a web template for a fully functioning Ecommerce platform, where products can be shown, browsed, wishlisted, put in cart, bought, added reviews, user created, etc.The server is realized via PHP and MySQL database. The frontend is JavaScript, HTML and CSS.",
+      "img": [
+        "./assets/image/product/MallShopping-android-1.png",
+        "./assets/image/product/MallShopping-android-2.png",
+        "./assets/image/product/MallShopping-android-3.png",
+        "./assets/image/product/MallShopping-android-4.png"
+      ],
+      "price": "150.09",
+      "author": "hoxuanthinh",
+      "rating": 3,
+      "languageName": [
+        "PHP",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "MOBILE"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "title": "Tooday A Social community app",
+      "description": "Tooday is your city's own local app, that brings to you all the latest updates of your city through short videos. Through the app, we aim to provide users a medium where they can get all the important and interesting videos from across their city in a single place.",
+      "img": [
+        "./assets/image/product/Tooday-android-1.png",
+        "./assets/image/product/Tooday-android-2.png",
+        "./assets/image/product/Tooday-android-3.png"
+      ],
+      "price": "956.89",
+      "author": "chungtrithong",
+      "rating": 3,
+      "languageName": [
+        "JAVASCRIPT",
+        "PHP"
+
+      ],
+      "industryName": [
+        "MOBILE"
+      ],
+      "tagName": [
+        "CRYPTO"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 9,
+      "title": "Febit Digital Currency Exchange Platform",
+      "description": "Cryptocurrency exchange script is a pre-fabricated bitcoin exchange software that helps you to create and launch a user-friendly crypto trading platform instantly.Our script comes with the latest trading modules and robust security features. Febit premium crypto exchange script is fully customizable, so you can modify themes, features, designs, and other add-ons as per the business requirements in a hassle-free manner.",
+      "img": [
+        "./assets/image/product/CurrencyExchange-crypto-1.png",
+        "./assets/image/product/CurrencyExchange-crypto-2.png"
+
+      ],
+      "price": "2,110.09",
+      "author": "letrungnhan",
+      "rating": 3,
+      "languageName": [
+        "JAVASCRIPT",
+        "PHP",
+        "CSS"
+      ],
+      "industryName": [
+        "MOBILE"
+      ],
+      "tagName": [
+        "CRYPTO"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "title": "Crypto Central",
+      "description": "Crypto Central is a powerful lightweight modern android application that can be used to maintain portfolio across multiple Cryptocurrency Exchanges like Coinbase, Coinbase Pro and Binance.  Unlike other cryptocurrency portfolio tracker applications, It is a unique application that can be used to track history of your crypto currencies as whole and/or, by individual exchange based on the crypto's historic spot prices.",
+      "img": [
+        "./assets/image/product/Crypto Central-1.png",
+        "./assets/image/product/Crypto Central-2.png"
+      ],
+      "price": "346.09",
+      "author": "letrungnhan",
+      "rating": 4,
+      "languageName": [
+        "JAVA"
+      ],
+      "industryName": [
+        "MOBILE"
+      ],
+      "tagName": [
+        "CRYPTO"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 11,
+      "title": "RN Firebase Chat App",
+      "description": "Mobile Chat application developed with React-Native an using Google Firebase as back-end. This is an npm tool running on NodeJS, using a websocket for communication. Frontend via web interface. Working on both IOS and Android platforms.",
+      "img": [
+        "./assets/image/product/Chat App-1.png",
+        "./assets/image/product/Chat App-2.png",
+        "./assets/image/product/Chat App-3.png"
+      ],
+      "price": "99.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "MOBILE"
+      ],
+      "tagName": [
+        "CHAT"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 12,
+      "title": "Chatbot in PHP MySQL Codeigniter Framework",
+      "description": "I am going to show you how the chat bot work when customer ask any question.Sometimes we don't have enough time to chat with customer being online 24 hrs.On the other hand customer is not interested to read the FAQ (Frequently asked questions).So what is the solution.We can make customer happy by replying immediate answer of their question with a chat bot. So how can we make a chat bot we will have a list of predefined question and answer into database table When they will ask a question we will count the matching word into the predefined questions in table and calculate the maximum matching words from the table's question list and finally we will take decision that the answer is the answer field of same record of that maximum words of the customer's sending question.",
+      "img": [
+        "./assets/image/product/chatbox-php-1.png",
+        "./assets/image/product/chatbox-php-2.png",
+        "./assets/image/product/chatbox-php-3.png"
+      ],
+      "price": "97.98",
+      "author": "letrungnhan",
+      "rating": 3,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS",
+        "PHP"
+      ],
+      "industryName": [
+        "MOBILE"
+      ],
+      "tagName": [
+        "CHAT"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 13,
+      "title": "CRUD system",
+      "description": "This CRUD you can Create login users, signup user, create member/add a member, Update a member, Delete a member and you can also logout the user easy and fast. My Background I am Christian and I am 3rd year in College, I am currently enrolled Bachelor of Science in Information Technology Programming language i know: Php Html Java Python C++ C#. I already done creating CRUD using PHP HTML and MSQL .This CRUD you can Create login users, signup user, create member/add a member, Update a member, Delete a member and you can also logout the user easy and fast.",
+      "img": [
+        "./assets/image/product/CRUD system-1.png",
+        "./assets/image/product/CRUD system-2.png"
+      ],
+      "price": "10.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS",
+        "PHP"
+      ],
+      "industryName": [
+        "TECHNOLOGY"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 14,
+      "title": "Shopping cart small application",
+      "description": "shopping cart small application developed by technologies angular 8 as frontend,php as backend and mysql is used for database connection.It is just a small application I developed for demo purpose.It is a single page only with multiple components based.If someone presses add to cart or quantity increased button, make sure cart quantity should get updated and price also should be updated.If the quantity decreased button is pressed, quantity and price should also decrease.If someone presses the checkout button.",
+      "img": [
+        "./assets/image/product/shopping cart-1.jpg"
+
+      ],
+      "price": "9.09",
+      "author": "letrungnhan",
+      "rating": 3,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "NET",
+        "CSS"
+      ],
+      "industryName": [
+        "ECOMMERCE"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 15,
+      "title": "Crypto Currency Price Module",
+      "description": "Crypto Currency Price Module This project is designed to solve the problem of getting crypto currency pricing data in your solution and doing so robustly. Using a nice and simple to use java workflow. Easy to implement and add or combine with any existing project. Most services and solutions rely on one data source for their data, meaning one point of failure.",
+      "img": [
+        "./assets/image/product/CryptoPrice-1.png",
+        "./assets/image/product/CryptoPrice-2.png",
+        "./assets/image/product/CryptoPrice-3.png"
+      ],
+      "price": "119.09",
+      "author": "letrungnhan",
+      "rating": 5,
+      "languageName": [
+        "JAVA"
+      ],
+      "industryName": [
+        "DATA"
+      ],
+      "tagName": [
+        "CRYPTO"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 16,
+      "title": "Medical Clinic App Reception Data",
+      "description": "Medical Clinic App Reception Data Clinic Reception Data is a desktop app, using Electron, which takes care of the basic reception data needs of a medical clinic. As such it includes features like:Appointment CalendarPatient data, searchable via various data typesOnline ticket listStaff listAutomatic saving and loading of all data This is a JavaScript based project using ElectronJS which makes it natively runnable on all desktop systems and can also be ported to the web with relative ease, since it s all HTML, CSS and Javascript.",
+      "img": [
+        "./assets/image/product/App Reception Data-1.png",
+        "./assets/image/product/App Reception Data-2.png",
+        "./assets/image/product/App Reception Data-3.png",
+        "./assets/image/product/App Reception Data-4.png"
+      ],
+      "price": "30.09",
+      "author": "chungtrithong",
+      "rating": 4,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB",
+        "DATA"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 17,
+      "title": "THUNDER LAND Multipurpose HTML5 CSS Js Website Template",
+      "description": "This is an npm tool running on NodeJS, using a websocket for communication. Frontend via web interface. Command line functionality also included, via NodeJS. Fully use Websocket for exchange communication to react as fast as possible on market movements and events. Multi pair support in one instance.",
+      "img": [
+        "./assets/image/product/THUNDER LAND-1.png",
+        "./assets/image/product/THUNDER LAND-2.png"
+      ],
+      "price": "43.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB",
+        "ECOMMERCE"
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 18,
+      "title": "Download Media from YouTube",
+      "description": "Song Tube is a new beautiful and fast application made in flutter, it supports YouTube audio and video downloading at any quality, In-App YouTube Browser, audio conversion and an Audio tags editor.Sometimes we don't have enough time to chat with customer being online 24 hrs. On the other hand customer is not interested to read the FAQ (Frequently asked questions).",
+      "img": [
+        "./assets/image/product/MediaYouTube-1.png",
+        "./assets/image/product/MediaYouTube-2.png",
+        "./assets/image/product/MediaYouTube-3.png"
+      ],
+      "price": "171.09",
+      "author": "letrungnhan",
+      "rating": 4,
+      "languageName": [
+        "PYTHON"
+      ],
+      "industryName": [
+        "MOBILE",
+        "MEDIA"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 19,
+      "title": "News related social media network",
+      "description": "Zagela is a location based social media open source platform, where users can instead of filtering the feeds based on the accounts they are following; they will be able to filter the feeds based on their location on the map. So if the user is interested in the feeds related to specific geolocation, he would be able to simply draw a circle around that area, and list all related feeds. Price includes the mobile app source code, and an access to EC2 instance that has the backend server (The source code of the backend server is not included).",
+      "img": [
+        "./assets/image/product/social media-1.png",
+        "./assets/image/product/social media-2.png",
+        "./assets/image/product/social media-3.png"
+      ],
+      "price": "240.09",
+      "author": "letrungnhan",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "JAVA"
+      ],
+      "industryName": [
+        "DATA",
+        "MEDIA",
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 20,
+      "title": "Xsportz React Redux Full Frontend",
+      "description": "Xsportz React Redux Full Frontend Redsportz - React,Redux Full Frontend Link : https://redsportsz.herokuapp.com/Redsportz is a webapp containing full react redux code and frontend design . Redux helps you deal with shared state management, but like any tool, it has tradeoffs. It s a trade-off between short term and long term productivity.Redux Toolkit is our recommended approach for writing Redux logic. It contains packages and functions that we think are essential for building a Redux app.",
+      "img": [
+        "./assets/image/product/Xsportz React-1.png",
+        "./assets/image/product/Xsportz React-2.png"
+      ],
+      "price": "9.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 21,
+      "title": "Movie Website",
+      "description": "The website server has a static, templates and database file. In the static file are stored all the images, videos and styles of the website, the images and videos should be the exact same name as the movie or tv show that is saved on the databse. In the templates file are stored all html files for the templates of the website. And in the sqlite3 database file are stored all the movies and tv shows details.",
+      "img": [
+        "./assets/image/product/Movie Website-1.png",
+        "./assets/image/product/Movie Website-2.png",
+        "./assets/image/product/Movie Website-3.png"
+      ],
+      "price": "109.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "PYTHON",
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "DATA",
+        "MEDIA",
+        "WEB"
+      ],
+      "tagName": [
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 22,
+      "title": "E commerce Application Like Flipkart Amazon",
+      "description": "Everything You Need To Start Selling Online Today. 99.99% Average Uptime. Fulfillment Integration. Mobile Commerce Ready. Social Media Integration. Fraud Prevention. Unlimited 24/7 Support. Secure Shopping Cart. This is an npm tool running on NodeJS, using a websocket for communication. Frontend via web interface. Command line functionality also included, via NodeJS.",
+      "img": [
+        "./assets/image/product/Flipkart Amazon-1.png",
+        "./assets/image/product/Flipkart Amazon-2.png",
+        "./assets/image/product/Flipkart Amazon-3.png",
+        "./assets/image/product/Flipkart Amazon-4.png"
+      ],
+      "price": "93.09",
+      "author": "letrungnhan",
+      "rating": 4,
+      "languageName": [
+        "JAVA"
+
+      ],
+      "industryName": [
+        "DATA",
+        "ECOMMERCE",
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 23,
+      "title": "Face Recognition python3 opencv3",
+      "description": "To make a face recognition program, first we need to train the recognizer with dataset of previously captured faces along with its ID, for example we have two person then first person will have ID 1 that's me (yassine) :p and 2nd person will have ID 2 (my binome) :p , so that all the images of person one in the dataset will have ID 1 and all the images of the 2nd person in the dataset will have ID 2, then we will use those dataset images to train the recognizer to predict the 1 of an newly presented face from the live video frame",
+      "img": [
+        "./assets/image/product/Face Recognition-1.png"
+      ],
+      "price": "9.09",
+      "author": "letrungnhan",
+      "rating": 5,
+      "languageName": [
+        "PYTHON"
+
+      ],
+      "industryName": [
+        "DATA",
+        "TECHNOLOGY"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 24,
+      "title": "Coffee Shop Template",
+      "description": "The Ultimate Coffee Shop Template. -Index Page Is Home Page. Navbar Contains Links To : Product Listing Page, Login Page, Register Page, Cart Page. Click Any Product On Product Page And It Will Take You To Product Details Page. Click On Place Order Button On Cart Page And It Will Take You To Checkout Page.",
+      "img": [
+        "./assets/image/product/Coffee Shop-1.png",
+        "./assets/image/product/Coffee Shop-2.png",
+        "./assets/image/product/Coffee Shop-3.png",
+        "./assets/image/product/Coffee Shop-4.png",
+        "./assets/image/product/Coffee Shop-5.png"
+
+      ],
+      "price": "79.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "HTML",
+        "JAVASCRIPT",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB"
+      ],
+      "tagName": [
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 25,
+      "title": "Mini Ecommerce Website",
+      "description": "It is based on PHP and MySQL. In this project user can buy a product from website, place an order and pay for it. Admin will receive the confirmation order through the email and after confirmation of payment admin will ship the order. Admin can also add the product or remove in the site. A website that allows people to buy and sell physical goods, services, and digital products over the internet rather than at a brick-and-mortar location. Through an e-commerce website, a business can process orders, accept payments, manage shipping and logistics, and provide customer service.",
+      "img": [
+        "./assets/image/product/Movie Website-1.png",
+        "./assets/image/product/Movie Website-2.png",
+        "./assets/image/product/Movie Website-3.png"
+      ],
+      "price": "99.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "PHP",
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "ECOMMERCE",
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 26,
+      "title": "Mini Ecommerce Website",
+      "description": "Crypto Currency Price Module This project is designed to solve the problem of getting crypto currency pricing data in your solution and doing so robustly. Using a nice and simple to use java workflow. Easy to implement and add or combine with any existing project. Most services and solutions rely on one data source for their data, meaning one point of failure.",
+      "img": [
+        "./assets/image/product/iRescueApp-java-1.png",
+        "./assets/image/product/iRescueApp-java-2.png",
+        "./assets/image/product/iRescueApp-java-3.png",
+        "./assets/image/product/iRescueApp-java-4.png"
+      ],
+      "price": "887.09",
+      "author": "letrungnhan",
+      "rating": 4,
+      "languageName": [
+        "HTML",
+        "CSS",
+        "JAVASCRIPT",
+        "PHP"
+      ],
+      "industryName": [
+        "WEB",
+        "ENGINEERING"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 27,
+      "title": "FWoo Flutter WooCommerce Store",
+      "description": "The website server has a static, templates and database file. In the static file are stored all the images, videos and styles of the website, the images and videos should be the exact same name as the movie or tv show that is saved on the databse. In the templates file are stored all html files for the templates of the website. And in the sqlite3 database file are stored all the movies and tv shows details.",
+      "img": [
+        "./assets/image/product/WooCommerce-1.png",
+        "./assets/image/product/CurrencyExchange-crypto-2.png",
+        "./assets/image/product/MallShopping-android-3.png"
+      ],
+      "price": 423.5,
+      "author": "letrungnhan",
+      "rating": 3,
+      "languageName": [
+        "NET",
+        "CSHARP"
+      ],
+      "industryName": [
+        "ECOMMERCE",
+        "WEB"
+      ],
+      "tagName": [
+        "CRYPTO",
+        "WEBSYSTEM"
+
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 28,
+      "title": "News related social media network",
+      "description": "Song Tube is a new beautiful and fast application made in flutter, it supports YouTube audio and video downloading at any quality, In-App YouTube Browser, audio conversion and an Audio tags editor.Sometimes we don't have enough time to chat with customer being online 24 hrs. On the other hand customer is not interested to read the FAQ (Frequently asked questions).",
+      "img": [
+        "./assets/image/product/Delivery App-1.png",
+        "./assets/image/product/Coffee Shop-2.png",
+        "./assets/image/product/Coffee Shop-3.png"
+      ],
+      "price": "550.09",
+      "author": "letrungnhan",
+      "rating": 3,
+      "languageName": [
+        "NET",
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "DATA",
+        "WEB"
+      ],
+      "tagName": [
+        "CRYPTO",
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 29,
+      "title": "DHANA Ecommerce Flutter UI Kit",
+      "description": "Crypto Central is a powerful lightweight modern android application that can be used to maintain portfolio across multiple Cryptocurrency Exchanges like Coinbase, Coinbase Pro and Binance.  Unlike other cryptocurrency portfolio tracker applications, It is a unique application that can be used to track history of your crypto currencies as whole and/or, by individual exchange based on the crypto's historic spot prices.",
+      "img": [
+        "./assets/image/product/DHANA Ecommerce-1.png",
+        "./assets/image/product/Chat App-2.png",
+        "./assets/image/product/Chat App-3.png"
+      ],
+      "price": 39.32,
+      "author": "chungtrithong",
+      "rating": 4,
+      "languageName": [
+        "JAVA",
+        "PHP",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "ECOMMERCE",
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 30,
+      "title": "Laravel Ecommerce Project",
+      "description": "To make a face recognition program, first we need to train the recognizer with dataset of previously captured faces along with its ID, for example we have two person then first person will have ID 1 that's me (yassine) :p and 2nd person will have ID 2 (my binome) :p , so that all the images of person one in the dataset will have ID 1 and all the images of the 2nd person in the dataset will have ID 2, then we will use those dataset images to train the recognizer to predict the 1 of an newly presented face from the live video frame.",
+      "img": [
+        "./assets/image/product/Laravel Ecommerce-1.png",
+        "./assets/image/product/HERMEX_Web_2.png",
+        "./assets/image/product/HERMEX_Web_3.png"
+      ],
+      "price": "2,110.09",
+      "author": "hoxuanthinh",
+      "rating": 4,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "ECOMMERCE",
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 31,
+      "title": "NeoCart B2B MarketPlace eCommerce System Multi Vendor",
+      "description": "This is the B2B eCommerce (Multi Vendor) Marketplace system for small ,medium & large company(Extended Version). In this B2B eCommerce Market Place system You will have the products information with selling price, In Admin there are all kinds of data including products,slides,featured products, CMS and others Features. in Member Area there are login register and buy products and can see the status of their orders,delivery,cancellation,completion of their Orders.",
+      "img": [
+        "./assets/image/product/NeoCart-1.png",
+        "./assets/image/product/NeoCart-2.png",
+        "./assets/image/product/NeoCart-3.png"
+
+      ],
+      "price": "450.09",
+      "author": "letrungnhan",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "PHP",
+        "CSS",
+        "HTML"
+      ],
+      "industryName": [
+        "WEB",
+        "ECOMMERCE"
+      ],
+      "tagName": [
+        "FRONTEND",
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 32,
+      "title": "OmniCart eCommerce Multi Vendor Marketplace Classified Ads Platform",
+      "description": "OmniCart can be used as either a fully featured multi vendor marketplace or as a single vendor e-commerce system. It's built with simplicity in mind, while being feature rich, with a clean and easy to extend codebase. It's optimized for performance, and easy management with all kinds of advanced features, like group operations, backup system, logging, widgets, and much more.",
+      "img": [
+        "./assets/image/product/OmniCart eCommerce-1.png",
+        "./assets/image/product/App Reception Data-2.png",
+        "./assets/image/product/App Reception Data-3.png",
+        "./assets/image/product/App Reception Data-4.png"
+      ],
+      "price": "150.09",
+      "author": "chungtrithong",
+      "rating": 4,
+      "languageName": [
+        "PHP",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "ECOMMERCE",
+        "MOBILE"
+      ],
+      "tagName": [
+        "FRONTEND",
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 33,
+      "title": "Bhista Chat App",
+      "description": "Bhista chat app is a multi client chatting application. The app is written in python. The application can be used for messaging as well as non live messaging. All file type transfer is supported and all messages and files are end-to-end encrypted. All users are stored in a MySQL database and an easy UI has been made to add or remove user from the database. Password protected login for all users. Large file transfer also supported. After everything has been set up, the chat app can be opened. ",
+      "img": [
+        "./assets/image/product/Bhista Chat App-1.png",
+        "./assets/image/product/Bhista Chat App-2.png",
+        "./assets/image/product/Bhista Chat App-3.png"
+      ],
+      "price": "96.89",
+      "author": "chungtrithong",
+      "rating": 5,
+      "languageName": [
+        "PYTHON"
+      ],
+      "industryName": [
+        "DATA",
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "CHAT"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 34,
+      "title": "ChatMe Simply Messaging Flutter Apps",
+      "description": "Song Tube is a new beautiful and fast application made in flutter, it supports YouTube audio and video downloading at any quality, In-App YouTube Browser, audio conversion and an Audio tags editor.Sometimes we don't have enough time to chat with customer being online 24 hrs. On the other hand customer is not interested to read the FAQ (Frequently asked questions).",
+      "img": [
+        "./assets/image/product/ChatMe Simply-1.png",
+        "./assets/image/product/ChatMe Simply-2.png",
+        "./assets/image/product/ChatMe Simply-3.png"
+      ],
+      "price": "310.09",
+      "author": "letrungnhan",
+      "rating": 4,
+      "languageName": [
+        "PHP",
+        "PYTHON"
+
+      ],
+      "industryName": [
+        "MOBILE"
+      ],
+      "tagName": [
+        "CHAT"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 35,
+      "title": "WhatsApp Click to Chat Plugin",
+      "description": "Crypto Central is a powerful lightweight modern android application that can be used to maintain portfolio across multiple Cryptocurrency Exchanges like Coinbase, Coinbase Pro and Binance. The WhatsApp Chat Plugin allows your visitors and customers to send messages directly to you or multiple agents phone numbers. Start a conversation from your website directly to your WhatsApp phone number with one click.",
+      "img": [
+        "./assets/image/product/WhatsApp-1.png",
+        "./assets/image/product/WhatsApp-2.png"
+      ],
+      "price": "34.09",
+      "author": "chungtrithong",
+      "rating": 4,
+      "languageName": [
+        "CSS",
+        "PHP",
+        "JAVASCRIPT"
+      ],
+      "industryName": [
+        "MOBILE"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 36,
+      "title": "Integration of Fresh Chat In React Native With Push Notifications",
+      "description": "In this code, you can create a chat between mobile and fresh Chat Support Channel and can also receives push from fresh Chat Server. Messages and push notifications are delivered real time. If you are a beginner in react native, you are required to learn the basics of react native. Then, if you are doing this after react native - 0.60, auto-linking can make the things easier for you. Else, you are required to do the configuration manually. After installing the main package \"react-native-freshChat-sdk, you can start chatting",
+      "img": [
+        "./assets/image/product/React Native-1.png",
+        "./assets/image/product/Chat App-2.png",
+        "./assets/image/product/Chat App-3.png"
+      ],
+      "price": "99.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "MOBILE"
+      ],
+      "tagName": [
+        "CHAT"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 37,
+      "title": "Dalite Premium App to Date Chat Meet People",
+      "description": "Dalite is a premium dating App you need to get started your own business. It’s include People near with locations, Encounters, It’s a match, Credits system, Machine Learning, Admob, Realtime Chat, Premium features, Gift system in-app purchases, In-app subscriptions, Push notifications, Blocking System, Report System, User Profile, Multiple Photos Upload, Multiple Profile Photos, Facebook multiple Photos import, and more…",
+      "img": [
+        "./assets/image/product/Dalite Premium-1.png",
+        "./assets/image/product/chatbox-php-2.png",
+        "./assets/image/product/chatbox-php-3.png"
+      ],
+      "price": "889.98",
+      "author": "letrungnhan",
+      "rating": 5,
+      "languageName": [
+        "JAVA",
+        "PHP"
+      ],
+      "industryName": [
+        "DATA",
+        "MOBILE"
+      ],
+      "tagName": [
+        "CHAT"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 38,
+      "title": "MJ Fitness Android UI Kit",
+      "description": "Change text, colors, and graphics, add or place photos. Customize every element as much, or as little as you want. Customize elements (easy to edit) 100% free fonts Perfect pixel (high-quality design)Very clean and cool UI Free updates. My Background I am Christian and I am 3rd year in College, I am currently enrolled Bachelor of Science in Information Technology Programming language i know: Php Html Java Python C++ C#. I already done creating CRUD using PHP HTML and MSQL .This CRUD you can Create login users, signup user, create member/add a member, Update a member, Delete a member and you can also logout the user easy and fast.",
+      "img": [
+        "./assets/image/product/Android UI-1.png",
+        "./assets/image/product/Android UI-2.png",
+        "./assets/image/product/Android UI-3.png",
+        "./assets/image/product/Android UI-4.png"
+      ],
+      "price": "999.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "JAVA"
+      ],
+      "industryName": [
+        "MOBILE",
+        "DATA"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 39,
+      "title": "iOS Recipe Template App Swift MVVM Only mock data and UI Code",
+      "description": "Cheffy is a template of recipe application. Contain 3 tab, perfectly good for initial template with code in MVVM style for iOS application. The design is perfectly nice for beginner, easy to navigate and understand. Good for practicing and also for initial template with good design pattern. Follow apple guideline and easy to customisable.",
+      "img": [
+        "./assets/image/product/Xsportz React-1.png"
+      ],
+      "price": "90.09",
+      "author": "letrungnhan",
+      "rating": 5,
+      "languageName": [
+        "PYTHON",
+        "NET"
+      ],
+      "industryName": [
+        "DATA",
+        "MOBILE"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 40,
+      "title": "ionic 5 whatsApp clone",
+      "description": "The website server has a static, templates and database file. In the static file are stored all the images, videos and styles of the website, the images and videos should be the exact same name as the movie or tv show that is saved on the databse. In the templates file are stored all html files for the templates of the website. And in the sqlite3 database file are stored all the movies and tv shows details.",
+      "img": [
+        "./assets/image/product/ionic-1.png",
+        "./assets/image/product/CryptoPrice-2.png",
+        "./assets/image/product/CryptoPrice-3.png"
+      ],
+      "price": "519.09",
+      "author": "letrungnhan",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "MOBILE",
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 41,
+      "title": "Coworking Workspace Booking Flutter App with GetX Chat Admin Panel Google Admob",
+      "description": "Medical Clinic App Reception Data Clinic Reception Data is a desktop app, using Electron, which takes care of the basic reception data needs of a medical clinic. As such it includes features like:Appointment CalendarPatient data, searchable via various data typesOnline ticket listStaff listAutomatic saving and loading of all data This is a JavaScript based project using ElectronJS which makes it natively runnable on all desktop systems and can also be ported to the web with relative ease, since it s all HTML, CSS and Javascript.",
+      "img": [
+        "./assets/image/product/Coworking Workspace-1.png",
+        "./assets/image/product/Coworking Workspace-2.png",
+        "./assets/image/product/Coworking Workspace-3.png",
+        "./assets/image/product/Coworking Workspace-4.png"
+      ],
+      "price": "330.09",
+      "author": "chungtrithong",
+      "rating": 4,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "MOBILE",
+        "DATA"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 42,
+      "title": "Tooday A Social community app Template",
+      "description": "To make a face recognition program, first we need to train the recognizer with dataset of previously captured faces along with its ID, for example we have two person then first person will have ID 1 that's me (yassine) :p and 2nd person will have ID 2 (my binome) :p , so that all the images of person one in the dataset will have ID 1 and all the images of the 2nd person in the dataset will have ID 2, then we will use those dataset images to train the recognizer to predict the 1 of an newly presented face from the live video frame",
+      "img": [
+        "./assets/image/product/HomeRental-1.png",
+        "./assets/image/product/Tooday-android-2.png",
+        "./assets/image/product/Tooday-android-3.png"
+      ],
+      "price": "43.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB",
+        "ECOMMERCE"
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 43,
+      "title": "Download Bhista Chat App",
+      "description": "Song Tube is a new beautiful and fast application made in flutter, it supports YouTube audio and video downloading at any quality, In-App YouTube Browser, audio conversion and an Audio tags editor.Sometimes we don't have enough time to chat with customer being online 24 hrs. On the other hand customer is not interested to read the FAQ (Frequently asked questions).",
+      "img": [
+        "./assets/image/product/MediaYouTube-1.png",
+        "./assets/image/product/MediaYouTube-2.png",
+        "./assets/image/product/MediaYouTube-3.png"
+      ],
+      "price": "71.09",
+      "author": "letrungnhan",
+      "rating": 4,
+      "languageName": [
+        "PYTHON"
+      ],
+      "industryName": [
+        "MOBILE",
+        "MEDIA"
+      ],
+      "tagName": [
+        "FRONTEND",
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 44,
+      "title": "News related social media network",
+      "description": "Zagela is a location based social media open source platform, where users can instead of filtering the feeds based on the accounts they are following; they will be able to filter the feeds based on their location on the map. So if the user is interested in the feeds related to specific geolocation, he would be able to simply draw a circle around that area, and list all related feeds. Price includes the mobile app source code, and an access to EC2 instance that has the backend server (The source code of the backend server is not included).",
+      "img": [
+        "./assets/image/product/social media-1.png",
+        "./assets/image/product/social media-2.png",
+        "./assets/image/product/social media-3.png"
+      ],
+      "price": "240.09",
+      "author": "letrungnhan",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "JAVA"
+      ],
+      "industryName": [
+        "DATA",
+        "MEDIA",
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 45,
+      "title": "Crypto Currency Price Module",
+      "description": "Song Tube is a new beautiful and fast application made in flutter, it supports YouTube audio and video downloading at any quality, In-App YouTube Browser, audio conversion and an Audio tags editor.Sometimes we don't have enough time to chat with customer being online 24 hrs. On the other hand customer is not interested to read the FAQ (Frequently asked questions).",
+      "img": [
+        "./assets/image/product/HomeRental-1.png",
+        "./assets/image/product/Xsportz React-2.png"
+      ],
+      "price": "92.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB",
+        "DATA"
+
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 46,
+      "title": "Movie Website",
+      "description": "The website server has a static, templates and database file. In the static file are stored all the images, videos and styles of the website, the images and videos should be the exact same name as the movie or tv show that is saved on the databse. In the templates file are stored all html files for the templates of the website. And in the sqlite3 database file are stored all the movies and tv shows details.",
+      "img": [
+        "./assets/image/product/Movie Website-1.png",
+        "./assets/image/product/Movie Website-2.png",
+        "./assets/image/product/Movie Website-3.png"
+      ],
+      "price": "109.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "PYTHON",
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "DATA",
+        "MEDIA",
+        "WEB"
+      ],
+      "tagName": [
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 47,
+      "title": "E commerce Application Like Flipkart Amazon",
+      "description": "Everything You Need To Start Selling Online Today. 99.99% Average Uptime. Fulfillment Integration. Mobile Commerce Ready. Social Media Integration. Fraud Prevention. Unlimited 24/7 Support. Secure Shopping Cart. This is an npm tool running on NodeJS, using a websocket for communication. Frontend via web interface. Command line functionality also included, via NodeJS.",
+      "img": [
+        "./assets/image/product/Flipkart Amazon-1.png",
+        "./assets/image/product/Flipkart Amazon-2.png",
+        "./assets/image/product/Flipkart Amazon-3.png",
+        "./assets/image/product/Flipkart Amazon-4.png"
+      ],
+      "price": "93.09",
+      "author": "letrungnhan",
+      "rating": 4,
+      "languageName": [
+        "JAVA"
+
+      ],
+      "industryName": [
+        "DATA",
+        "ECOMMERCE",
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 48,
+      "title": "Face Recognition python3 opencv3",
+      "description": "To make a face recognition program, first we need to train the recognizer with dataset of previously captured faces along with its ID, for example we have two person then first person will have ID 1 that's me (yassine) :p and 2nd person will have ID 2 (my binome) :p , so that all the images of person one in the dataset will have ID 1 and all the images of the 2nd person in the dataset will have ID 2, then we will use those dataset images to train the recognizer to predict the 1 of an newly presented face from the live video frame",
+      "img": [
+        "./assets/image/product/Face Recognition-1.png"
+      ],
+      "price": "9.09",
+      "author": "letrungnhan",
+      "rating": 5,
+      "languageName": [
+        "PYTHON"
+
+      ],
+      "industryName": [
+        "DATA",
+        "TECHNOLOGY"
+      ],
+      "tagName": [
+        "WEBSYSTEM"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 49,
+      "title": "Coffee Shop Template",
+      "description": "The Ultimate Coffee Shop Template. -Index Page Is Home Page. Navbar Contains Links To : Product Listing Page, Login Page, Register Page, Cart Page. Click Any Product On Product Page And It Will Take You To Product Details Page. Click On Place Order Button On Cart Page And It Will Take You To Checkout Page.",
+      "img": [
+        "./assets/image/product/Coffee Shop-1.png",
+        "./assets/image/product/Coffee Shop-2.png",
+        "./assets/image/product/Coffee Shop-3.png",
+        "./assets/image/product/Coffee Shop-4.png",
+        "./assets/image/product/Coffee Shop-5.png"
+
+      ],
+      "price": "79.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "HTML",
+        "JAVASCRIPT",
+        "CSS"
+      ],
+      "industryName": [
+        "WEB"
+      ],
+      "tagName": [
+        "FRONTEND"
+      ],
+      "quantity": 1
+    },
+    {
+      "id": 50,
+      "title": "Mini Ecommerce Website",
+      "description": "Crypto Currency Price Module This project is designed to solve the problem of getting crypto currency pricing data in your solution and doing so robustly. Using a nice and simple to use java workflow. Easy to implement and add or combine with any existing project. Most services and solutions rely on one data source for their data, meaning one point of failure.",
+      "img": [
+        "./assets/image/product/Movie Website-1.png",
+        "./assets/image/product/Movie Website-2.png",
+        "./assets/image/product/Movie Website-3.png"
+      ],
+      "price": "99.09",
+      "author": "hoxuanthinh",
+      "rating": 5,
+      "languageName": [
+        "PHP",
+        "JAVASCRIPT",
+        "HTML",
+        "CSS"
+      ],
+      "industryName": [
+        "ECOMMERCE",
+        "WEB"
+      ],
+      "tagName": [
+        "WEBSYSTEM",
+        "FRONTEND"
+      ],
+      "quantity": 1
+    }
+  ]
+}

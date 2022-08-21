@@ -83,7 +83,7 @@ export class LoginComponent implements OnInit {
       this.toast.observe({
         success: 'Login success',
         loading: 'Waiting....',
-        error: 'ERROR '
+        error: 'ERROR'
       })
     ).subscribe(
       () => {
