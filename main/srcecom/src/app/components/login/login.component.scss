@@ -4,14 +4,16 @@ main {
   height: 100%;
 
   .card-body {
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;  }
-    .white-box{
-      width: 7vw;
-      height: 7vw;
-      line-height: 7vw;
-      position: relative;
-      vertical-align: middle;
-      background: #FFFFFF;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+
+  .white-box {
+    width: 7vw;
+    height: 7vw;
+    line-height: 7vw;
+    position: relative;
+    vertical-align: middle;
+    background: #FFFFFF;
       border-radius: 50%;
 
       img{
@@ -20,13 +22,27 @@ main {
         vertical-align: middle;
       }
 
-    }
-    .icons{
-      height: 30px;
-      width: 30px;
+  }
 
-    }
+  .icons {
+    height: 30px;
+    width: 30px;
+
+  }
 }
+
 .btn-rounded {
   background: linear-gradient(45deg, rgba(29, 236, 197, 0.7), rgba(91, 14, 214, 0.7) 100%);
+}
+
+@media screen and (max-width: 400px) {
+  .left-box {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .left-box {
+    margin-top: 3rem !important;
+  }
 }
