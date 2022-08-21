@@ -1,6 +1,7 @@
 body {
   background-color: hsl(0, 0%, 80%);
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -11,6 +12,7 @@ body {
   padding: 120px 0px;
   z-index: 0;
 }
+
 .product-banner:before {
   position: absolute;
   content: "";
@@ -21,6 +23,7 @@ body {
   background: RGBA(40, 40, 40, 0.88);
   z-index: -1;
 }
+
 .product-banner h1 {
   color: #FFFFFF;
   font-size: 40px;
@@ -47,6 +50,7 @@ body {
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
     }
+
     .card-title {
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
@@ -56,7 +60,8 @@ body {
       opacity: .8;
       color: #1266f1;
     }
-    .card-group{
+
+    .card-group {
       -webkit-line-clamp: 1;
       -webkit-box-orient: vertical;
       min-height: 26px;
@@ -65,11 +70,40 @@ body {
     }
   }
 }
-.featured-text-product{}
-.mid-div{
+
+.featured-text-product {
+}
+
+.mid-div {
   background-image: url('../../../../assets/image/banner/mid_div.png');
   background-size: cover;
   background-repeat: no-repeat;
   padding: 2.5rem;
 }
 
+@media screen and (max-width: 991px) {
+  .main-list {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    align-content: center;
+  }
+  .sidenav-light {
+    width: 100%;
+    margin-left: 1.5rem;
+
+  }
+
+}
+
+@media screen and (max-width: 991px) {
+  .list-products {
+    overflow-y: auto;
+    max-height: 1000px !important;
+    justify-content: center;
+  }
+  .main-content{
+    width: 100%;
+    margin-left: 1.3rem;
+  }
+}

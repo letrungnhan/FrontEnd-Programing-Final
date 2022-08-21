@@ -74,6 +74,9 @@ import {FilterPipe} from './pipes/filter.pipe';
 import {SortPipe} from './pipes/sort.pipe';
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
 import {CheckoutComponent} from './components/checkout/checkout.component';
+import {InfiniteScrollModule} from "ngx-infinite-scroll";
+import {NgxSpinnerModule} from "ngx-spinner";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductsListComponent, OrderComponent, SearchComponent, FilterPipe, SortPipe, CheckoutComponent],
@@ -132,7 +135,11 @@ import {CheckoutComponent} from './components/checkout/checkout.component';
     provideAuth(() => getAuth()),
     HotToastModule.forRoot(),
     AngularFireStorageModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    InfiniteScrollModule,
+    NgxSpinnerModule,
+    NgxPaginationModule
+
   ],
   providers: [
     MdbCookiesManagementService,
