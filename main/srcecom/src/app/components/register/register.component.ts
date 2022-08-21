@@ -3,6 +3,7 @@ import {AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, 
 import {AuthenticationService} from "../../auth/authentication.service";
 import {HotToastService} from "@ngneat/hot-toast";
 import {Router} from "@angular/router";
+import {style} from "@angular/animations";
 
 export function passwordsMatchValidator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
@@ -55,21 +56,32 @@ export class RegisterComponent implements OnInit {
     return this.registerForm.get('repeat')!;
   }
 
+  // submit() {
+  //   if (!this.registerForm.valid) return;
+  //   const {username, email, password} = this.registerForm.value;
+  //   this.authService.register(username, email, password);.pipe(
+  //     this.toast.observe({
+  //       success: 'Congrats! You are all signed up',
+  //       loading: 'Wating for sign up',
+  //       error: ({message}) => `$(at least 6 characters)`
+  //     })
+  //   ).subscribe(
+  //     () => {
+  //       this.router.navigate(['/login']).then(r => this.authService.logout());
+  //     }
+  //   )
+  //
+  // }
+
   submit() {
     if (!this.registerForm.valid) return;
     const {username, email, password} = this.registerForm.value;
-    this.authService.register(username, email, password).pipe(
-      this.toast.observe({
-        success: 'Congrats! You are all signed up',
-        loading: 'Wating for sign up',
-        error: ({message}) => `$(message)`
-      })
-    ).subscribe(
-      () => {
-        this.router.navigate(['/login']).then(r => this.authService.logout());
-      }
-    )
-
+    this.authService.register(username, email, password);
+    this.toast.observe({
+      success:'Sign Up success',
+      loading:'Waiting for SignUp',
+      error:'ERROR'
+    });
   }
 
 }

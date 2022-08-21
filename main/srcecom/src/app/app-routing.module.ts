@@ -15,6 +15,7 @@ import {OrderComponent} from "./components/order/order.component";
 import {CheckoutComponent} from "./components/checkout/checkout.component";
 
 
+
 const routes: Routes = [
   {path: 'checkout', component: CheckoutComponent},
   {path: 'home', component: HomeComponent},

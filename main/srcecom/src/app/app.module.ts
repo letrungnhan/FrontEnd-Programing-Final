@@ -69,6 +69,7 @@ import {provideAuth, getAuth} from '@angular/fire/auth';
 import {HotToastModule} from '@ngneat/hot-toast';
 import {OrderComponent} from './components/order/order.component';
 import {SearchComponent} from './components/search/search.component';
+import {FIREBASE_OPTIONS} from "@angular/fire/compat";
 import {FilterPipe} from './pipes/filter.pipe';
 import {SortPipe} from './pipes/sort.pipe';
 import {AngularFireStorageModule} from "@angular/fire/compat/storage";
@@ -76,6 +77,7 @@ import {CheckoutComponent} from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductsListComponent, OrderComponent, SearchComponent, FilterPipe, SortPipe, CheckoutComponent],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -135,6 +137,7 @@ import {CheckoutComponent} from './components/checkout/checkout.component';
   providers: [
     MdbCookiesManagementService,
     MdbStorageManagementService,
+    {provide: FIREBASE_OPTIONS, useValue: environment.firebase}
 
   ],
 
