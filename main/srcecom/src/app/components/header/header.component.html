@@ -39,12 +39,11 @@
         <li class="nav-item me-3 me-lg-0">
           <div class="d-flex align-items-center">
             <ng-container *ngIf="authService.currentUser$  | async as user; else loginButton">
-              <img src="{{user.photoURL}}" class="img-fluid avtGG"> &nbsp;&nbsp;
+              <img class="img-fluid avtGG" src="{{user.photoURL===null? 'assets/icons/user.png':user.photoURL}}"> &nbsp;&nbsp;
               <button type="button" class="btn btn-outline-light px-3 me-2 btn-hover" (click)="logout()">
                 Logout
                 &nbsp;
                 <i class="fas fa-sign-out-alt"></i>
-
               </button>
             </ng-container>
             <ng-template #loginButton>
