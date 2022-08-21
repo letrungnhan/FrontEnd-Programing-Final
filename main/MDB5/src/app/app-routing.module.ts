@@ -12,6 +12,8 @@ import {CartComponent} from "./components/cart/cart.component";
 import {ProductsListComponent} from "./components/product/products-list/products-list.component";
 import {ProductDetailComponent} from "./components/product/product-details/product-details.component";
 import {OrderComponent} from "./components/order/order.component";
+import {ForgotPasswordComponent} from "./components/forgot-password/forgot-password.component";
+import {VerifyEmailComponent} from "./components/verify-email/verify-email.component";
 
 
 const routes: Routes = [
@@ -26,7 +28,9 @@ const routes: Routes = [
   {path: 'order', component: OrderComponent},
   {path: 'product-details/:id', component: ProductDetailComponent},
   {path: 'cart', component: CartComponent},
-  {path:'**', redirectTo:'/home'}
+  {path: 'forgotPassword', component: ForgotPasswordComponent},
+  {path: 'verify-email', component: VerifyEmailComponent},
+  {path:'**', redirectTo:'/home'},
 ];
 
 @NgModule({

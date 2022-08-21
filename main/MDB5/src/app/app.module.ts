@@ -68,10 +68,13 @@ import {environment} from '../environments/environment';
 import {provideAuth, getAuth} from '@angular/fire/auth';
 import {HotToastModule} from '@ngneat/hot-toast';
 import {OrderComponent} from './components/order/order.component';
-import { SearchComponent } from './components/search/search.component';
+import {SearchComponent} from './components/search/search.component';
+import {FIREBASE_OPTIONS} from "@angular/fire/compat";
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductsListComponent, OrderComponent, SearchComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductsListComponent, OrderComponent, SearchComponent, ForgotPasswordComponent, VerifyEmailComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -129,6 +132,7 @@ import { SearchComponent } from './components/search/search.component';
   providers: [
     MdbCookiesManagementService,
     MdbStorageManagementService,
+    {provide: FIREBASE_OPTIONS, useValue: environment.firebase}
 
   ],
 
