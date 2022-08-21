@@ -198,3 +198,14 @@ body .slick-next {
   }
 
 }
+@media screen and (max-width: 900px) {
+      .slide{
+        display: flex !important;
+        flex-direction: row;
+      }
+  .slick-slide{
+    width: 100%!important;
+  }
+
+}
+

@@ -1,14 +1,11 @@
-import {Component, AfterViewInit, NgZone, ViewChild, Output, EventEmitter} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {MdbSidenavComponent} from 'mdb-angular-ui-kit/sidenav';
 import {ProductService} from "../../../service/product-service/product.service";
 import {CommonService} from "../../../service/common.service";
-import {FormControl, FormGroup} from '@angular/forms';
-import {Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
 import {Products} from "../../../service/product-service/Products";
 import {CartService} from "../../../service/cart.service";
-import {ActivatedRoute} from "@angular/router";
-import {FilterPipe} from "../../../pipes/filter.pipe";
+import {ActivatedRoute, Router} from "@angular/router";
+import {HttpClient} from "@angular/common/http";
 
 
 @Component({
@@ -25,12 +22,25 @@ export class ProductsListComponent {
   dataTag: any;
   Search: any;
   searchText: string = '';
+  show = false;
+  notEmtyProduct = true;
+  notScrolly = true;
+  config: any;
+  POST: any;
+  page: number = 1;
+  count: number = 0;
+  tableSize: number = 10;
+  tableSizes: any = [5, 10, 15, 20];
+
 
   constructor(private productService: ProductService,
               private commonService: CommonService,
               private cartService: CartService,
               private activatedRouter: ActivatedRoute,
+              private httpClient: HttpClient,
+              private router: Router
   ) {
+
   }
 
   ngOnInit()
@@ -140,4 +150,35 @@ export class ProductsListComponent {
       }
     }
   }
+
+  showLoader(): void {
+    this.show = true;
+    setTimeout(() => {
+      this.show = false;
+    }, 5000);
+
+  }
+
+  hideLoader(): void {
+    setTimeout(() => {
+      this.show = false;
+    }, 6000)
+
+  }
+
+  pageChange(newPage: number) {
+    this.router.navigate(['/product-list'], {queryParams: {page: newPage}});
+  }
+    onTableDataChange(event : any){
+    this.page = event;
+    this.getLastProduct();
+
+    }
+    onTableSizeChange(event: any):void{
+    this.tableSize = event.target.valueChange
+    console.log(this.tableSize)
+    this.page=1;
+    this.getLastProduct();
+
+    }
 }

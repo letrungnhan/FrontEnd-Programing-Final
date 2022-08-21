@@ -61,9 +61,9 @@
                                 (breakpoint)="breakpoint($event)"
                                 (afterChange)="afterChange($event)"
                                 (beforeChange)="beforeChange($event)">
-              <div ngxSlickItem *ngFor="let slide of slides" class="slide col-lg-3  col-md-7 mx-sm-2 mx-lg-2">
+              <div  *ngFor="let slide of slides" class="slide col-lg-3 col-sm-5  col-md-7 mx-sm-2 mx-lg-2 " ngxSlickItem>
                 <!-- Product card -->
-                <div class="card">
+                <div class="card m-3">
                   <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
                     <img src="{{slide.img}}" class="card-img-top w-100"
                          alt="Fissure in Sandstone"/>
@@ -74,10 +74,11 @@
                   <div class="card-body">
                     <h5 class="card-title">{{slide.title}}</h5>
                     <p class="card-text">{{slide.description}}</p>
-                    <a routerLink="/product" class="btn btn-secondary fw-bold text-uppercase">Buy Now</a>
+                    <a class="btn btn-secondary fw-bold text-uppercase" routerLink="/product-list">See more</a>
                   </div>
                 </div>
                 <!-- Product card -->
+
               </div>
             </ngx-slick-carousel>
           </div>
@@ -310,7 +311,7 @@
             </button>
           </div>
         </div>
-        <div class="col-lg-3 mb-5">
+        <div class="col-lg-3 mb-5 d-flex align-items-center flex-column">
           <div class="bg-image hover-zoom mb-4">
             <img src="https://propiece.s3-ap-northeast-1.amazonaws.com/product_image_thumbnail/thumbnail-3200.webp"
                  alt="Offer"
@@ -330,7 +331,7 @@
             </button>
           </div>
         </div>
-        <div class="col-lg-3 mb-5">
+        <div class="col-lg-3 mb-5 d-flex align-items-center flex-column">
           <div class="bg-image hover-zoom mb-4">
             <img src="https://propiece.s3-ap-northeast-1.amazonaws.com/product_image_thumbnail/thumbnail-3237.webp"
                  alt="Offer"
@@ -350,7 +351,7 @@
             </button>
           </div>
         </div>
-        <div class="col-lg-3 mb-5">
+        <div class="col-lg-3 mb-5 d-flex align-items-center flex-column">
           <div class="bg-image hover-zoom mb-4">
             <img src="https://propiece.s3-ap-northeast-1.amazonaws.com/product_image_thumbnail/thumbnail-4327.webp"
                  alt="Offer"

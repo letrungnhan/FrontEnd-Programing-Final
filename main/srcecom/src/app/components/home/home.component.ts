@@ -52,11 +52,6 @@ export class HomeComponent implements OnInit {
       title: 'Multiple Modern Website',
       description: 'The source code of this template is very simple and can be easily modified according to the need. It contains beautiful loading content section and hover effects.'
     },
-    {
-      img: './assets/image/slider/slider-product-5.png',
-      title: '2020 Ecommerce Grocery App UI Kit with Flutter 30 Screens for Android and IOS',
-      description: '2020 Ecommerce Grocery App UI Kit with Flutter 30 Screens for Android and IOS A highly customizable, fully-developed and production-ready Ecommerce/grocery app Frontend UI code with over 30 screens made with Flutter.Compatible with both Android and IOS.'
-    },
 
   ];
   slideConfig = {slidesToShow: 4, slidesToScroll: 4};

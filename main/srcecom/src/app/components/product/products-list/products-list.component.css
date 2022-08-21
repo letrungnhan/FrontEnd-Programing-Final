@@ -72,4 +72,30 @@ body {
   padding: 2.5rem;
 }
 
+@media screen and (max-width: 991px) {
+  .main-list {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+    align-content: center;
+  }
+
+  .sidenav-light {
+    width: 100%;
+    margin-left: 1.5rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .list-products {
+    overflow-y: auto;
+    max-height: 1000px !important;
+    justify-content: center;
+  }
+
+  .main-content {
+    width: 100%;
+    margin-left: 1.3rem;
+  }
+}
+
 /*# sourceMappingURL=products-list.component.css.map */
