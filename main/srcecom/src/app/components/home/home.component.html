@@ -65,16 +65,17 @@
                 <!-- Product card -->
                 <div class="card m-3">
                   <div class="bg-image hover-overlay hover-zoom hover-shadow ripple">
-                    <img src="{{slide.img}}" class="card-img-top w-100"
+                    <img class="card-img-top w-100" src="{{slide.img[0]}}"
                          alt="Fissure in Sandstone"/>
-                    <a routerLink="#">
+                    <a routerLink="/product-details/{{slide.id}}">
                       <div class="mask" style="background-color: rgba(57, 192, 237, 0.2);"></div>
                     </a>
                   </div>
                   <div class="card-body">
                     <h5 class="card-title">{{slide.title}}</h5>
                     <p class="card-text">{{slide.description}}</p>
-                    <a class="btn btn-secondary fw-bold text-uppercase" routerLink="/product-list">See more</a>
+                    <a class="btn btn-secondary fw-bold text-uppercase" routerLink="/product-details/{{slide.id}}">See
+                      more</a>
                   </div>
                 </div>
                 <!-- Product card -->
@@ -237,7 +238,7 @@
                     rgba(91, 14, 214, 0.7) 100%
                   );
                 ">
-            <button class="btn btn-outline-white">SEE MORE</button>
+            <button class="btn btn-outline-white" routerLink="/product-list">SEE MORE</button>
           </div>
         </div>
         <p class="text-uppercase fw-bold  mt-4 mb-0">{{banner.label}}</p>

@@ -77,8 +77,9 @@ import {CheckoutComponent} from './components/checkout/checkout.component';
 import {InfiniteScrollModule} from "ngx-infinite-scroll";
 import {NgxSpinnerModule} from "ngx-spinner";
 import {NgxPaginationModule} from "ngx-pagination";
+import { PaymentComponent } from './components/payment/payment.component';
 @NgModule({
-  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductsListComponent, OrderComponent, SearchComponent, FilterPipe, SortPipe, CheckoutComponent],
+  declarations: [AppComponent, HomeComponent, LoginComponent, RegisterComponent, AboutComponent, HeaderComponent, FooterComponent, ContactComponent, DetailsModalComponent, CartComponent, ProductDetailComponent, ProductsListComponent, OrderComponent, SearchComponent, FilterPipe, SortPipe, CheckoutComponent, PaymentComponent],
 
   imports: [
     BrowserModule,
@@ -137,7 +138,8 @@ import {NgxPaginationModule} from "ngx-pagination";
     ReactiveFormsModule,
     InfiniteScrollModule,
     NgxSpinnerModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+
 
   ],
   providers: [

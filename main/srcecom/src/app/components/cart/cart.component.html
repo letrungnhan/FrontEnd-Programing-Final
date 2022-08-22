@@ -25,7 +25,6 @@
                 </p>
                 <a routerLink="/product-list" class="btn btn-primary mb-6 p-3 w-25">Buy Code Now</a>
               </div>
-
               <ng-container *ngIf="items.length >0">
                 <div class="row border-bottom mb-4 " *ngFor="let item of items; let i = index">
                   <div class="col-md-2 mb-4 mb-md-0">
@@ -38,7 +37,7 @@
                         class="w-100"
                         alt=""
                       />
-                      <a href="#!">
+                      <a routerLink="/product-details/{{item.id}}">
                         <div class="hover-overlay">
                           <div
                             class="mask"
@@ -75,7 +74,6 @@
                       >
                     </p>
                   </div>
-
                   <div class="col-md-3 mb-4 mb-md-0">
                     <div class="input-group mb-4 w-100">
                       <span class="input-group-text text-primary fw-bolder" id="typeNumber1">Quantity</span>
@@ -86,11 +84,9 @@
                         class="form-control quantity"
                         [value]="item.quantity"
                         (blur)="validateInput($event,i)"
-
+                        readonly
                       />
-
                     </div>
-
                     <h5 class="mb-1 mx-1">
                       <span
                         class="align-middle text-danger fs-6">Price: ${{ item.price | number  : "1.0-4" : "en-US"  }}</span>
@@ -100,10 +96,7 @@
                     </h5>
                   </div>
                 </div>
-
               </ng-container>
-
-
               <!-- Section: Details -->
               <section class="">
                 <div class="mb-5">
@@ -113,11 +106,8 @@
                     them.
                   </p>
                 </div>
-
-
                 <div>
                   <h5 class="mb-4">We accept</h5>
-
                   <img
                     class="mr-2"
                     width="45px"
@@ -153,6 +143,10 @@
                   <span>Temporary amount: </span>
                   <span>$ {{total |  number  : "1.0-4" : "en-US"}}</span>
                 </div>
+                <div class="d-flex justify-content-between mb-3">
+                  <span>Amount product </span>
+                  <span>{{itemInCart }}</span>
+                </div>
                 <hr class="my-4"/>
                 <div class="d-flex justify-content-between fw-bold mb-5">
                   <span>The total amount of (including VAT): </span>
@@ -177,6 +171,7 @@
                   <button
                     type="button"
                     class="btn btn-link btn-rounded overflow-visible"
+
                   >
                     Apply
                   </button>

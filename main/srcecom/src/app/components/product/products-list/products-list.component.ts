@@ -6,13 +6,24 @@ import {Products} from "../../../service/product-service/Products";
 import {CartService} from "../../../service/cart.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
+import {DataSource} from "@angular/cdk/collections";
+import {FormControl, FormGroup} from "@angular/forms";
+import {map, startWith} from "rxjs/operators";
 
+export interface Filters {
+  [key: string]: string | null;
+
+  JAVA: string | null;
+  CSHARP: string | null;
+
+}
 
 @Component({
   selector: 'app-product',
   templateUrl: './products-list.component.html',
   styleUrls: ['./products-list.component.scss']
 })
+
 export class ProductsListComponent {
   @ViewChild('sidenav', {static: true}) sidenav!: MdbSidenavComponent;
   public dataProduct: any;
@@ -23,8 +34,6 @@ export class ProductsListComponent {
   Search: any;
   searchText: string = "";
   show = false;
-  notEmtyProduct = true;
-  notScrolly = true;
   config: any;
   POST: any;
   page: number = 1;
@@ -32,7 +41,20 @@ export class ProductsListComponent {
   tableSize: number = 13;
   tableSizes: any = [5, 10, 15, 20];
   public filterCategory: any;
+  apiRespone: any;
+  public filteredItems$: any;
+  filtersGroup: FormGroup;
+  defaultFilters: Filters = {
+    JAVA: null,
+    CSHARP: null,
+    HTML: null,
+    PYTHON: null,
+    PHP: null,
+    JAVASCRIPT: null,
+    NET: null,
+    CSS: null,
 
+  };
 
   constructor(
     private productService: ProductService,
@@ -42,7 +64,30 @@ export class ProductsListComponent {
     private httpClient: HttpClient,
     private router: Router
   ) {
+    this.filtersGroup = new FormGroup({
+      JAVA: new FormControl(),
+      CSHARP: new FormControl(),
+      HTML: new FormControl(),
+      PYTHON: new FormControl(),
+      PHP: new FormControl(),
+      JAVASCRIPT: new FormControl(),
+      NET: new FormControl(),
+      CSS: new FormControl()
 
+    });
+    this.filteredItems$ = this.filtersGroup.valueChanges.pipe(
+      startWith(this.defaultFilters),
+      map((controls: Filters) => {
+        let products = this.dataProduct;
+        const languageName = Object.keys(controls).filter(
+          (control) => controls[control])
+        if (languageName.length > 0) {
+          products = products.filter((product: { languageName: string[]; }) =>
+            languageName.some((checkboxLang) => product['languageName'].some((languageName) => languageName.includes(checkboxLang))));
+        }
+        return products;
+      })
+    )
   }
 
   ngOnInit()
@@ -51,19 +96,12 @@ export class ProductsListComponent {
     this.getLastCategory();
     this.getLastTag();
     this.getLastIndustry();
-    this.getLastProduct()
+    this.getLastProduct();
     this.getArrays();
     this.productService.getProducts().subscribe(res => {
       this.filterCategory = res;
     })
 
-    this.dataProduct.forEach((a: any) => {
-      if (a.languageName.includes("JAVA")) {
-        a.languageName = "JAVA"
-        this.arrays = [];
-        this.dataProduct.push(this.arrays);
-      }
-    })
     console.log(this.dataProduct)
     this.productService.search.subscribe((value: any) => {
       this.searchText = value;
@@ -159,6 +197,8 @@ export class ProductsListComponent {
         for (let i = 0; i < firstArray.length; i++) {
           let obj = firstArray[i];
           this.dataProduct.push(obj);
+
+
         }
       }
     } else {
@@ -171,6 +211,7 @@ export class ProductsListComponent {
         for (let i = 0; i < firstArray.length; i++) {
           let obj = firstArray[i];
           this.dataProduct.push(obj);
+          console.log(this.dataProduct)
         }
       }
     }
@@ -217,14 +258,21 @@ export class ProductsListComponent {
 
   }
 
-  filter(language: any) {
+  filterData($event: any) {
+    this.dataProduct.filter = $event.target.value;
 
-    this.filterCategory = this.dataProduct.filter((a: any) => {
-      if (a.languageName == language || language == '') {
-        return a;
-      }
-    })
   }
+
+  onChange2($event: any) {
+    let filteredData = this.dataProduct.filter(this.apiRespone, (item: { _languageName: string[] }) => {
+      return item._languageName.includes($event.value.toLowerCase());
+    })
+    // @ts-ignore
+    this.dataProduct = new DataSource(filteredData);
+    console.log(this.dataProduct);
+
+  }
+
 
 }
 
