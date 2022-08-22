@@ -73,15 +73,5 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  // submit() {
-  //   if (!this.registerForm.valid) return;
-  //   const {username, email, password} = this.registerForm.value;
-  //   this.authService.register(username, email, password);
-  //   this.toast.observe({
-  //     success:'Sign Up success',
-  //     loading:'Waiting for SignUp',
-  //     error:'ERROR'
-  //   });
-  // }
 
 }

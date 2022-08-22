@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {AuthenticationService} from "../../auth/authentication.service";
+import {Router} from "@angular/router";
+import {HotToastService} from "@ngneat/hot-toast";
 
 @Component({
   selector: 'app-about',
@@ -7,9 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+
+
+  constructor(private authService: AuthenticationService, private router: Router, private toast: HotToastService) {
+  }
 
   ngOnInit(): void {
   }
+
+
 
 }
