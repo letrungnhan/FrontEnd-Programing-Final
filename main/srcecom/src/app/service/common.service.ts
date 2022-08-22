@@ -11,23 +11,23 @@ export class CommonService {
   }
 
   listAllLanguage() {
-    return this.http.get("http://localhost:3000/Languages")
+    return this.http.get("https://src-ecomos-web.herokuapp.com/Languages")
   }
 
   listAllProduct() {
 
-    return this.http.get("http://localhost:3000/Products")
+    return this.http.get("https://src-ecomos-web.herokuapp.com/Products")
   }
 
   listAllIndustry() {
-    return this.http.get("http://localhost:3000/Industries")
+    return this.http.get("https://src-ecomos-web.herokuapp.com/Industries")
   }
 
   listAllTags() {
-    return this.http.get("http://localhost:3000/Tags")
+    return this.http.get("https://src-ecomos-web.herokuapp.com/Tags")
   }
 
   getProductByID(id: any) {
-    return this.http.get("http://localhost:3000/Products/" + id);
+    return this.http.get("https://src-ecomos-web.herokuapp.com/Products/" + id);
   }
 }
