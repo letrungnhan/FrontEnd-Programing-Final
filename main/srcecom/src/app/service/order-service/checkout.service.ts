@@ -7,7 +7,6 @@ import {Observable, of} from "rxjs";
 export class CheckoutService {
   constructor() {
   }
-
   getCreditCardMonths(startMonth: number): Observable<number[]> {
     let data: number[] = [];
     for (let theMonth = startMonth; theMonth <= 12; theMonth++) {
@@ -15,7 +14,6 @@ export class CheckoutService {
     }
     return of(data);
   }
-
   getCreditCardYear(): Observable<number[]> {
     let data: number[] = [];
     const startYear: number = new Date().getFullYear();
@@ -27,5 +25,4 @@ export class CheckoutService {
     }
     return of(data);
   }
-
 }

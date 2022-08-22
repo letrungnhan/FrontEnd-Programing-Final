@@ -9,18 +9,13 @@ import {BehaviorSubject, Subject} from "rxjs";
 export class CartService {
   placeholder = [];
   cartItems = new BehaviorSubject([]);
-
-
   constructor() {
     const ls = this.getCartData();
     if (ls) this.cartItems.next(ls);
   }
-
   addItem(product: Products) {
     const ls = this.getCartData();
-
     let exist: Products;
-
     if (ls) { // @ts-ignore
       exist = ls.find((item) => {
         return item.id === product.id;
@@ -39,14 +34,11 @@ export class CartService {
       this.placeholder.push(product);
       this.setCartData(this.placeholder);
     }
-
   }
-
   setCartData(data: any) {
     localStorage.setItem('cart', JSON.stringify(data));
     this.cartItems.next(this.getCartData());
   }
-
   getCartData() {
     // @ts-ignore
     return JSON.parse(localStorage.getItem('cart'));

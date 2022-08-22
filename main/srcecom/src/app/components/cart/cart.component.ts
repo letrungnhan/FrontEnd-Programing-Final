@@ -13,29 +13,27 @@ import {Router} from "@angular/router";
 export class CartComponent implements OnInit {
   items: Products[] = [];
   total: number | undefined;
+  itemInCart: number | undefined;
 
   constructor(public cartService: CartService,
               private authService: AuthenticationService,
               private router: Router) {
   }
-
   ngOnInit(): void {
+    this.getQuantity();
     this.cartService.cartItems.subscribe(data => {
         this.items = data;
         if (this.items) this.getTotal(this.items);
       }
     );
   }
-
   onDelete(i: number) {
     this.items.splice(i, 1)
     // @ts-ignore
     localStorage.removeItem('cart', JSON.stringify(this.items));
     this.cartService.setCartData(this.items);
     this.getTotal(this.items);
-
   }
-
   validateInput(event: any, i: number) {
     const quantity = +event.target.value;
     if (quantity < 1) {
@@ -59,6 +57,13 @@ export class CartComponent implements OnInit {
       this.total = subs;
     }
   }
+
+  getQuantity(): void {
+    this.cartService.cartItems.subscribe(d => {
+      this.itemInCart = d.length;
+    });
+  }
+
 
   onCheckOut() {
     this.authService.currentUser$.subscribe(user => {
