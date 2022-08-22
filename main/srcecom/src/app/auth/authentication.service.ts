@@ -7,7 +7,6 @@ import {
   GoogleAuthProvider,
   signInWithEmailAndPassword, signInWithPopup, updateProfile, UserCredential
 } from "@angular/fire/auth";
-import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {switchMap} from "rxjs/operators";
 
 
@@ -16,8 +15,10 @@ import {switchMap} from "rxjs/operators";
 })
 
 export class AuthenticationService {
+
   currentUser$ = authState(this.auth);
-  constructor(public auth: Auth, public fireAuth: AngularFireAuth) {
+
+  constructor(public auth: Auth) {
   }
   login(email: string, password: string) {
     return from(signInWithEmailAndPassword(this.auth, email, password));
