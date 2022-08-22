@@ -1,1 +1,13 @@
+<input
+  aria-label="Search"
+  class="form-control rounded"
+  name="search"
+  ngModel
+  placeholder="Search"
+  type="text"
+/>
+<button (input)="onSearchTextChanged()" [ngModel]="enterSearchValue" class="btn btn-secondary btn-rounded w-100"
+        type="button">Search
+</button>
+
 
