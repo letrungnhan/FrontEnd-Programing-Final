@@ -15,6 +15,7 @@ import {CartService} from "../../../service/cart.service";
 export class ProductDetailComponent implements OnInit {
   modalRef: MdbModalRef<DetailsModalComponent> | null = null;
   id: any;
+  price: any;
   itemProduct: any;
 
   constructor(private modalService: MdbModalService, private commonService: CommonService,
@@ -29,6 +30,7 @@ export class ProductDetailComponent implements OnInit {
     );
     this.getProductByID(this.id);
 
+
     throw new Error('Method not implemented.');
   }
 
@@ -42,6 +44,8 @@ export class ProductDetailComponent implements OnInit {
     )
 
   }
+
+
 
 
   openModal() {

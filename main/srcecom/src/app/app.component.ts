@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductService} from "./service/product-service/product.service";
-import {Products} from "./service/product-service/Products";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +12,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
 
+  onActive() {
+    window.scroll(0, 0);
+  }
 }
+

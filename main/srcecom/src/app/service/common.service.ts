@@ -5,7 +5,6 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class CommonService {
-  public hideLoadMoreButton = false;
 
   constructor(private http: HttpClient) {
   }
@@ -29,5 +28,8 @@ export class CommonService {
 
   getProductByID(id: any) {
     return this.http.get("https://src-ecomos-web.herokuapp.com/Products/" + id);
+  }
+  getProductByPrice(price:any){
+    return this.http.get("https://src-ecomos-web.herokuapp.com/Products/" + price);
   }
 }

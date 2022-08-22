@@ -27,19 +27,16 @@
               <div class="col-lg-7 col-md-12 col-sm-12 mb-4 mb-md-0">
                 <div class="d-flex input-group w-auto">
                   <input
-                    [(ngModel)]="Search"
-                    type="text"
+                    [ngModel]="searchText"
+                    (keyup)="search($event)"
                     class="form-control rounded"
-                    placeholder="Search"
                     aria-label="Search"
+                    name="search"
+                    placeholder="Search"
+                    type="text"
+
                   />
-                  <span class="input-group-text border-0"
-                        id="search-addon">
-                  <a>
-              <button type="button" class="btn btn-secondary btn-rounded w-100" (click)="onSearch()">Search
-            </button>
-   </a>
-  </span>
+
                 </div>
               </div>
             </div>
@@ -52,6 +49,7 @@
 <main class="row col-12 main-list">
   <div class="sidenav-light col-lg-3 pt-5">
     <div class="card h-100 ">
+
       <mdb-accordion [multiple]="true">
         <div class="container mt-3">
           <form>
@@ -63,9 +61,11 @@
                     aria-label="..."
                     class="form-check-input"
                     id="checkboxLanguage"
-                    name="Languages"
+                    formControlName="language"
                     type="checkbox"
                     value="{{language.languageName}}"
+                    name="language"
+                    (click)="filter('JAVA')"
                   />
                   <label class="form-check-label text-black" for="checkboxLanguage">{{language.languageName}}</label>
                 </div>
@@ -131,10 +131,13 @@
           <section class="product-list pt-4">
 
             <div class="row  list-products" id="products">
-              <div *ngFor="let item of dataProduct | paginate : {itemsPerPage: tableSize,
+              <div *ngFor="let item of dataProduct | paginate : {
+              itemsPerPage: tableSize,
               currentPage:page,
-              totalItems:count}; let i = index" class="col-lg-4 col-md-6 col-sm-5 mb-4">
+              totalItems:count
+              } | filter:searchText:'title'; let i = index" class="col-lg-4 col-md-6 col-sm-5 mb-4">
                 <div class="product-container"
+
                 >
                   <div class="card card-ecommerce">
                     <!-- Card image -->
@@ -200,14 +203,14 @@
                   previousLabel="Prev">
                 </pagination-controls>
               </div>
-              <div class="col">
-                <mdb-form-control>
-                  <select (change)="onTableSizeChange($event)"
-                  >
-                    <option *ngFor="let size of tableSizes" [value]="size">{{size }}</option>
-                  </select>
-                </mdb-form-control>
-              </div>
+              <!--              <div class="col">-->
+              <!--                <mdb-form-control>-->
+              <!--                  <select (change)="onTableSizeChange($event)"-->
+              <!--                  >-->
+              <!--                    <option *ngFor="let size of tableSizes" [value]="size">{{size }}</option>-->
+              <!--                  </select>-->
+              <!--                </mdb-form-control>-->
+              <!--              </div>-->
             </div>
 
             <section class="product-footer shadow-5-strong">

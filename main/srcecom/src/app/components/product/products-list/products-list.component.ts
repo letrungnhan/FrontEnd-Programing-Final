@@ -15,13 +15,13 @@ import {HttpClient} from "@angular/common/http";
 })
 export class ProductsListComponent {
   @ViewChild('sidenav', {static: true}) sidenav!: MdbSidenavComponent;
-  dataProduct: any;
+  public dataProduct: any;
   arrays: any;
   dataLanguage: any;
   dataIndustry: any;
   dataTag: any;
   Search: any;
-  searchText: string = '';
+  searchText: string = "";
   show = false;
   notEmtyProduct = true;
   notScrolly = true;
@@ -29,16 +29,18 @@ export class ProductsListComponent {
   POST: any;
   page: number = 1;
   count: number = 0;
-  tableSize: number = 10;
+  tableSize: number = 13;
   tableSizes: any = [5, 10, 15, 20];
+  public filterCategory: any;
 
 
-  constructor(private productService: ProductService,
-              private commonService: CommonService,
-              private cartService: CartService,
-              private activatedRouter: ActivatedRoute,
-              private httpClient: HttpClient,
-              private router: Router
+  constructor(
+    private productService: ProductService,
+    private commonService: CommonService,
+    private cartService: CartService,
+    private activatedRouter: ActivatedRoute,
+    private httpClient: HttpClient,
+    private router: Router
   ) {
 
   }
@@ -49,10 +51,27 @@ export class ProductsListComponent {
     this.getLastCategory();
     this.getLastTag();
     this.getLastIndustry();
-    this.getLastProduct();
+    this.getLastProduct()
     this.getArrays();
+    this.productService.getProducts().subscribe(res => {
+      this.filterCategory = res;
+    })
 
+    this.dataProduct.forEach((a: any) => {
+      if (a.languageName.includes("JAVA")) {
+        a.languageName = "JAVA"
+        this.arrays = [];
+        this.dataProduct.push(this.arrays);
+      }
+    })
+    console.log(this.dataProduct)
+    this.productService.search.subscribe((value: any) => {
+      this.searchText = value;
+    })
+  }
 
+  checkProductTitle(product: Products, params: any) {
+    return product?.title.toLowerCase().includes(params.get('searchTerm') || '');
   }
 
 
@@ -89,7 +108,13 @@ export class ProductsListComponent {
 
   onSearchTextEntered(searchValue: string) {
     this.searchText = searchValue;
+    console.log(this.searchText);
 
+  }
+
+  clearFilters() {
+    // @ts-ignore
+    this.filtersGroup.reset();
   }
 
   onSearch() {
@@ -114,7 +139,7 @@ export class ProductsListComponent {
     this.commonService.listAllProduct().subscribe(
       (res) => {
         this.arrays = res;
-        console.log(this.arrays)
+
       }
     )
 
@@ -169,16 +194,37 @@ export class ProductsListComponent {
   pageChange(newPage: number) {
     this.router.navigate(['/product-list'], {queryParams: {page: newPage}});
   }
-    onTableDataChange(event : any){
+
+  onTableDataChange(event: any) {
     this.page = event;
     this.getLastProduct();
+    window.scroll(0, 0);
 
-    }
-    onTableSizeChange(event: any):void{
+  }
+
+  onTableSizeChange(event: any): void {
     this.tableSize = event.target.valueChange
     console.log(this.tableSize)
-    this.page=1;
+    this.page = 1;
     this.getLastProduct();
 
-    }
+  }
+
+  search(event: any) {
+    this.searchText = (event.target as HTMLInputElement).value;
+    console.log(this.searchText);
+    this.productService.search.next(this.searchText);
+
+  }
+
+  filter(language: any) {
+
+    this.filterCategory = this.dataProduct.filter((a: any) => {
+      if (a.languageName == language || language == '') {
+        return a;
+      }
+    })
+  }
+
 }
+
