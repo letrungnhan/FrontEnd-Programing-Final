@@ -34,9 +34,7 @@
                     name="search"
                     placeholder="Search"
                     type="text"
-
                   />
-
                 </div>
               </div>
             </div>
@@ -52,21 +50,20 @@
 
       <mdb-accordion [multiple]="true">
         <div class="container mt-3">
-          <form>
+          <form [formGroup]="filtersGroup">
             <mdb-accordion-item>
               <ng-template mdbAccordionItemHeader>Programming Language</ng-template>
               <ng-template mdbAccordionItemBody>
-                <div *ngFor="let language of dataLanguage">
+                <div *ngFor="let language of dataLanguage" class="form-check">
                   <input
-                    aria-label="..."
                     class="form-check-input"
                     id="checkboxLanguage"
-                    formControlName="language"
                     type="checkbox"
                     value="{{language.languageName}}"
-                    name="language"
-                    (click)="filter('JAVA')"
-                  />
+                    (change)="onChange($event)"
+                    formControlName="{{language.languageName}}"
+                    name="languageName"
+                  >
                   <label class="form-check-label text-black" for="checkboxLanguage">{{language.languageName}}</label>
                 </div>
               </ng-template>
@@ -87,7 +84,6 @@
                     mdbInput
                     type="checkbox"
                     value="{{industry.industryID}}"
-
                   />
                   <label class="form-check-label text-black" for="checkboxIndustry">{{industry.industryName}}</label>
                 </div>
@@ -117,8 +113,6 @@
           </form>
         </div>
       </mdb-accordion>
-
-
     </div>
   </div>
   <div class="main-content col-lg-9 col-sm-9 " style="position: relative;">

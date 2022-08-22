@@ -1,15 +1,15 @@
 export class Products {
-  private _id: number;
-  private _title: string;
-  private _description: string;
-  private _img: string[];
-  private _price: number;
-  private _author: string;
-  private _rating: number;
-  private _languageName: string[];
-  private _industryName: string[];
-  private _tagName: string[];
-  private _quantity: number;
+  public _id: number;
+  public _title: string;
+  public _description: string;
+  public _img: string[];
+  public _price: number;
+  public _author: string;
+  public _rating: number;
+  public _languageName: string[];
+  public _industryName: string[];
+  public _tagName: string[];
+  public _quantity: number;
 
 
   constructor(id: number, title: string, description: string, img: string[], price: number, author: string, rating: number, languageName: string[], industryName: string[], tagName: string[], quantity: number) {

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {CommonService} from "../../service/common.service";
 
 @Component({
   selector: 'app-home',
@@ -25,35 +26,7 @@ export class HomeComponent implements OnInit {
     {label: 'E-commerce Website', src: './assets/image/banner/banner-8.png'},
     {label: 'Mobile Apps', src: './assets/image/banner/banner-9.png'}
   ];
-  slides = [
-    {
-      img: './assets/image/slider/slider-product-1.png',
-      title: 'PDF Scanner',
-      description: 'We Scan is a super light and smart scanner app in your pocket. This app can quickly scan your paper documents on the go and export them as PDF files or Images. '
-    },
-    {
-      img: './assets/image/slider/slider-product-2.png',
-      title: 'HR Manager Smart Business Tracker React App',
-      description: '1. Full react native expo source code for app\n' +
-        '\n' +
-        '2. Backend Api project publishable files(Asp.net)\n' +
-        '\n' +
-        '3. Database script\n' +
-        '\n' +
-        '4. Full documentation'
-    },
-    {
-      img: './assets/image/slider/slider-product-3.png',
-      title: 'Febit Digital Currency Exchange Platform',
-      description: 'Cryptocurrency exchange script is a pre-fabricated bitcoin exchange software that helps you to create and launch a user-friendly crypto trading platform instantly.Our script comes with the latest trading modules and robust security features. '
-    },
-    {
-      img: './assets/image/slider/slider-product-4.png',
-      title: 'Multiple Modern Website',
-      description: 'The source code of this template is very simple and can be easily modified according to the need. It contains beautiful loading content section and hover effects.'
-    },
-
-  ];
+  slides: any;
   slideConfig = {slidesToShow: 4, slidesToScroll: 4};
 
   slickInit(e: any) {
@@ -72,10 +45,13 @@ export class HomeComponent implements OnInit {
     console.log('beforeChange');
   }
 
-  constructor() {
+  constructor(private commonService: CommonService) {
   }
 
   ngOnInit(): void {
+    this.commonService.getHomeFeatured().subscribe((slide) => {
+      this.slides = slide;
+    })
   }
 
 }

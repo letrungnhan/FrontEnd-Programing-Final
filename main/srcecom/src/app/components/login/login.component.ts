@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   captcha: string;
   eamil: string;
 
-
   constructor(
 
     private authService: AuthenticationService,

@@ -13,7 +13,7 @@
         <div class="col-lg-8 mb-4 mb-md-0 shadow-5-strong p-3">
           <!-- Section: Biling details -->
           <section class="">
-            <form [formGroup]="checkoutFormGroup">
+            <form >
               <div formGroupName="customer">
                 <h2 class="mx-1 mb-3">Customer Details</h2>
                 <!-- 2 column grid layout with text inputs for the first and last names -->
@@ -25,7 +25,6 @@
                         type="text"
                         id="form6Example1"
                         class="form-control"
-                        formControlName="firstName"
                       />
                       <label mdbLabel class="form-label" for="form6Example1">First name</label>
                     </mdb-form-control>
@@ -225,7 +224,11 @@
 
           <!-- Section: Summary -->
 
-          <h5 class="mb-4 mx-3">Choose your preferred payment</h5>
+          <h5 class="mb-4 mx-3">Choose your preferred payment
+
+          </h5>
+
+          <button class="btn btn-outline-primary w-100"   routerLink="/payment"> Another payment method</button>
 
           <!-- Section: Summary -->
         </div>

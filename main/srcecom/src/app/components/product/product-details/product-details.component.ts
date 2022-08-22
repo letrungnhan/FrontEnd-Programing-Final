@@ -17,7 +17,6 @@ export class ProductDetailComponent implements OnInit {
   id: any;
   price: any;
   itemProduct: any;
-
   constructor(private modalService: MdbModalService, private commonService: CommonService,
               private activatedRouter: ActivatedRoute, private cartService: CartService) {
   }
@@ -29,11 +28,8 @@ export class ProductDetailComponent implements OnInit {
       }
     );
     this.getProductByID(this.id);
-
-
     throw new Error('Method not implemented.');
   }
-
   getProductByID(id: any) {
     this.commonService.getProductByID(id).subscribe(
       (res) => {
@@ -42,18 +38,13 @@ export class ProductDetailComponent implements OnInit {
         console.log(this.itemProduct)
       }
     )
-
   }
-
-
-
 
   openModal() {
     this.modalRef = this.modalService.open(DetailsModalComponent, {
       modalClass: 'modal-dialog-centered'
     })
   }
-
   addToCart(product: Products) {
     this.cartService.addItem(product);
   }

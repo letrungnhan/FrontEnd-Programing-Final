@@ -12,10 +12,12 @@ import {ProductsListComponent} from "./components/product/products-list/products
 import {ProductDetailComponent} from "./components/product/product-details/product-details.component";
 import {OrderComponent} from "./components/order/order.component";
 import {CheckoutComponent} from "./components/checkout/checkout.component";
+import {PaymentComponent} from "./components/payment/payment.component";
 
 
 const routes: Routes = [
   {path: 'product-list/search/:searchTerm', component: ProductsListComponent},
+  {path: 'payment', component: PaymentComponent},
   {path: 'checkout', component: CheckoutComponent},
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
@@ -28,7 +30,7 @@ const routes: Routes = [
   {path: 'order', component: OrderComponent},
   {path: 'product-details/:id', component: ProductDetailComponent},
   {path: 'cart', component: CartComponent},
-  // {path: '**', redirectTo: '/home'},
+  {path: '**', redirectTo: '/home'},
 
 ];
 

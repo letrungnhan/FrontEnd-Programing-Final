@@ -29,7 +29,12 @@ export class CommonService {
   getProductByID(id: any) {
     return this.http.get("https://src-ecomos-web.herokuapp.com/Products/" + id);
   }
-  getProductByPrice(price:any){
+
+  getProductByPrice(price: any) {
     return this.http.get("https://src-ecomos-web.herokuapp.com/Products/" + price);
+  }
+
+  getHomeFeatured() {
+    return this.http.get("https://src-ecomos-web.herokuapp.com/Products?_start=20&_limit=4");
   }
 }

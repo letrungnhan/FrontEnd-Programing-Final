@@ -7,10 +7,8 @@ import {LoaderService} from "./loader.service";
   providedIn: 'root'
 })
 export class InterceptorService implements HttpInterceptor {
-
   constructor(public loaderService: LoaderService) {
   }
-
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     this.loaderService.isLoading.next(true);
 
