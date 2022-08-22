@@ -1,0 +1,13 @@
+<div class="d-flex justify-content-center align-items-center flex-column" style="height: 100vh">
+  <div *ngIf="!paidFor">
+    <h1>Buy this Couch - ${{ product.price }} OBO</h1>
+    <p>{{ product.description }}</p>
+    <img [src]="product.img" width="400">
+  </div>
+  <div *ngIf=paidFor>
+    <h1>Yay, you bought a sweet couch!</h1>
+    <img src="assets/giphy.gif">
+  </div>
+
+  <div #paypal [hidden]="paidFor"></div>
+</div>
