@@ -118,8 +118,8 @@
       "description": "With this finance app, accounting and tracking your financial data efficiently is now made easy. Clearly arranged monthly tables enable transactions to be entered very quickly.",
       "img": [
         "./assets/image/product/supper-cleaner-2020.png",
-        "./assets/image/product/Money-Management-Android-App.png",
-        "./assets/image/product/Bot Mult Crypto for Binance1.png"
+        "./assets/image/product/iRescueApp-java-2.png",
+        "./assets/image/product/iRescueApp-java-3.png"
       ],
       "price": 4223.5,
       "author": "hoxuanthinh",
@@ -135,12 +135,12 @@
     },
     {
       "id": 3,
-      "title": "ECOM Ecommerce web platform",
+      "title": "ECOM Ecommerce",
       "description": "This is a web template for a fully functioning Ecommerce platform, where products can be shown, browsed, wishlisted, put in cart, bought, added reviews, user created, etc.The server is realized via PHP and MySQL database. The frontend is JavaScript, HTML and CSS.",
       "img": [
         "./assets/image/product/instargra-1.png",
-        "./assets/image/product/Money-Management-Android-App.png",
-        "./assets/image/product/Bot Mult Crypto for Binance1.png"
+        "./assets/image/product/iRescueApp-java-2.png",
+        "./assets/image/product/HERMEX_Web_3.png"
       ],
       "price": "310.09",
       "author": "letrungnhan",
@@ -164,8 +164,8 @@
       "description": "Robot for the Cryptocurrency market, uses binance to make trades within its portfolio. (single user system)",
       "img": [
         "./assets/image/product/Customizable-1.png",
-        "./assets/image/product/Money-Management-Android-App.png",
-        "./assets/image/product/Bot Mult Crypto for Binance1.png"
+        "./assets/image/product/HERMEX_Web_2.png",
+        "./assets/image/product/Chat App-3.png"
       ],
       "price": 393.32,
       "author": "letrungnhan",
@@ -293,7 +293,8 @@
       "description": "Cryptocurrency exchange script is a pre-fabricated bitcoin exchange software that helps you to create and launch a user-friendly crypto trading platform instantly.Our script comes with the latest trading modules and robust security features. Febit premium crypto exchange script is fully customizable, so you can modify themes, features, designs, and other add-ons as per the business requirements in a hassle-free manner.",
       "img": [
         "./assets/image/product/CurrencyExchange-crypto-1.png",
-        "./assets/image/product/CurrencyExchange-crypto-2.png"
+        "./assets/image/product/CurrencyExchange-2.png",
+        "./assets/image/product/MediaYouTube-3.png"
 
       ],
       "price": "2,110.09",
@@ -318,7 +319,8 @@
       "description": "Crypto Central is a powerful lightweight modern android application that can be used to maintain portfolio across multiple Cryptocurrency Exchanges like Coinbase, Coinbase Pro and Binance.  Unlike other cryptocurrency portfolio tracker applications, It is a unique application that can be used to track history of your crypto currencies as whole and/or, by individual exchange based on the crypto's historic spot prices.",
       "img": [
         "./assets/image/product/Crypto Central-1.png",
-        "./assets/image/product/Crypto Central-2.png"
+        "./assets/image/product/Crypto Central-2.png",
+        "./assets/image/product/MediaYouTube-3.png"
       ],
       "price": "346.09",
       "author": "letrungnhan",
@@ -391,7 +393,8 @@
       "description": "This CRUD you can Create login users, signup user, create member/add a member, Update a member, Delete a member and you can also logout the user easy and fast. My Background I am Christian and I am 3rd year in College, I am currently enrolled Bachelor of Science in Information Technology Programming language i know: Php Html Java Python C++ C#. I already done creating CRUD using PHP HTML and MSQL .This CRUD you can Create login users, signup user, create member/add a member, Update a member, Delete a member and you can also logout the user easy and fast.",
       "img": [
         "./assets/image/product/CRUD system-1.png",
-        "./assets/image/product/CRUD system-2.png"
+        "./assets/image/product/CRUD system-2.png",
+        "./assets/image/product/MediaYouTube-3.png"
       ],
       "price": "10.09",
       "author": "hoxuanthinh",
@@ -412,26 +415,27 @@
     },
     {
       "id": 14,
-      "title": "Shopping cart small application",
-      "description": "shopping cart small application developed by technologies angular 8 as frontend,php as backend and mysql is used for database connection.It is just a small application I developed for demo purpose.It is a single page only with multiple components based.If someone presses add to cart or quantity increased button, make sure cart quantity should get updated and price also should be updated.If the quantity decreased button is pressed, quantity and price should also decrease.If someone presses the checkout button.",
+      "title": "Xsportz React Redux Full Frontend",
+      "description": "Xsportz React Redux Full Frontend Redsportz - React,Redux Full Frontend Link : https://redsportsz.herokuapp.com/Redsportz is a webapp containing full react redux code and frontend design . Redux helps you deal with shared state management, but like any tool, it has tradeoffs. It s a trade-off between short term and long term productivity.Redux Toolkit is our recommended approach for writing Redux logic. It contains packages and functions that we think are essential for building a Redux app.",
       "img": [
-        "./assets/image/product/shopping cart-1.jpg"
-
+        "./assets/image/product/Xsportz React-1.png",
+        "./assets/image/product/Xsportz React-2.png",
+        "./assets/image/product/Movie Website-3.png"
       ],
       "price": "9.09",
-      "author": "letrungnhan",
-      "rating": 3,
+      "author": "hoxuanthinh",
+      "rating": 5,
       "languageName": [
         "JAVASCRIPT",
         "HTML",
-        "NET",
         "CSS"
       ],
       "industryName": [
-        "ECOMMERCE"
+        "WEB"
       ],
       "tagName": [
-        "WEBSYSTEM"
+        "WEBSYSTEM",
+        "FRONTEND"
       ],
       "quantity": 1
     },
@@ -491,7 +495,8 @@
       "description": "This is an npm tool running on NodeJS, using a websocket for communication. Frontend via web interface. Command line functionality also included, via NodeJS. Fully use Websocket for exchange communication to react as fast as possible on market movements and events. Multi pair support in one instance.",
       "img": [
         "./assets/image/product/THUNDER LAND-1.png",
-        "./assets/image/product/THUNDER LAND-2.png"
+        "./assets/image/product/THUNDER LAND-2.png",
+        "./assets/image/product/MediaYouTube-3.png"
       ],
       "price": "43.09",
       "author": "hoxuanthinh",
@@ -567,7 +572,8 @@
       "description": "Xsportz React Redux Full Frontend Redsportz - React,Redux Full Frontend Link : https://redsportsz.herokuapp.com/Redsportz is a webapp containing full react redux code and frontend design . Redux helps you deal with shared state management, but like any tool, it has tradeoffs. It s a trade-off between short term and long term productivity.Redux Toolkit is our recommended approach for writing Redux logic. It contains packages and functions that we think are essential for building a Redux app.",
       "img": [
         "./assets/image/product/Xsportz React-1.png",
-        "./assets/image/product/Xsportz React-2.png"
+        "./assets/image/product/Xsportz React-2.png",
+        "./assets/image/product/Movie Website-3.png"
       ],
       "price": "9.09",
       "author": "hoxuanthinh",
@@ -647,7 +653,9 @@
       "title": "Face Recognition python3 opencv3",
       "description": "To make a face recognition program, first we need to train the recognizer with dataset of previously captured faces along with its ID, for example we have two person then first person will have ID 1 that's me (yassine) :p and 2nd person will have ID 2 (my binome) :p , so that all the images of person one in the dataset will have ID 1 and all the images of the 2nd person in the dataset will have ID 2, then we will use those dataset images to train the recognizer to predict the 1 of an newly presented face from the live video frame",
       "img": [
-        "./assets/image/product/Face Recognition-1.png"
+        "./assets/image/product/Face Recognition-1.png",
+        "./assets/image/product/Flipkart Amazon-2.png",
+        "./assets/image/product/Bhista Chat App-3.png"
       ],
       "price": "9.09",
       "author": "letrungnhan",
@@ -971,7 +979,8 @@
       "description": "Crypto Central is a powerful lightweight modern android application that can be used to maintain portfolio across multiple Cryptocurrency Exchanges like Coinbase, Coinbase Pro and Binance. The WhatsApp Chat Plugin allows your visitors and customers to send messages directly to you or multiple agents phone numbers. Start a conversation from your website directly to your WhatsApp phone number with one click.",
       "img": [
         "./assets/image/product/WhatsApp-1.png",
-        "./assets/image/product/WhatsApp-2.png"
+        "./assets/image/product/WhatsApp-2.png",
+        "./assets/image/product/ChatMe Simply-3.png"
       ],
       "price": "34.09",
       "author": "chungtrithong",
@@ -1069,7 +1078,9 @@
       "title": "iOS Recipe Template App Swift MVVM Only mock data and UI Code",
       "description": "Cheffy is a template of recipe application. Contain 3 tab, perfectly good for initial template with code in MVVM style for iOS application. The design is perfectly nice for beginner, easy to navigate and understand. Good for practicing and also for initial template with good design pattern. Follow apple guideline and easy to customisable.",
       "img": [
-        "./assets/image/product/Xsportz React-1.png"
+        "./assets/image/product/Xsportz React-1.png",
+        "./assets/image/product/CryptoPrice-2.png",
+        "./assets/image/product/social media-3.png"
       ],
       "price": "90.09",
       "author": "letrungnhan",
@@ -1224,7 +1235,8 @@
       "description": "Song Tube is a new beautiful and fast application made in flutter, it supports YouTube audio and video downloading at any quality, In-App YouTube Browser, audio conversion and an Audio tags editor.Sometimes we don't have enough time to chat with customer being online 24 hrs. On the other hand customer is not interested to read the FAQ (Frequently asked questions).",
       "img": [
         "./assets/image/product/HomeRental-1.png",
-        "./assets/image/product/Xsportz React-2.png"
+        "./assets/image/product/Xsportz React-2.png",
+        "./assets/image/product/Face Recognition-3.png"
       ],
       "price": "92.09",
       "author": "hoxuanthinh",
@@ -1306,7 +1318,9 @@
       "title": "Face Recognition python3 opencv3",
       "description": "To make a face recognition program, first we need to train the recognizer with dataset of previously captured faces along with its ID, for example we have two person then first person will have ID 1 that's me (yassine) :p and 2nd person will have ID 2 (my binome) :p , so that all the images of person one in the dataset will have ID 1 and all the images of the 2nd person in the dataset will have ID 2, then we will use those dataset images to train the recognizer to predict the 1 of an newly presented face from the live video frame",
       "img": [
-        "./assets/image/product/Face Recognition-1.png"
+        "./assets/image/product/Face Recognition-1.png",
+        "./assets/image/product/Face Recognition-2.png",
+        "./assets/image/product/Face Recognition-3.png"
       ],
       "price": "9.09",
       "author": "letrungnhan",
