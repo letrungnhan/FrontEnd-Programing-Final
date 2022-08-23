@@ -32,7 +32,7 @@ export class CartService {
       }
       // @ts-ignore
       this.placeholder.push(product);
-      this.setCartData(this.placeholder);
+      this.cartItems.next(this.getCartData());
     }
   }
   setCartData(data: any) {
