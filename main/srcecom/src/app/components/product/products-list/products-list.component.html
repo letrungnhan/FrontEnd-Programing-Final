@@ -125,13 +125,14 @@
           <section class="product-list pt-4">
 
             <div class="row  list-products" id="products">
-              <div *ngFor="let item of dataProduct | paginate : {
+              <div *ngFor="let item of dataProduct |
+              paginate : {
               itemsPerPage: tableSize,
               currentPage:page,
-              totalItems:count
-              } | filter:searchText:'title'; let i = index" class="col-lg-4 col-md-6 col-sm-5 mb-4">
+              totalItems:count}
+              | filter:searchText:'title'; let i = index"
+                   class="col-lg-4 col-md-6 col-sm-5 mb-4">
                 <div class="product-container"
-
                 >
                   <div class="card card-ecommerce">
                     <!-- Card image -->
